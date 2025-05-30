@@ -4,7 +4,7 @@ import "../styles/Header.css";
 import { useState, useRef, useEffect } from "react";
 import { Play, Square } from "lucide-react";
 import MobileImage from "../assets/HeroSection/HeroImage.png";
-import IphoneImage from "../assets/HeroSection/iphoneLatest.png";
+import IphoneImage from "../assets/HeroSection/iPhoneLatest.png";
 import SwiperCaraousal from "../pages/SwiperCaraousal";
 import IntroVideo from "../assets/HeroSection/intoVideo.mp4"
 import { useDispatch } from "react-redux";
