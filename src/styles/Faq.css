@@ -1,0 +1,64 @@
+/* faq.css */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide In Up Animation */
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(10px); /* Reduced from 15px to avoid overflow */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide In Right Animation */
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(20px); /* Reduced from 30px to avoid overflow */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply Animations */
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .slide-in-up {
+    animation: slideInUp 0.5s ease-out forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+  
+  .fade-in-delay-1000 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  .slide-in-up-delay-500 {
+    animation: slideInUp 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .slide-in-right-delay-1000 {
+    animation: slideInRight 0.5s ease-out forwards;
+    animation-delay: 1s;
+  }
+  

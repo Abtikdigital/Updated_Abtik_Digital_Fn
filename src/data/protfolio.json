@@ -1,0 +1,389 @@
+{
+    "portfolioItems": [
+      {
+        "title": "Project One",
+        "description": "Redesigned a responsive website with adaptive layouts, modern UX patterns, and optimized load times, achieving a 30% increase in user engagement across devices.",
+        "link": "#",
+        "imageUrl": "../..//iPhone.png",
+        "category": "All"
+      },
+      {
+        "title": "BLUE WINGS (SHIVA TOURS & TRAVELS)",
+        "description": "Launched a targeted digital campaign for a travel agency, using SEO, social media ads, and localized content to drive a 35% surge in tour bookings.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "MAGPIE SHIPPING PRIVATE LIMITED",
+        "description": "Optimized a Google Ads campaign for a logistics company, refining keywords and landing pages to boost lead generation by 40% with a lower cost-per-click.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
+        "description": "Developed a personalized email marketing funnel for a tech firm, integrating automation and analytics to improve customer retention by 25%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "Wood County Private Limited",
+        "description": "Crafted a visually compelling social media strategy for an e-commerce brand, leveraging Instagram and Pinterest to increase sales by 20%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
+        "description": "Created a content-driven marketing plan for an organic products company, using blogs and videos to establish brand authority and grow organic traffic.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "GOVEDIC AGRO PRIVATE LIMITED",
+        "description": "Executed a multi-channel campaign for an agro brand, combining SEO and influencer collaborations to expand market reach and customer acquisition.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "S-JBW ELECTRICALS & TRADING PRIVATE LIMITED",
+        "description": "Streamlined a PPC campaign for an electrical supplier, optimizing ad copy and targeting to reduce costs while increasing conversions by 15%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "Hari Om Kathiyawadi",
+        "description": "Built a vibrant social media presence for a restaurant, using local SEO and engaging visuals to drive a 25% increase in customer visits.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "NAVRACHANA AROGYA PRIVATE LIMITED",
+        "description": "Designed a comprehensive digital strategy for a healthcare brand, blending SEO, content, and paid ads to boost online visibility and patient inquiries.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Digital Marketing"
+      },
+      {
+        "title": "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
+        "description": "Created a sleek, data-driven dashboard with real-time analytics, customizable widgets, and intuitive UI for actionable business insights.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "CLICKFLUENCE LLP",
+        "description": "Revamped an e-commerce platform with streamlined navigation, A/B-tested UX, and a fast checkout process, improving conversions by 20%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "MIGHTY FISH AQUAFARM",
+        "description": "Designed an e-commerce interface with intuitive product filters, responsive design, and seamless checkout, enhancing user satisfaction and sales.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "RIYA DITYA EDU LLP",
+        "description": "Developed a user-friendly educational platform with interactive UI, accessibility features, and smooth navigation for improved learning experiences.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "NEXTSTEP CORPORATE SOLUTIONS PRIVATE LIMITED",
+        "description": "Built a professional service portal with clean UX, dynamic content, and optimized workflows, increasing client engagement by 15%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "METAMORPH IT SYSTEMS PRIVATE LIMITED (ADS 360)",
+        "description": "Created an ad management dashboard with visually appealing UI, real-time metrics, and user-friendly controls for campaign optimization.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "OMMNETZ TECHNOLOGIES LLP",
+        "description": "Designed a tech service platform with responsive layouts, clear CTAs, and intuitive UX, reducing user drop-off rates significantly.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "WOOD COUNTY PRIVATE LIMITED",
+        "description": "Enhanced an e-commerce site with modern UI, personalized product recommendations, and smooth checkout, boosting customer retention.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "PARMS AUTOMATION LLP",
+        "description": "Developed an automation dashboard with minimalist UI, real-time data visualization, and easy-to-use controls for operational efficiency.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "AURATRIX GREEN TECH (OPC) PRIVATE LIMITED",
+        "description": "Designed a green tech website with eco-friendly aesthetics, accessible UX, and interactive features to promote sustainable solutions.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "FUSINEVIT SOLUTION PVT. LTD.",
+        "description": "Crafted a SaaS platform with intuitive workflows, responsive design, and user-centric UI to streamline business operations.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "SASWAT BUILDERS & FABRICATORS PRIVATE LIMITED",
+        "description": "Built a construction services portal with clean UX, project galleries, and easy navigation, improving client inquiry rates.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "UMAKU IKU PRIVATE LIMITED",
+        "description": "Designed a retail e-commerce site with engaging UI, fast load times, and seamless checkout, driving higher sales conversions.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "GSTRENGTH PRIVATE LIMITED",
+        "description": "Created a fitness platform with dynamic UI, personalized dashboards, and accessible design, enhancing user motivation and retention.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "DR BORULKAR'S PHARMA PRIVATE LIMITED",
+        "description": "Developed a pharma e-commerce site with secure UX, clear product listings, and streamlined ordering, improving customer trust.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "CARBON AGRIS",
+        "description": "Designed an agricultural platform with intuitive UI, real-time data, and mobile-friendly design to support farmers’ decision-making.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "H ONE GLOBAL TECHNOLOGY PRIVATE LIMITED",
+        "description": "Built a tech solutions website with modern UX, interactive demos, and optimized navigation, increasing user engagement.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "RAB-AGS INDUSTRIES PRIVATE LIMITED",
+        "description": "Created an industrial services portal with robust UI, clear service breakdowns, and responsive design for better client interaction.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "YUEV INNOVATION PVT. LTD.",
+        "description": "Designed an innovation hub website with sleek UI, dynamic content, and user-friendly navigation to showcase cutting-edge solutions.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "OMMNETZ TECHNOLOGIES LLP",
+        "description": "Revamped a tech platform with intuitive UX, fast load times, and accessible design, reducing user friction and improving satisfaction.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "N4 WELTEST ENGINEERING PRIVATE LIMITED",
+        "description": "Developed an engineering services site with clean UI, detailed project showcases, and smooth navigation for enhanced client trust.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "KIEAN RONAK VENTURES PRIVATE LIMITED",
+        "description": "Built a venture capital portal with professional UX, interactive charts, and responsive design to attract investors.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "LIFESIGN INFOTECH PVT. LTD.",
+        "description": "Designed an IT services website with modern UI, clear service offerings, and optimized UX for higher client conversions.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "PRAKASHE ASSOCIATES LLP",
+        "description": "Created a consulting platform with streamlined UI, accessible design, and dynamic content to improve user engagement.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "HERITAGE REPAIR PRIVATE LIMITED",
+        "description": "Developed a repair services site with intuitive UX, clear booking flows, and responsive design, boosting customer inquiries.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "ABEEHA RETAIL PRIVATE LIMITED",
+        "description": "Designed a retail e-commerce platform with engaging UI, personalized recommendations, and seamless checkout for higher sales.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "ANUGRAH AGRO TRADE PRIVATE LIMITED",
+        "description": "Built an agro-trade platform with clean UX, real-time market data, and mobile-friendly design to empower traders.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "Hari Om Kathiyawadi",
+        "description": "Revamped a restaurant website with vibrant UI, online ordering, and responsive design, increasing online reservations by 20%.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "Art n Craft Shop",
+        "description": "Designed a craft e-commerce site with artistic UI, intuitive product browsing, and smooth checkout, enhancing user experience.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "JYMP",
+        "description": "Created a fitness app interface with dynamic UI, gamified features, and accessible design to boost user motivation.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "RUBRICS SYSTEMS PRIVATE LIMITED",
+        "description": "Developed a systems management platform with minimalist UI, real-time analytics, and user-friendly workflows for efficiency.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "KIRA E-MOTION PRIVATE LIMITED",
+        "description": "Designed an e-mobility platform with sleek UX, interactive maps, and responsive design to enhance user adoption.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "KKLJ ENERGY PRIVATE LIMITED",
+        "description": "Built an energy solutions website with clear UI, dynamic data visualizations, and optimized navigation for client engagement.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "BOUNCEBACK ENTERTAINMENT PRIVATE LIMITED",
+        "description": "Created an entertainment platform with immersive UI, seamless content browsing, and responsive design for better user retention.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "MD1 NATURAL FOODS",
+        "description": "Designed a natural foods e-commerce site with clean UX, vibrant visuals, and streamlined ordering, improving customer trust.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "UIUX"
+      },
+      {
+        "title": "KALKI CORPORATION PRIVATE LIMITED",
+        "description": "Crafted a cohesive AWS-based branding campaign with vibrant social media visuals, logos, and consistent identity for a tech startup.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "NAPASRI PVT LTD",
+        "description": "Developed AWS-hosted marketing visuals for a retail brand, featuring dynamic banners and cohesive designs to boost campaign performance.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "ADVANCEMENT GLOBAL VENTURE PVT.LTD",
+        "description": "Created AWS-supported branding assets for a venture firm, including infographics and social media visuals for investor outreach.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "VIKETH BRAND ECOMMERCE PRIVATE LIMITED",
+        "description": "Designed AWS-hosted e-commerce visuals with bold graphics, consistent branding, and optimized assets for faster load times.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "RADHE KRISHNA MANPOWER SOLUTIONS PRIVATE LIMITED",
+        "description": "Developed AWS-backed marketing materials for a manpower agency, featuring professional visuals and targeted campaign designs.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "ANMOL MICRO FINANCE PRIVATE LIMITED",
+        "description": "Created AWS-hosted branding visuals for a finance company, with clean designs and consistent identity to build customer trust.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "AUGUSTDEVICES INDIA PRIVATE LIMITED",
+        "description": "Designed AWS-supported marketing assets for a tech firm, including vibrant social media graphics and professional brochures.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "BESHBESH INFOTECH PRIVATE LIMITED",
+        "description": "Built an AWS-hosted landing page for a tech startup, with bold visuals, clear CTAs, and optimized design for lead generation.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "AWS"
+      },
+      {
+        "title": "MIHRAB INNOVATE PRIVATE LIMITED",
+        "description": "Developed a real-time messaging platform on AWS with scalable architecture, responsive design, and secure APIs for seamless communication.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Development"
+      },
+      {
+        "title": "RUDRALAY.COM (OPC) PRIVATE LIMITED",
+        "description": "Built a full-stack inventory management app with real-time updates, robust security, and responsive UI, deployed on AWS for scalability.",
+        "link": "#",
+        "imageUrl": "Project1",
+        "category": "Development"
+      }
+    ]
+  }

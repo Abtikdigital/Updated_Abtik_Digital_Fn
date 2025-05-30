@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+*{
+  scroll-behavior: smooth;
+}

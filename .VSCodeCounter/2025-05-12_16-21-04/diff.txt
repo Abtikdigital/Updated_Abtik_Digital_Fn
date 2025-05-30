@@ -1,0 +1,49 @@
+Date : 2025-05-12 16:21:04
+Directory : c:\abtik digital react\abtik-digital fn
+Total : 18 files,  674 codes, -84 comments, 52 blanks, all 642 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         17 |        664 |        -84 |         50 |        630 |
+| TypeScript     |          1 |         10 |          0 |          2 |         12 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                               | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                  |         18 |        674 |        -84 |         52 |        642 |
+| src                                                                                |         18 |        674 |        -84 |         52 |        642 |
+| src\apis                                                                           |          1 |         10 |          0 |          1 |         11 |
+| src\layout                                                                         |          1 |         12 |          0 |          2 |         14 |
+| src\pages                                                                          |         11 |        320 |        -78 |         26 |        268 |
+| src\section                                                                        |          4 |        322 |         -6 |         21 |        337 |
+| src\validation                                                                     |          1 |         10 |          0 |          2 |         12 |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                           | language       | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\abtik digital react\abtik-digital fn\src\apis\emailMarketingApis.tsx            | TypeScript JSX |         10 |          0 |          1 |         11 |
+| c:\abtik digital react\abtik-digital fn\src\layout\Mainlayout.tsx                  | TypeScript JSX |         12 |          0 |          2 |         14 |
+| c:\abtik digital react\abtik-digital fn\src\pages\AboutUs.tsx                      | TypeScript JSX |        147 |        -84 |          4 |         67 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Blog.tsx                         | TypeScript JSX |        -89 |          3 |          0 |        -86 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Career.tsx                       | TypeScript JSX |          2 |          0 |          0 |          2 |
+| c:\abtik digital react\abtik-digital fn\src\pages\ContactUs.tsx                    | TypeScript JSX |          2 |          0 |          0 |          2 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Events.tsx                       | TypeScript JSX |         30 |          4 |          8 |         42 |
+| c:\abtik digital react\abtik-digital fn\src\pages\ExpandedBlog.tsx                 | TypeScript JSX |         55 |          0 |          7 |         62 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Faq.tsx                          | TypeScript JSX |        -10 |          0 |          0 |        -10 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Partner.tsx                      | TypeScript JSX |          0 |          1 |          1 |          2 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Protfolio.tsx                    | TypeScript JSX |        116 |         -2 |          1 |        115 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Services.tsx                     | TypeScript JSX |         73 |          0 |          5 |         78 |
+| c:\abtik digital react\abtik-digital fn\src\pages\Testimonial.tsx                  | TypeScript JSX |         -6 |          0 |          0 |         -6 |
+| c:\abtik digital react\abtik-digital fn\src\section\Contact.tsx                    | TypeScript JSX |        195 |          1 |         14 |        210 |
+| c:\abtik digital react\abtik-digital fn\src\section\Footer.tsx                     | TypeScript JSX |         41 |         -3 |          3 |         41 |
+| c:\abtik digital react\abtik-digital fn\src\section\Hero.tsx                       | TypeScript JSX |         91 |         -4 |          4 |         91 |
+| c:\abtik digital react\abtik-digital fn\src\section\Navbar.tsx                     | TypeScript JSX |         -5 |          0 |          0 |         -5 |
+| c:\abtik digital react\abtik-digital fn\src\validation\emailMarketingValidation.ts | TypeScript     |         10 |          0 |          2 |         12 |
+| Total                                                                              |                |        674 |        -84 |         52 |        642 |
++------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

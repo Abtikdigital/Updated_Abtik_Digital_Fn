@@ -1,0 +1,80 @@
+/* Initial hidden state to prevent flash before animation */
+.initial-hidden {
+    opacity: 0;
+  }
+  
+  /* Existing animations for ServicesCarousel */
+  @keyframes fadeUpDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up-down {
+    animation: fadeUpDown 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.7s ease-in-out forwards;
+  }
+  
+  @keyframes fadeActive {
+    0% {
+      opacity: 0.8;
+      transform: scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .fade-active {
+    animation: fadeActive 0.4s ease-in-out forwards;
+  }
+  
+  /* Animation for ServicesDetails section initial load */
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-section {
+    animation: fadeInSection 1s ease-in-out forwards;
+  }
+  
+  /* Animation for each service item */
+  @keyframes fadeUpItem {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .fade-up-item {
+    animation: fadeUpItem 0.8s ease-in-out forwards;
+  }

@@ -1,0 +1,92 @@
+"filename", "language", "JSON with Comments", "JSON", "TypeScript", "TypeScript JSX", "CSS", "XML", "Markdown", "Properties", "JavaScript", "HTML", "comment", "blank", "total"
+"c:\abtik digital react\abtik-digital fn\.env", "Properties", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"c:\abtik digital react\abtik-digital fn\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 10, 55
+"c:\abtik digital react\abtik-digital fn\components.json", "JSON", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21
+"c:\abtik digital react\abtik-digital fn\components\ui\dialog.tsx", "TypeScript JSX", 0, 0, 0, 121, 0, 0, 0, 0, 0, 0, 0, 13, 134
+"c:\abtik digital react\abtik-digital fn\components\ui\dropdown-menu.tsx", "TypeScript JSX", 0, 0, 0, 238, 0, 0, 0, 0, 0, 0, 0, 18, 256
+"c:\abtik digital react\abtik-digital fn\components\ui\label.tsx", "TypeScript JSX", 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 4, 23
+"c:\abtik digital react\abtik-digital fn\eslint.config.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 2, 29
+"c:\abtik digital react\abtik-digital fn\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 1, 3, 36
+"c:\abtik digital react\abtik-digital fn\package-lock.json", "JSON", 0, 6358, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6359
+"c:\abtik digital react\abtik-digital fn\package.json", "JSON", 0, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 63
+"c:\abtik digital react\abtik-digital fn\public\vite.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"c:\abtik digital react\abtik-digital fn\src\App.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\App.tsx", "TypeScript JSX", 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 4, 11, 80
+"c:\abtik digital react\abtik-digital fn\src\apis\apis.tsx", "TypeScript JSX", 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\abtik digital react\abtik-digital fn\src\apis\careerApis.tsx", "TypeScript JSX", 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 3, 15
+"c:\abtik digital react\abtik-digital fn\src\apis\emailMarketingApis.tsx", "TypeScript JSX", 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\abtik digital react\abtik-digital fn\src\apis\quoteApis.tsx", "TypeScript JSX", 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5, 15
+"c:\abtik digital react\abtik-digital fn\src\assets\Services\WebDevelopement\app-development.svg", "XML", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 1, 10
+"c:\abtik digital react\abtik-digital fn\src\assets\react.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"c:\abtik digital react\abtik-digital fn\src\assets\svg\abtik-svg-premium-logo.svg", "XML", 0, 0, 0, 0, 0, 113, 0, 0, 0, 0, 7, 26, 146
+"c:\abtik digital react\abtik-digital fn\src\components\ui\button.tsx", "TypeScript JSX", 0, 0, 0, 54, 0, 0, 0, 0, 0, 0, 0, 6, 60
+"c:\abtik digital react\abtik-digital fn\src\components\ui\dialog.tsx", "TypeScript JSX", 0, 0, 0, 114, 0, 0, 0, 0, 0, 0, 0, 14, 128
+"c:\abtik digital react\abtik-digital fn\src\components\ui\dropdown.tsx", "TypeScript JSX", 0, 0, 0, 183, 0, 0, 0, 0, 0, 0, 0, 20, 203
+"c:\abtik digital react\abtik-digital fn\src\components\ui\input.tsx", "TypeScript JSX", 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 4, 23
+"c:\abtik digital react\abtik-digital fn\src\components\ui\label.tsx", "TypeScript JSX", 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 6, 27
+"c:\abtik digital react\abtik-digital fn\src\components\ui\select.tsx", "TypeScript JSX", 0, 0, 0, 146, 0, 0, 0, 0, 0, 0, 0, 14, 160
+"c:\abtik digital react\abtik-digital fn\src\data\blog.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\data\protfolio.json", "JSON", 0, 389, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 389
+"c:\abtik digital react\abtik-digital fn\src\index.css", "CSS", 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 2, 11
+"c:\abtik digital react\abtik-digital fn\src\layout\Mainlayout.tsx", "TypeScript JSX", 0, 0, 0, 327, 0, 0, 0, 0, 0, 0, 3, 18, 348
+"c:\abtik digital react\abtik-digital fn\src\lib\utils.ts", "TypeScript", 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"c:\abtik digital react\abtik-digital fn\src\main.tsx", "TypeScript JSX", 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 3, 13
+"c:\abtik digital react\abtik-digital fn\src\pages\AboutUs.tsx", "TypeScript JSX", 0, 0, 0, 251, 0, 0, 0, 0, 0, 0, 11, 18, 280
+"c:\abtik digital react\abtik-digital fn\src\pages\AnimatedLine.tsx", "TypeScript JSX", 0, 0, 0, 67, 0, 0, 0, 0, 0, 0, 6, 10, 83
+"c:\abtik digital react\abtik-digital fn\src\pages\Blog.tsx", "TypeScript JSX", 0, 0, 0, 193, 0, 0, 0, 0, 0, 0, 5, 14, 212
+"c:\abtik digital react\abtik-digital fn\src\pages\Career.tsx", "TypeScript JSX", 0, 0, 0, 554, 0, 0, 0, 0, 0, 0, 3, 26, 583
+"c:\abtik digital react\abtik-digital fn\src\pages\ClientStats.tsx", "TypeScript JSX", 0, 0, 0, 71, 0, 0, 0, 0, 0, 0, 0, 10, 81
+"c:\abtik digital react\abtik-digital fn\src\pages\ContactUs.tsx", "TypeScript JSX", 0, 0, 0, 213, 0, 0, 0, 0, 0, 0, 10, 11, 234
+"c:\abtik digital react\abtik-digital fn\src\pages\DigitalMarketingService.tsx", "TypeScript JSX", 0, 0, 0, 198, 0, 0, 0, 0, 0, 0, 12, 9, 219
+"c:\abtik digital react\abtik-digital fn\src\pages\Events.tsx", "TypeScript JSX", 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 4, 10, 62
+"c:\abtik digital react\abtik-digital fn\src\pages\ExpandedBlog.tsx", "TypeScript JSX", 0, 0, 0, 333, 0, 0, 0, 0, 0, 0, 3, 22, 358
+"c:\abtik digital react\abtik-digital fn\src\pages\Faq.tsx", "TypeScript JSX", 0, 0, 0, 107, 0, 0, 0, 0, 0, 0, 0, 12, 119
+"c:\abtik digital react\abtik-digital fn\src\pages\Home.tsx", "TypeScript JSX", 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 4, 3, 29
+"c:\abtik digital react\abtik-digital fn\src\pages\Loader.tsx", "TypeScript JSX", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 8, 44
+"c:\abtik digital react\abtik-digital fn\src\pages\NotFound.tsx", "TypeScript JSX", 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 3, 24
+"c:\abtik digital react\abtik-digital fn\src\pages\Partner.tsx", "TypeScript JSX", 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 47, 7, 88
+"c:\abtik digital react\abtik-digital fn\src\pages\PrivacyPolicy.tsx", "TypeScript JSX", 0, 0, 0, 141, 0, 0, 0, 0, 0, 0, 0, 5, 146
+"c:\abtik digital react\abtik-digital fn\src\pages\Protfolio.tsx", "TypeScript JSX", 0, 0, 0, 596, 0, 0, 0, 0, 0, 0, 10, 17, 623
+"c:\abtik digital react\abtik-digital fn\src\pages\SeoService.tsx", "TypeScript JSX", 0, 0, 0, 194, 0, 0, 0, 0, 0, 0, 7, 11, 212
+"c:\abtik digital react\abtik-digital fn\src\pages\Service.tsx", "TypeScript JSX", 0, 0, 0, 168, 0, 0, 0, 0, 0, 0, 2, 11, 181
+"c:\abtik digital react\abtik-digital fn\src\pages\Services.tsx", "TypeScript JSX", 0, 0, 0, 92, 0, 0, 0, 0, 0, 0, 2, 9, 103
+"c:\abtik digital react\abtik-digital fn\src\pages\SwiperCaraousal.tsx", "TypeScript JSX", 0, 0, 0, 119, 0, 0, 0, 0, 0, 0, 4, 15, 138
+"c:\abtik digital react\abtik-digital fn\src\pages\Technologies.tsx", "TypeScript JSX", 0, 0, 0, 173, 0, 0, 0, 0, 0, 0, 6, 11, 190
+"c:\abtik digital react\abtik-digital fn\src\pages\Test.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\pages\Testimonial.tsx", "TypeScript JSX", 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 1, 7, 71
+"c:\abtik digital react\abtik-digital fn\src\pages\UIUXService.tsx", "TypeScript JSX", 0, 0, 0, 195, 0, 0, 0, 0, 0, 0, 8, 8, 211
+"c:\abtik digital react\abtik-digital fn\src\pages\WebDevelopmentService.tsx", "TypeScript JSX", 0, 0, 0, 316, 0, 0, 0, 0, 0, 0, 13, 15, 344
+"c:\abtik digital react\abtik-digital fn\src\reducers\reducer.ts", "TypeScript", 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 4, 6, 30
+"c:\abtik digital react\abtik-digital fn\src\section\Contact.tsx", "TypeScript JSX", 0, 0, 0, 312, 0, 0, 0, 0, 0, 0, 4, 23, 339
+"c:\abtik digital react\abtik-digital fn\src\section\Copyright.tsx", "TypeScript JSX", 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 3, 9
+"c:\abtik digital react\abtik-digital fn\src\section\Footer.tsx", "TypeScript JSX", 0, 0, 0, 205, 0, 0, 0, 0, 0, 0, 6, 15, 226
+"c:\abtik digital react\abtik-digital fn\src\section\Hero.tsx", "TypeScript JSX", 0, 0, 0, 412, 0, 0, 0, 0, 0, 0, 398, 97, 907
+"c:\abtik digital react\abtik-digital fn\src\section\HeroSection1.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 9, 73
+"c:\abtik digital react\abtik-digital fn\src\section\Navbar.tsx", "TypeScript JSX", 0, 0, 0, 189, 0, 0, 0, 0, 0, 0, 6, 15, 210
+"c:\abtik digital react\abtik-digital fn\src\store\store.ts", "TypeScript", 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\abtik digital react\abtik-digital fn\src\styles\AboutUs.css", "CSS", 0, 0, 0, 0, 86, 0, 0, 0, 0, 0, 17, 17, 120
+"c:\abtik digital react\abtik-digital fn\src\styles\ClientStats.css", "CSS", 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 1, 2, 13
+"c:\abtik digital react\abtik-digital fn\src\styles\Contact.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\styles\Faq.css", "CSS", 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 5, 10, 64
+"c:\abtik digital react\abtik-digital fn\src\styles\Footer.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 123, 1, 124
+"c:\abtik digital react\abtik-digital fn\src\styles\Header.css", "CSS", 0, 0, 0, 0, 53, 0, 0, 0, 0, 0, 84, 4, 141
+"c:\abtik digital react\abtik-digital fn\src\styles\HeroSection.css", "CSS", 0, 0, 0, 0, 92, 0, 0, 0, 0, 0, 3, 16, 111
+"c:\abtik digital react\abtik-digital fn\src\styles\Loader.css", "CSS", 0, 0, 0, 0, 101, 0, 0, 0, 0, 0, 3, 19, 123
+"c:\abtik digital react\abtik-digital fn\src\styles\Navbar.css", "CSS", 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 4, 30
+"c:\abtik digital react\abtik-digital fn\src\styles\Partner.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2
+"c:\abtik digital react\abtik-digital fn\src\styles\Service.css", "CSS", 0, 0, 0, 0, 66, 0, 0, 0, 0, 0, 4, 10, 80
+"c:\abtik digital react\abtik-digital fn\src\styles\Swiper.css", "CSS", 0, 0, 0, 0, 111, 0, 0, 0, 0, 0, 2, 15, 128
+"c:\abtik digital react\abtik-digital fn\src\styles\Technologies.css", "CSS", 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 4, 5, 53
+"c:\abtik digital react\abtik-digital fn\src\styles\Test.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\styles\Testimonial.css", "CSS", 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 1, 4, 30
+"c:\abtik digital react\abtik-digital fn\src\utils\ScrollToTop.tsx", "TypeScript JSX", 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"c:\abtik digital react\abtik-digital fn\src\utils\ServiceHelperComponent.tsx", "TypeScript JSX", 0, 0, 0, 75, 0, 0, 0, 0, 0, 0, 0, 10, 85
+"c:\abtik digital react\abtik-digital fn\src\utils\ThreeejsAnimation.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\abtik digital react\abtik-digital fn\src\utils\withDelay.tsx", "TypeScript JSX", 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\abtik digital react\abtik-digital fn\src\validation\emailMarketingValidation.ts", "TypeScript", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12
+"c:\abtik digital react\abtik-digital fn\src\vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"c:\abtik digital react\abtik-digital fn\tsconfig.app.json", "JSON", 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 27
+"c:\abtik digital react\abtik-digital fn\tsconfig.json", "JSON with Comments", 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18
+"c:\abtik digital react\abtik-digital fn\tsconfig.node.json", "JSON", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 25
+"c:\abtik digital react\abtik-digital fn\vite.config.ts", "TypeScript", 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 2, 3, 18
+"Total", "-", 17, 6872, 52, 6789, 672, 124, 45, 1, 27, 32, 909, 773, 16313

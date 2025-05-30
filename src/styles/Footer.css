@@ -1,0 +1,123 @@
+/*
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  background-color: #f9f6ee;
+  padding: 2.5rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  gap: 2rem 0; 
+}
+.footer-section {
+  box-sizing: border-box;
+  flex: 1 1 50%; 
+  padding: 0 0.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@media (min-width: 640px) {
+  .footer-section {
+    flex: 1 1 33.333%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-section {
+    flex: 1 1 16.666%; 
+  }
+}
+
+.footer.animate .footer-section {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.footer.animate .footer-section:nth-child(1) { animation-delay: 0.2s; }
+.footer.animate .footer-section:nth-child(2) { animation-delay: 0.3s; }
+.footer.animate .footer-section:nth-child(3) { animation-delay: 0.4s; }
+.footer.animate .footer-section:nth-child(4) { animation-delay: 0.5s; }
+.footer.animate .footer-section:nth-child(5) { animation-delay: 0.6s; }
+.footer.animate .footer-section:nth-child(6) { animation-delay: 0.7s; }
+
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #4b5563;
+  padding-bottom: 0.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #f56015;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #f56015;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.highlight-badge {
+  margin-left: 0.5rem;
+  background-color: #f56015;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+
+.footer-link {
+  position: relative;
+}
+
+.footer-link .underline-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: #f56015; 
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
+
+.footer-link:hover .underline-fill {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+ */

@@ -1,0 +1,145 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f56015" />
+      <stop offset="100%" stop-color="#ff8c54" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <clipPath id="textClip">
+      <text x="250" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="bold">ABTIK DIGITAL</text>
+    </clipPath>
+  </defs>
+  
+  <style>
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes rotateReverse {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(0.95); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    
+    @keyframes dashAnim {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fillText {
+      from { fill-opacity: 0; }
+      to { fill-opacity: 1; }
+    }
+    
+    @keyframes particle {
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      20% { opacity: 1; transform: translateY(-5px) scale(1); }
+      80% { opacity: 1; transform: translateY(-15px) scale(0.8); }
+      100% { opacity: 0; transform: translateY(-25px) scale(0); }
+    }
+    
+    .logo-circle {
+      fill: #111;
+      stroke: url(#logoGradient);
+      stroke-width: 2;
+      animation: fadeIn 1s forwards;
+    }
+    
+    .rotating-circle {
+      stroke: #f56015;
+      stroke-width: 1;
+      fill: none;
+      transform-origin: center;
+    }
+    
+    .rotate-1 {
+      animation: rotate 20s linear infinite;
+    }
+    
+    .rotate-2 {
+      animation: rotateReverse 15s linear infinite;
+    }
+    
+    .glow-center {
+      fill: #f56015;
+      filter: url(#glow);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .logo-letters {
+      fill: white;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      animation: fadeIn 0.5s 1s forwards;
+      opacity: 0;
+    }
+    
+    .logo-text {
+      fill: url(#logoGradient);
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      stroke: url(#logoGradient);
+      stroke-width: 1;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dashAnim 3s 1.5s ease-in-out forwards, fillText 1s 3s forwards;
+      fill-opacity: 0;
+    }
+    
+    .tagline {
+      fill: #aaa;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      opacity: 0;
+      animation: fadeIn 1s 4s forwards;
+    }
+    
+    .particle {
+      fill: #f56015;
+      animation: particle 2s ease-out infinite;
+    }
+  </style>
+  
+  <!-- Background glow -->
+  <circle class="glow-center" cx="250" cy="150" r="30" opacity="0.3" />
+  
+  <!-- Rotating circles -->
+  <circle class="rotating-circle rotate-1" cx="250" cy="150" r="80" />
+  <circle class="rotating-circle rotate-2" cx="250" cy="150" r="60" />
+  
+  <!-- Particles -->
+  <g>
+    <circle class="particle" cx="240" cy="210" r="3" style="animation-delay: 0.2s" />
+    <circle class="particle" cx="260" cy="210" r="4" style="animation-delay: 0.5s" />
+    <circle class="particle" cx="250" cy="210" r="3" style="animation-delay: 0.8s" />
+    <circle class="particle" cx="230" cy="210" r="2" style="animation-delay: 1.1s" />
+    <circle class="particle" cx="270" cy="210" r="3" style="animation-delay: 1.4s" />
+  </g>
+  
+  <!-- Main logo circle -->
+  <circle class="logo-circle" cx="250" cy="150" r="50" />
+  
+  <!-- Logo letters -->
+  <text x="250" y="165" text-anchor="middle" class="logo-letters" font-size="36">AD</text>
+  
+  <!-- Company name -->
+  <text x="250" y="250" text-anchor="middle" class="logo-text" font-size="40">ABTIK DIGITAL</text>
+  
+  <!-- Tagline -->
+  <text x="250" y="280" text-anchor="middle" class="tagline">Transforming Vision Into Digital Reality</text>
+</svg>

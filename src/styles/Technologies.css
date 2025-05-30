@@ -1,0 +1,53 @@
+/* Animation for icons coming from the left */
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%) scale(0.8);
+      opacity: 0;
+    }
+    70% {
+      transform: translateX(10%) scale(1.03);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for icons coming from the right */
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%) scale(0.8);
+      opacity: 0;
+    }
+    70% {
+      transform: translateX(-10%) scale(1.03);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Add the animation classes with overflow handling */
+  .animate-slideInLeft, .animate-slideInRight {
+    will-change: transform, opacity;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother easing */
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animate-slideInLeft {
+    animation-name: slideInLeft;
+  }
+  
+  .animate-slideInRight {
+    animation-name: slideInRight;
+  }
+  
+  /* Make sure all grid container elements have overflow hidden */
+  .grid {
+    overflow: hidden;
+    position: relative;
+  }
