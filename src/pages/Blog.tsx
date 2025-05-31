@@ -151,9 +151,8 @@ const Blog = () => {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 text-sm font-semibold cursor-pointer text-white rounded-md transition-all duration-300 group hover:bg-[#f56015] ${
-                  activeFilter === filter && "bg-[#f56015]"
-                }`}
+                className={`px-4 py-2 text-sm font-semibold cursor-pointer text-white rounded-md transition-all duration-300 group hover:bg-[#f56015] ${activeFilter === filter && "bg-[#f56015]"
+                  }`}
               >
                 {filter}
               </button>
@@ -176,22 +175,27 @@ const Blog = () => {
                   aria-label={`View blog post: ${post.title}`}
                 >
                   <div
-                    className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
-                      isFlipped ? "[transform:rotateY(180deg)]" : ""
-                    } md:group-hover:[transform:rotateY(180deg)]`}
+                    className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${isFlipped ? "[transform:rotateY(180deg)]" : ""
+                      } md:group-hover:[transform:rotateY(180deg)]`}
                   >
                     {/* Front Side */}
                     <div className="absolute inset-0 rounded-lg overflow-hidden shadow-md bg-[#0F172A] [backface-visibility:hidden]">
-                      <img
-                        src={post.sections[0].imageUrl}
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute bottom-0 w-full bg-[#0F172A] bg-opacity-60 text-white text-center p-4 text-lg font-semibold">
-                        {post.title.split(" ").slice(0, 4).join(" ") +
-                          (post.title.split(" ").length > 4 ? "..." : "")}
+                      <div className="relative w-full h-full">
+                        <img
+                          src={post.sections[0].imageUrl}
+                          draggable="false"
+                          alt={post.title}
+                          className="w-full h-[calc(100%-4rem)] object-cover object-center"
+                        />
+                        <div className="absolute bottom-0 w-full h-16 bg-[#0F172A] bg-opacity-60 text-white text-center flex items-center justify-center px-2">
+                          <span className="w-full text-base font-semibold truncate">
+                            {post.title.split(" ").slice(0, 4).join(" ") +
+                              (post.title.split(" ").length > 4 ? "..." : "")}
+                          </span>
+                        </div>
                       </div>
                     </div>
+
 
                     {/* Back Side */}
                     <div className="absolute inset-0 rounded-lg bg-[#ffe8db] p-4 shadow-md [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-start justify-between">
