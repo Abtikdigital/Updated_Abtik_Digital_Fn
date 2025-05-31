@@ -148,7 +148,7 @@ const BlogData = {
         {
           heading: "Recommended Tools",
           imageUrl: SeoImage2,
-          text: "✅ Google Search Console<br>✅ Ahrefs<br>✅ Semrush<br>✅ Screaming Frog"
+          text: "✔ Google Search Console<br>✔ Ahrefs<br>✔ Semrush<br>✔ Screaming Frog"
         },
         {
           heading: "Let’s Boost Your Search Visibility",
@@ -183,37 +183,37 @@ const BlogData = {
           heading: "Top Benefits of Digital Marketing",
           imageUrl: DigitalMarketingImage1,
           lists: [
-            "✅ Maximum Visibility",
-            "✅ Lead Generation",
-            "✅ Brand Building",
-            "✅ Smart Analytics",
-            "✅ Cost Efficiency"
+            "✔ Maximum Visibility",
+            "✔ Lead Generation",
+            "✔ Brand Building",
+            "✔ Smart Analytics",
+            "✔ Cost Efficiency"
           ]
         },
         {
           heading: "Our Core Services",
           imageUrl: DigitalMarketingImage1,
           lists: [
-            "✅ Social Media Marketing — Scroll-stopping content & engagement",
-            "✅ SEO — Technical fixes to content optimization",
-            "✅ Performance Ads — Google & Meta campaigns",
-            "✅ Email & WhatsApp Marketing — Automation & retargeting",
-            "✅ Content Strategy — Funnels & copy that convert",
-            "✅ WhatsApp Banner Design — Branded message creatives",
-            "✅ LinkedIn Post Creation — Professional brand content",
-            "✅ Logo & Branding Design — Eye-catching visuals",
-            "✅ UI/UX Design — Flexible & conversion-focused layouts"
+            "✔ Social Media Marketing — Scroll-stopping content & engagement",
+            "✔ SEO — Technical fixes to content optimization",
+            "✔ Performance Ads — Google & Meta campaigns",
+            "✔ Email & WhatsApp Marketing — Automation & retargeting",
+            "✔ Content Strategy — Funnels & copy that convert",
+            "✔ WhatsApp Banner Design — Branded message creatives",
+            "✔ LinkedIn Post Creation — Professional brand content",
+            "✔ Logo & Branding Design — Eye-catching visuals",
+            "✔ UI/UX Design — Flexible & conversion-focused layouts"
           ]
         },
         {
           heading: "Top Trends for 2025",
           imageUrl: DigitalMarketingImage1,
           lists: [
-            "✅ AI-Powered Campaigns",
-            "✅ Voice & Visual Search",
-            "✅ Video-First Strategies",
-            "✅ Omnichannel Funnels",
-            "✅ Privacy-Ready Ads"
+            "✔ AI-Powered Campaigns",
+            "✔ Voice & Visual Search",
+            "✔ Video-First Strategies",
+            "✔ Omnichannel Funnels",
+            "✔ Privacy-Ready Ads"
           ]
         },
         {
