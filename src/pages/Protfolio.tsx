@@ -4,7 +4,7 @@ import IphoneImage from "../assets/IphoneImage/iPhone.png";
 
 import SlokImage from "../assets/Portfolio/1.jpg"
 import ClikcFluenceImage from "../assets/Portfolio/2.jpg"
-import ProjectOneImage from "../assets/Portfolio/projectOneImage.jpg"
+
 import NextStepImage from "../assets/Portfolio/3.jpg"
 import MetaMorphImage from "../assets/Portfolio/4.jpg"
 import WoodCompany from "../assets/Portfolio/5.jpg"
@@ -310,7 +310,7 @@ const Portfolio = () => {
                  
                   rel="noopener noreferrer"
                   className="relative w-full sm:w-[48%] md:w-[23%] h-80 group [perspective:1000px] cursor-pointer md:hover:[transform:none] animate-fade-in"
-                  onClick={(e) => handleFlip(index, e)}
+                  onClick={(e:any) => handleFlip(index, e)}
                   aria-label={`View project: ${project.title}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
