@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Mainlayout from "../layout/Mainlayout";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
-import DesignImage from "../assets/Portfolio/DesignImage.jpeg";
+
 import SlokImage from "../assets/Portfolio/1.jpg"
 import ClikcFluenceImage from "../assets/Portfolio/2.jpg"
 import ProjectOneImage from "../assets/Portfolio/projectOneImage.jpg"
