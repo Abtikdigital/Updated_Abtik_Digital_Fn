@@ -134,31 +134,7 @@ const SeoService = () => {
         </div>
 
         {/* Happy Clients */}
-        {/* <section className="bg-white text-black px-6 md:px-16 py-16">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6">
-              Clients We've Helped Grow
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-10">
-              Our SEO strategies have helped businesses rank higher, increase
-              organic traffic, and generate more leads. We’re proud to partner
-              with brands across industries to deliver real, measurable results.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              {happyClients.map((client, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-100 p-6 rounded-xl w-64 shadow-md text-left"
-                >
-                  <p className="text-gray-700 text-sm">{client.title}</p>
-                  <p className="mt-4 font-semibold text-[#f56015] text-sm">
-                    {client.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
+        
 
         {/* SEO Accelerates Growth */}
         <section className="bg-white text-black px-6 md:px-16 py-16">

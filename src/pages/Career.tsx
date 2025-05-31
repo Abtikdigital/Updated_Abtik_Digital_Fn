@@ -203,7 +203,11 @@ const Career = () => {
                 Current Job Openings
               </h3>
               <div className="flex flex-wrap justify-center gap-6">
-                {jobOpenings.map((job, index) => (
+               {/* No Post Available */}
+                <p className="text-white text-2xl md:text-4xl font-semibold text-center">
+                No Open Positions at the Moment
+                </p>
+                {/* {jobOpenings.map((job, index) => (
                   <div
                     key={job.title}
                     className="bg-white cursor-pointer border border-gray-300 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#f56015] transition-all duration-300 animate-fadeInUp w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex flex-col justify-between min-h-[16rem]"
@@ -242,7 +246,7 @@ const Career = () => {
                       Apply Now
                     </Button>
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>

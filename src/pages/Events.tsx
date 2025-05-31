@@ -50,7 +50,7 @@ const Events = () => {
 
       {/* Text Content */}
       <div className="w-full max-w-xl text-center lg:text-left">
-        <label className="text-2xl md:text-3xl font-bold  text-gray-800">Our Events</label>
+        <label className="text-4xl font-bold  text-gray-800">Our Events</label>
         <h2 className="text-2xl md:text-2xl font-semibold text-whi mt-2 text-gray-800">Building Brands & Connecting Ideas</h2>
         <h3 className="text-xl md:text-xl font-semibold mt-2 text-gray-600">Join our community events to learn, share, and grow.</h3>
       </div>

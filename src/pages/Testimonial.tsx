@@ -21,14 +21,10 @@ const testimonials = [
     role: 'Govedic.org',
     text: 'Absolutely thrilled with Govedic.org! Huge thanks to Himani, Akash, and Karan for their dedication and making the process so smooth and quick.',
   },
-  {
-    name: 'Bhagwan Bhai Patel',
-    role: 'Hari Om Kathyawadi',
-    text: 'Akash’s expertise and Riya’s excellent support made this one of the best web development experiences I’ve had. Highly recommend Abtik Services!',
-  },
+
 ];
 
-const getInitials = (name:any) => {
+const getInitials = (name: any) => {
   const parts = name.trim().split(" ");
   const first = parts[0]?.charAt(0).toUpperCase() || "";
   const last = parts[parts.length - 1]?.charAt(0).toUpperCase() || "";
@@ -50,9 +46,8 @@ const Testimonial = () => {
         {doubledTestimonials.map((t, i) => (
           <div key={i} className="testimonial-card max-w-xl">
             <div
-              className={`w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4 text-white text-xl font-bold border-2 border-orange-500 ${
-                bgColors[i % bgColors.length]
-              }`}
+              className={`w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4 text-white text-xl font-bold border-2 border-orange-500 ${bgColors[i % bgColors.length]
+                }`}
             >
               {getInitials(t.name)}
             </div>

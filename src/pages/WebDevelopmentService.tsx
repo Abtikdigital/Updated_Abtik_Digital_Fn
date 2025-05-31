@@ -63,19 +63,7 @@ const WebDesign = () => {
     },
   ];
 
-  // Array of objects for Happy Clients
-  // const clientTestimonials = [
-  //   {
-  //     quote:
-  //       "Amazing service! Our new website helped us double our online inquiries.",
-  //     client: "Tech Solutions",
-  //   },
-  //   {
-  //     quote:
-  //       "The design was exactly what we needed. Modern, clean, and professional.",
-  //     client: "Fresh Start Co.",
-  //   },
-  // ];
+ 
 
   // Array of objects for How Web Design Boosts Business
   const businessBoosts = [
@@ -265,32 +253,7 @@ const WebDesign = () => {
         </section>
 
         {/* Happy Clients Section */}
-        {/* <section className=" px-6 md:px-16 py-10 bg-white ">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6  text-black">
-              Our Happy Clients
-            </h2>
-            <p className="text-[#9f9f9f] text-lg leading-relaxed mb-8">
-              Our clients love the websites and web apps we create! From
-              startups to established brands, we help businesses stand out
-              online. Our commitment to excellence, creativity, and user-focused
-              designs lead to outstanding results.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 ">
-              {clientTestimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-100 p-6 rounded-2xl w-72 shadow-md"
-                >
-                  <p className="text-gray-700">{testimonial.quote}</p>
-                  <p className="mt-4 font-semibold text-[#f56015]">
-                    - {testimonial.client}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
+       
 
         {/* How It Boosts Business */}
         <section className="  px-6 md:px-16 py-10 bg-white">
