@@ -221,7 +221,7 @@ const HeroSection = () => {
         {/* Section One */}
         <div
           id="section-one"
-          className="min-h-screen flex flex-col md:flex-row items-center text-white px-6 py-10 md:px-16 bg-[radial-gradient(ellipse_at_top_right,_#f56015_1%,_#0F172A_40%)] z-10 relative"
+          className="md:min-h-screen flex flex-col md:flex-row items-center text-white px-6 py-10 md:px-16 bg-[radial-gradient(ellipse_at_top_right,_#f56015_1%,_#0F172A_40%)] z-10 relative"
           style={{
             background: `
               radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
@@ -379,7 +379,7 @@ const HeroSection = () => {
         {/* Section Two */}
         <div
           id="section-two"
-          className="flex justify-center items-center min-h-screen bg-[radial-gradient(ellipse_at_top_left,_#f56015_1%,_#0F172A_30%)] px-4 py-10 relative overflow-hidden"
+          className="flex justify-center items-center md:min-h-screen bg-[radial-gradient(ellipse_at_top_left,_#f56015_1%,_#0F172A_30%)] px-4 py-10 relative overflow-hidden"
           style={{
             background: `
               radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
