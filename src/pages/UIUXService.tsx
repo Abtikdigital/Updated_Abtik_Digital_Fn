@@ -151,39 +151,7 @@ const UIUXService = () => {
         </section>
 
         {/* Happy Clients Section */}
-        {/* <section className="  px-6 md:px-16 py-10 bg-white">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6">
-              Clients Who Love Our UI/UX Designs
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-8">
-              Our clients have seen impressive improvements in user engagement,
-              satisfaction, and retention due to our strategic and creative
-              UI/UX designs. We take pride in creating designs that not only
-              look beautiful but also deliver results.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 pb-2">
-              <div className="bg-gray-100 p-6 rounded-lg w-72 shadow-md">
-                <p className="text-gray-700">
-                  "Our website design increased engagement by 50%, and our users
-                  are happier than ever!"
-                </p>
-                <p className="mt-4 font-semibold text-[#f56015]">
-                  - Bloom Innovations
-                </p>
-              </div>
-              <div className="bg-gray-100 p-6 rounded-lg w-72 shadow-md">
-                <p className="text-gray-700">
-                  "The user-friendly interface boosted our customer retention
-                  rates by 40%!"
-                </p>
-                <p className="mt-4 font-semibold text-[#f56015]">
-                  - SkyTech Solutions
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
+       
 
         {/* Call To Action */}
         <section className=" bg-[#0F172A] text-white text-center px-6 md:px-16 py-10">

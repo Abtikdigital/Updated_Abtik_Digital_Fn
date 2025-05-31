@@ -193,7 +193,7 @@ const HeroSection = () => {
     setIsPlaying(true);
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
-      videoRef.current.muted = true;
+      videoRef.current.muted = false;
       videoRef.current.play();
     }
   };

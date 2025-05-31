@@ -33,7 +33,7 @@ interface PortfolioData {
 const portfolioData: PortfolioData = {
   portfolioItems: [
     {
-      title: "Project One",
+      title: "Mihrab",
       description:
         "Revamped a corporate website with responsive design, intuitive navigation, and optimized performance, boosting user engagement by 30%.",
       link: "https://projectone.com/",
@@ -48,36 +48,15 @@ const portfolioData: PortfolioData = {
       imageUrl: BlueWingsImage,
       category: "Digital Marketing",
     },
-    {
-      title: "MAGPIE SHIPPING PRIVATE LIMITED",
-      description:
-        "Refined Google Ads with precise keyword targeting and optimized landing pages, increasing leads by 40% at reduced costs.",
-      link: "#",
-      imageUrl: DesignImage,
-      category: "Digital Marketing",
-    },
-    {
-      title: "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
-      description:
-        "Built an automated email marketing funnel with personalized content, enhancing customer retention for a tech firm by 25%.",
-      link: "https://www.sloki.in/",
-      imageUrl: SlokImage,
-      category: "Digital Marketing",
-    },
-    {
-      title: "Wood County Private Limited",
-      description:
-        "Developed a visually striking Instagram and Pinterest campaign, increasing e-commerce sales by 20% for a retail brand.",
-      link: "#",
-      imageUrl: DesignImage,
-      category: "Digital Marketing",
-    },
+  
+    
+  
     {
       title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
       description:
         "Created engaging blog and video content to promote organic products, doubling organic traffic for an agro company.",
       link: "#",
-      imageUrl: DesignImage,
+      imageUrl: Patrika,
       category: "Digital Marketing",
     },
     {
@@ -88,14 +67,7 @@ const portfolioData: PortfolioData = {
       imageUrl: HariOmDigitalMarketingImage,
       category: "Digital Marketing",
     },
-    {
-      title: "Patrika",
-      description:
-        "Enhanced a restaurant’s online presence with local SEO and dynamic visuals, boosting foot traffic by 25%.",
-      link: "https://hariomkathiyawadi.com/",
-      imageUrl: Patrika,
-      category: "Digital Marketing",
-    },
+   
     {
       title: "NAVRACHANA AROGYA PRIVATE LIMITED",
       description:

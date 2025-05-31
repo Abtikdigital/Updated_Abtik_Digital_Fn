@@ -183,7 +183,7 @@ const WebDesign = () => {
                     to become customers.
                   </li>
                   <li>
-                    Good UX/UI (user experience/user interface) keeps users
+                    Good UI/UX (user interface/user experience) keeps users
                     engaged longer.
                   </li>
                   <li>
