@@ -38,25 +38,28 @@ interface PortfolioData {
 const portfolioData: PortfolioData = {
   portfolioItems: [
     {
-      title: "Mihrab Innovate Private Limited",
+      title: "Mihrab",
       description:
-        "Revamped the corporate website for Mihrab Innovate, a company specializing in 'Waste to Value' solutions, with responsive design and optimized performance, boosting user engagement by 30%.",
+        "Revamped a corporate website with responsive design, intuitive navigation, and optimized performance, boosting user engagement by 30%.",
       link: "https://projectone.com/",
       imageUrl: ProjectOneImage,
       category: "UIUX",
     },
     {
-      title: "Blue Wings Tours and Travels Pvt Ltd",
+      title: "BLUE WINGS (SHIVA TOURS & TRAVELS)",
       description:
-        "Crafted a localized SEO strategy and vibrant social media ads for Blue Wings Tours and Travels, a Udaipur-based travel agency, driving a 35% increase in tour bookings.",
+        "Crafted a localized SEO strategy and vibrant social media ads for a travel agency, driving a 35% increase in tour bookings.",
       link: "#",
       imageUrl: BlueWingsImage,
       category: "Digital Marketing",
     },
+  
+    
+  
     {
-      title: "Rajasthan Agro Organics Private Limited",
+      title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
       description:
-        "Created engaging blog and video content to promote organic products for Rajasthan Agro Organics, doubling organic traffic for the agro company.",
+        "Created engaging blog and video content to promote organic products, doubling organic traffic for an agro company.",
       link: "#",
       imageUrl: Patrika,
       category: "Digital Marketing",
@@ -64,95 +67,96 @@ const portfolioData: PortfolioData = {
     {
       title: "Hari Om Kathiyawadi",
       description:
-        "Enhanced Hari Om Kathiyawadi's online presence with local SEO and dynamic visuals, boosting foot traffic by 25%.",
+        "Enhanced a restaurant’s online presence with local SEO and dynamic visuals, boosting foot traffic by 25%.",
       link: "https://hariomkathiyawadi.com/",
       imageUrl: HariOmDigitalMarketingImage,
       category: "Digital Marketing",
     },
+   
     {
-      title: "Navrachana Arogya Private Limited",
+      title: "NAVRACHANA AROGYA PRIVATE LIMITED",
       description:
-        "Designed a multi-channel digital campaign for Navrachana Arogya, a healthcare brand, increasing patient inquiries by 30% through SEO and ads.",
+        "Designed a multi-channel digital campaign for a healthcare brand, increasing patient inquiries by 30% through SEO and ads.",
       link: "#",
       imageUrl: NavrachnaDigitalMarketing,
       category: "Digital Marketing",
     },
     {
-      title: "Sloki Software Technologies LLP",
+      title: "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
       description:
-        "Developed a real-time analytics dashboard with customizable widgets and sleek UI for Sloki Software Technologies, streamlining business decision-making.",
+        "Developed a real-time analytics dashboard with customizable widgets and sleek UI, streamlining business decision-making.",
       link: "https://www.sloki.in/",
       imageUrl: SlokImage,
       category: "UIUX",
     },
     {
-      title: "Clickfluence LLP",
+      title: "CLICKFLUENCE LLP",
       description:
-        "Redesigned an e-commerce platform with A/B-tested UX and fast checkout for Clickfluence LLP, improving conversion rates by 20%.",
+        "Redesigned an e-commerce platform with A/B-tested UX and fast checkout, improving conversion rates by 20%.",
       link: "https://clickfluence.in/",
       imageUrl: ClikcFluenceImage,
       category: "UIUX",
     },
     {
-      title: "Alankrita Enterprises",
+      title: "ALANKRITA",
       description:
-        "Built an e-commerce UI with intuitive filters and responsive design for Alankrita Enterprises, enhancing user satisfaction and sales by 15%.",
+        "Built an e-commerce UI with intuitive filters and responsive design, enhancing user satisfaction and sales by 15%.",
       link: "#",
       imageUrl: AlankritaGraphicImage,
       category: "Graphic Design",
     },
     {
-      title: "HR Advisory Solutions",
+      title: "HR",
       description:
-        "Created an accessible educational platform with interactive UI for HR Advisory Solutions, improving student engagement by 25%.",
+        "Created an accessible educational platform with interactive UI, improving student engagement by 25%.",
       link: "#",
       imageUrl: HrGraphiDesignImage,
       category: "Graphic Design",
     },
     {
-      title: "Nextstep Corporate Solutions Private Limited",
+      title: "NEXTSTEP CORPORATE SOLUTIONS PRIVATE LIMITED",
       description:
-        "Designed a professional service portal with clean UX and dynamic content for Nextstep Corporate Solutions, increasing client interactions by 15%.",
+        "Designed a professional service portal with clean UX and dynamic content, increasing client interactions by 15%.",
       link: "https://nextstepcorporate.com/",
       imageUrl: NextStepImage,
       category: "UIUX",
     },
     {
-      title: "Metamorph IT Systems Private Limited",
+      title: "METAMORPH IT SYSTEMS PRIVATE LIMITED (ADS 360)",
       description:
-        "Developed an ad management dashboard with real-time metrics and user-friendly UI for Metamorph IT Systems, optimizing campaign performance.",
+        "Developed an ad management dashboard with real-time metrics and user-friendly UI, optimizing campaign performance.",
       link: "https://www.metamorphsystems.com/",
       imageUrl: MetaMorphImage,
       category: "UIUX",
     },
     {
-      title: "Ommnetz Technologies LLP",
+      title: "OMMNETZ TECHNOLOGIES LLP",
       description:
-        "Crafted a tech service platform with clear CTAs and responsive layouts for Ommnetz Technologies, reducing user drop-off by 20%.",
+        "Crafted a tech service platform with clear CTAs and responsive layouts, reducing user drop-off by 20%.",
       link: "#",
       imageUrl: OmNetsImage,
       category: "Graphic Design",
     },
     {
-      title: "Wood County Private Limited",
+      title: "WOOD COUNTY PRIVATE LIMITED",
       description:
-        "Enhanced an e-commerce site with personalized recommendations and smooth UI for Wood County, boosting customer retention by 18%.",
+        "Enhanced an e-commerce site with personalized recommendations and smooth UI, boosting customer retention by 18%.",
       link: "https://woodcounty.in/",
       imageUrl: WoodCompany,
       category: "UIUX",
     },
     {
-      title: "Nextstep Graphic Design",
+      title: "NEXTSTEP",
       description:
-        "Designed a green tech website with eco-friendly UI and interactive features for Nextstep, promoting sustainable solutions effectively.",
+        "Designed a green tech website with eco-friendly UI and interactive features, promoting sustainable solutions effectively.",
       link: "#",
       imageUrl: NextStepGraphicDesign,
       category: "Graphic Design",
     },
     {
-      title: "Fusinevit Solution Pvt. Ltd.",
+      title: "FUSINEVIT SOLUTION PVT. LTD.",
       description:
-        "Built a SaaS platform with intuitive workflows and responsive UI for Fusinevit Solution, streamlining operations for 500+ users.",
+        "Built a SaaS platform with intuitive workflows and responsive UI, streamlining operations for 500+ users.",
       link: "https://fusinevit.com/",
       imageUrl: FusinevitImage,
       category: "UIUX",
@@ -160,45 +164,45 @@ const portfolioData: PortfolioData = {
     {
       title: "Hari Om Kathiyawadi",
       description:
-        "Revamped Hari Om Kathiyawadi's restaurant website with vibrant UI and online ordering, increasing reservations by 20%.",
+        "Revamped a restaurant website with vibrant UI and online ordering, increasing reservations by 20%.",
       link: "https://hariomkathiyawadi.com/",
       imageUrl: HariOmKathiyavadiImage,
       category: "UIUX",
     },
     {
-      title: "Mihrab Innovate Private Limited",
+      title: "MIHRAB INNOVATE PRIVATE LIMITED",
       description:
-        "Developed a scalable real-time messaging platform on AWS with secure APIs and responsive design for Mihrab Innovate, catering to 10,000+ users.",
+        "Developed a scalable real-time messaging platform on AWS with secure APIs and responsive design for 10,000+ users.",
       link: "#",
       imageUrl: MihrabImage,
       category: "Development",
     },
     {
-      title: "Rudralay.com (OPC) Private Limited",
+      title: "RUDRALAY.COM (OPC) PRIVATE LIMITED",
       description:
-        "Built a full-stack inventory management app with real-time updates and AWS deployment for Rudralay.com, improving efficiency by 30%.",
+        "Built a full-stack inventory management app with real-time updates and AWS deployment, improving efficiency by 30%.",
       link: "#",
       imageUrl: RudryaLayImage,
       category: "Development",
     },
     {
-      title: "H One Global Technology Private Limited",
+      title: "H ONE GLOBAL TECHNOLOGY PRIVATE LIMITED",
       description:
-        "Created a tech solutions website with robust backend and interactive frontend for H One Global Technology, boosting user engagement by 15%.",
+        "Created a tech solutions website with robust backend and interactive frontend, boosting user engagement by 15%.",
       link: "#",
       imageUrl: HoneImage,
       category: "Development",
     },
+   
     {
-      title: "Lifesign Infotech Pvt. Ltd.",
+      title: "LIFESIGN INFOTECH PVT. LTD.",
       description:
-        "Built a full-stack IT services platform with secure APIs and modern frontend for Lifesign Infotech, increasing conversions by 20%.",
+        "Built a full-stack IT services platform with secure APIs and modern frontend, increasing conversions by 20%.",
       link: "#",
       imageUrl: LifeSignImage,
       category: "Development",
     },
-  ]
-
+  ],
 };
 
 const Portfolio = () => {
