@@ -36,173 +36,169 @@ interface PortfolioData {
 }
 
 const portfolioData: PortfolioData = {
-  portfolioItems: [
-    {
-      title: "Mihrab",
-      description:
-        "Revamped a corporate website with responsive design, intuitive navigation, and optimized performance, boosting user engagement by 30%.",
-      link: "https://projectone.com/",
-      imageUrl: MihrabImage,
-      category: "UIUX",
-    },
-    {
-      title: "BLUE WINGS (SHIVA TOURS & TRAVELS)",
-      description:
-        "Crafted a localized SEO strategy and vibrant social media ads for a travel agency, driving a 35% increase in tour bookings.",
-      link: "#",
-      imageUrl: BlueWingsImage,
-      category: "Digital Marketing",
-    },
-  
-    
-  
-    {
-      title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
-      description:
-        "Created engaging blog and video content to promote organic products, doubling organic traffic for an agro company.",
-      link: "#",
-      imageUrl: Patrika,
-      category: "Digital Marketing",
-    },
-    {
-      title: "Hari Om Kathiyawadi",
-      description:
-        "Enhanced a restaurant’s online presence with local SEO and dynamic visuals, boosting foot traffic by 25%.",
-      link: "https://hariomkathiyawadi.com/",
-      imageUrl: HariOmDigitalMarketingImage,
-      category: "Digital Marketing",
-    },
-   
-    {
-      title: "NAVRACHANA AROGYA PRIVATE LIMITED",
-      description:
-        "Designed a multi-channel digital campaign for a healthcare brand, increasing patient inquiries by 30% through SEO and ads.",
-      link: "#",
-      imageUrl: NavrachnaDigitalMarketing,
-      category: "Digital Marketing",
-    },
-    {
-      title: "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
-      description:
-        "Developed a real-time analytics dashboard with customizable widgets and sleek UI, streamlining business decision-making.",
-      link: "https://www.sloki.in/",
-      imageUrl: SlokImage,
-      category: "UIUX",
-    },
-    {
-      title: "CLICKFLUENCE LLP",
-      description:
-        "Redesigned an e-commerce platform with A/B-tested UX and fast checkout, improving conversion rates by 20%.",
-      link: "https://clickfluence.in/",
-      imageUrl: ClikcFluenceImage,
-      category: "UIUX",
-    },
-    {
-      title: "ALANKRITA",
-      description:
-        "Built an e-commerce UI with intuitive filters and responsive design, enhancing user satisfaction and sales by 15%.",
-      link: "#",
-      imageUrl: AlankritaGraphicImage,
-      category: "Graphic Design",
-    },
-    {
-      title: "HR",
-      description:
-        "Created an accessible educational platform with interactive UI, improving student engagement by 25%.",
-      link: "#",
-      imageUrl: HrGraphiDesignImage,
-      category: "Graphic Design",
-    },
-    {
-      title: "NEXTSTEP CORPORATE SOLUTIONS PRIVATE LIMITED",
-      description:
-        "Designed a professional service portal with clean UX and dynamic content, increasing client interactions by 15%.",
-      link: "https://nextstepcorporate.com/",
-      imageUrl: NextStepImage,
-      category: "UIUX",
-    },
-    {
-      title: "METAMORPH IT SYSTEMS PRIVATE LIMITED (ADS 360)",
-      description:
-        "Developed an ad management dashboard with real-time metrics and user-friendly UI, optimizing campaign performance.",
-      link: "https://www.metamorphsystems.com/",
-      imageUrl: MetaMorphImage,
-      category: "UIUX",
-    },
-    {
-      title: "OMMNETZ TECHNOLOGIES LLP",
-      description:
-        "Crafted a tech service platform with clear CTAs and responsive layouts, reducing user drop-off by 20%.",
-      link: "#",
-      imageUrl: OmNetsImage,
-      category: "Graphic Design",
-    },
-    {
-      title: "WOOD COUNTY PRIVATE LIMITED",
-      description:
-        "Enhanced an e-commerce site with personalized recommendations and smooth UI, boosting customer retention by 18%.",
-      link: "https://woodcounty.in/",
-      imageUrl: WoodCompany,
-      category: "UIUX",
-    },
-    {
-      title: "NEXTSTEP",
-      description:
-        "Designed a green tech website with eco-friendly UI and interactive features, promoting sustainable solutions effectively.",
-      link: "#",
-      imageUrl: NextStepGraphicDesign,
-      category: "Graphic Design",
-    },
-    {
-      title: "FUSINEVIT SOLUTION PVT. LTD.",
-      description:
-        "Built a SaaS platform with intuitive workflows and responsive UI, streamlining operations for 500+ users.",
-      link: "https://fusinevit.com/",
-      imageUrl: FusinevitImage,
-      category: "UIUX",
-    },
-    {
-      title: "Hari Om Kathiyawadi",
-      description:
-        "Revamped a restaurant website with vibrant UI and online ordering, increasing reservations by 20%.",
-      link: "https://hariomkathiyawadi.com/",
-      imageUrl: HariOmKathiyavadiImage,
-      category: "UIUX",
-    },
-    {
-      title: "MIHRAB INNOVATE PRIVATE LIMITED",
-      description:
-        "Developed a scalable real-time messaging platform on AWS with secure APIs and responsive design for 10,000+ users.",
-      link: "#",
-      imageUrl: MihrabImage,
-      category: "Development",
-    },
-    {
-      title: "RUDRALAY.COM (OPC) PRIVATE LIMITED",
-      description:
-        "Built a full-stack inventory management app with real-time updates and AWS deployment, improving efficiency by 30%.",
-      link: "#",
-      imageUrl: RudryaLayImage,
-      category: "Development",
-    },
-    {
-      title: "H ONE GLOBAL TECHNOLOGY PRIVATE LIMITED",
-      description:
-        "Created a tech solutions website with robust backend and interactive frontend, boosting user engagement by 15%.",
-      link: "#",
-      imageUrl: HoneImage,
-      category: "Development",
-    },
-   
-    {
-      title: "LIFESIGN INFOTECH PVT. LTD.",
-      description:
-        "Built a full-stack IT services platform with secure APIs and modern frontend, increasing conversions by 20%.",
-      link: "#",
-      imageUrl: LifeSignImage,
-      category: "Development",
-    },
-  ],
+portfolioItems: [
+  {
+    title: "Mihrab",
+    description:
+      "We designed a modern website interface for Mihrab, focusing on a clean layout, improved accessibility, and enhanced user flow to boost engagement.",
+    link: "#",
+    imageUrl: MihrabImage,
+    category: "UIUX",
+  },
+  {
+    title: "BLUE WINGS (SHIVA TOURS & TRAVELS)",
+    description:
+      "We created and posted engaging travel content and promotional offers on social media platforms, significantly increasing tour inquiries.",
+    link: "#",
+    imageUrl: BlueWingsImage,
+    category: "Digital Marketing",
+  },
+  {
+    title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
+    description:
+      "We developed informative social media posts and blog articles to educate audiences about organic living, enhancing product visibility and reach.",
+    link: "#",
+    imageUrl: Patrika,
+    category: "Digital Marketing",
+  },
+  {
+    title: "Hari Om Kathiyawadi",
+    description:
+      "We curated appetizing food visuals and optimized local SEO content, leading to a consistent increase in dine-in and delivery sales.",
+    link: "#",
+    imageUrl: HariOmDigitalMarketingImage,
+    category: "Digital Marketing",
+  },
+  {
+    title: "NAVRACHANA AROGYA PRIVATE LIMITED",
+    description:
+      "We promoted healthcare awareness through strategic SEO content and engaging campaign creatives across social media, improving patient inquiries.",
+    link: "#",
+    imageUrl: NavrachnaDigitalMarketing,
+    category: "Digital Marketing",
+  },
+  {
+    title: "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
+    description:
+      "We designed a professional dashboard UI featuring modular layouts, theme options, and a seamless user experience across devices.",
+    link: "#",
+    imageUrl: SlokImage,
+    category: "UIUX",
+  },
+  {
+    title: "CLICKFLUENCE LLP",
+    description:
+      "We crafted a user-centric e-commerce layout with refined product navigation and a conversion-optimized checkout experience.",
+    link: "#",
+    imageUrl: ClikcFluenceImage,
+    category: "UIUX",
+  },
+  {
+    title: "ALANKRITA",
+    description:
+      "We designed elegant logos and e-commerce product creatives that reflected the brand's ethnic appeal and enhanced visual storytelling.",
+    link: "#",
+    imageUrl: AlankritaGraphicImage,
+    category: "Graphic Design",
+  },
+  {
+    title: "HR",
+    description:
+      "We created a memorable brand identity with a custom logo and educational social media graphics to boost audience engagement.",
+    link: "#",
+    imageUrl: HrGraphiDesignImage,
+    category: "Graphic Design",
+  },
+  {
+    title: "NEXTSTEP CORPORATE SOLUTIONS PRIVATE LIMITED",
+    description:
+      "We designed a clean and modern service website UI tailored for corporate users, emphasizing intuitive layout and user flow.",
+    link: "#",
+    imageUrl: NextStepImage,
+    category: "UIUX",
+  },
+  {
+    title: "METAMORPH IT SYSTEMS PRIVATE LIMITED (ADS 360)",
+    description:
+      "We created a streamlined dashboard design for ad tracking, highlighting key metrics and enhancing user navigation for better decision-making.",
+    link: "#",
+    imageUrl: MetaMorphImage,
+    category: "UIUX",
+  },
+  {
+    title: "OMMNETZ TECHNOLOGIES LLP",
+    description:
+      "We developed branding visuals and sleek logo concepts tailored for a tech-based service provider to reflect innovation and trust.",
+    link: "#",
+    imageUrl: OmNetsImage,
+    category: "Graphic Design",
+  },
+  {
+    title: "WOOD COUNTY PRIVATE LIMITED",
+    description:
+      "We designed a clean product layout and smooth navigation for a furniture brand, enhancing product discovery and customer experience.",
+    link: "#",
+    imageUrl: WoodCompany,
+    category: "UIUX",
+  },
+  {
+    title: "NEXTSTEP",
+    description:
+      "We developed a nature-themed brand identity with eco-conscious graphics and illustrations that support their green initiative.",
+    link: "#",
+    imageUrl: NextStepGraphicDesign,
+    category: "Graphic Design",
+  },
+  {
+    title: "FUSINEVIT SOLUTION PVT. LTD.",
+    description:
+      "We built a responsive SaaS platform with robust user authentication, dashboards, and API integrations for enterprise workflows.",
+    link: "#",
+    imageUrl: FusinevitImage,
+    category: "UIUX",
+  },
+  {
+    title: "Hari Om Kathiyawadi",
+    description:
+      "We developed a vibrant restaurant website featuring food galleries, an online ordering system, and mobile responsiveness.",
+    link: "#",
+    imageUrl: HariOmKathiyavadiImage,
+    category: "UIUX",
+  },
+  {
+    title: "MIHRAB INNOVATE PRIVATE LIMITED",
+    description:
+      "We engineered a secure, real-time messaging platform using AWS and scalable backend services for large-scale communication.",
+    link: "#",
+    imageUrl: MihrabImage,
+    category: "Development",
+  },
+  {
+    title: "RUDRALAY.COM (OPC) PRIVATE LIMITED",
+    description:
+      "We developed a full inventory management system with barcode scanning, real-time stock updates, and cloud deployment.",
+    link: "#",
+    imageUrl: RudryaLayImage,
+    category: "Development",
+  },
+  {
+    title: "H ONE GLOBAL TECHNOLOGY PRIVATE LIMITED",
+    description:
+      "We built a business website from the ground up with secure backend, user management, and service integrations.",
+    link: "#",
+    imageUrl: HoneImage,
+    category: "Development",
+  },
+  {
+    title: "LIFESIGN INFOTECH PVT. LTD.",
+    description:
+      "We created a full-stack IT service portal with responsive UI, secure login, and dynamic data handling to boost client engagement.",
+    link: "#",
+    imageUrl: LifeSignImage,
+    category: "Development",
+  },
+]
+
 };
 
 const Portfolio = () => {
@@ -308,10 +304,10 @@ const Portfolio = () => {
               const isFlipped = flippedIndex === index;
 
               return (
-                <a
+                <span
                   key={index}
-                  href={project.link}
-                  target="_blank"
+                
+                 
                   rel="noopener noreferrer"
                   className="relative w-full sm:w-[48%] md:w-[23%] h-80 group [perspective:1000px] cursor-pointer md:hover:[transform:none] animate-fade-in"
                   onClick={(e) => handleFlip(index, e)}
@@ -348,20 +344,10 @@ const Portfolio = () => {
                           {project.description}
                         </p>
                       </div>
-                      {project.link !== "#" && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-4 py-2 text-sm font-semibold text-white bg-[#f56015] rounded-md cursor-pointer hover:bg-[#d14e10] transition-all duration-300"
-                          onClick={(e) => e.stopPropagation()} // Prevent parent a's onClick
-                        >
-                          View More
-                        </a>
-                      )}
+                    
                     </div>
                   </div>
-                </a>
+                </span>
               );
             })}
           </div>
