@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Mainlayout from "../layout/Mainlayout";
 
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
-import WebDevelopmentThumbnail from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentThumbnail.jpg"
+
 import WebDevelopmentBlogImage1 from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentBlogImage1.jpg"
 import WebDevelopmentBlogImage2 from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentImage1.jpeg"
 
