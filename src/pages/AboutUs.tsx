@@ -77,7 +77,7 @@ const AboutUs = () => {
 
   return (
     <Mainlayout>
-      <main className="text-white  min-h-screen w-full ">
+      <main className="text-white    min-h-screen w-full bg-[#0F172A] ">
         <style>
           {`
             @keyframes fadeInUp {
@@ -97,7 +97,7 @@ const AboutUs = () => {
         {/* About Section */}
         <section
           ref={setSectionRef(0)}
-          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
+          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0 text-white opacity-0  transition-all duration-500"
           style={{
             background: `
               radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
