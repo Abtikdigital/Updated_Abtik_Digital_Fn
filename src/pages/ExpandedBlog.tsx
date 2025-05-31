@@ -31,7 +31,7 @@ const BlogData = {
       heading: "Introduction",
       sections: [
         {
-          imageUrl: WebDevelopmentThumbnail,
+          imageUrl: "",
           text: "That’s where Abtik Digital comes in — with strategies that don’t just chase trends but drive measurable business growth."
         },
         {

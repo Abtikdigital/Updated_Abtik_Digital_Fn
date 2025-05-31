@@ -42,7 +42,7 @@ const portfolioData: PortfolioData = {
       description:
         "Revamped a corporate website with responsive design, intuitive navigation, and optimized performance, boosting user engagement by 30%.",
       link: "https://projectone.com/",
-      imageUrl: ProjectOneImage,
+      imageUrl: MihrabImage,
       category: "UIUX",
     },
     {
