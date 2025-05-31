@@ -77,7 +77,7 @@ const AboutUs = () => {
 
   return (
     <Mainlayout>
-      <main className="text-white z-10 overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_#f56015_1%,__#0F172A_30%)] min-h-screen w-full bg-[#0F172A] flex flex-col items-center">
+      <main className="text-white  min-h-screen w-full ">
         <style>
           {`
             @keyframes fadeInUp {
@@ -97,7 +97,7 @@ const AboutUs = () => {
         {/* About Section */}
         <section
           ref={setSectionRef(0)}
-          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0 text-white opacity-0 translate-y-10 transition-all duration-500"
+          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
           style={{
             background: `
               radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),

@@ -44,22 +44,25 @@ const DigitalMarketing = () => {
     <Mainlayout>
       <div className="min-h-screen w-full bg-[#0F172A] text-white">
         {/* Header Section */}
-        <div
-          className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 gap-10"
+       <div
+          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
           style={{
             background: `
-              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-              #0F172A
-            `,
+          radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+          radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+          #0F172A
+        `,
           }}
         >
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          {/* Left Side - Heading */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-start items-center">
+            <h2 className="max-w-full text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left leading-tight">
               Digital Marketing
             </h2>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
+
+          {/* Right Side - Image */}
+          <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
               src={IphoneImage}
               alt="iPhone Preview"
