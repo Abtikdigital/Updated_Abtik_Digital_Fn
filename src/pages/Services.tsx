@@ -1,7 +1,7 @@
 import { useState } from "react";
-import WebDevelopmentImage from "../assets/OurServices/devlopment.jpeg";
-import DigitalMarketingImage from "../assets/OurServices/digitalMarketing.jpeg";
-import DesignImage from "../assets/OurServices/design.jpeg";
+import WebDevelopmentImage from "../assets/OurServices/WebDevelopmentService1.jpeg";
+import DigitalMarketingImage from "../assets/OurServices/DigitalMarktingService.jpeg";
+import DesignImage from "../assets/OurServices/DesignService.jpeg";
 
 const serviceDetails = [
   {
