@@ -5,14 +5,47 @@ import LogoImage2 from "../assets/Services/WebDevelopement/computer.png";
 import LogoImage3 from "../assets/Services/WebDevelopement/dynamics.png";
 import LogoImage4 from "../assets/Services/WebDevelopement/website.png";
 import { useDispatch } from "react-redux";
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FC, ReactNode } from "react";
 
-const WebDesign = () => {
-  const disp = useDispatch();
+
+// Define interfaces for service objects
+interface DesignService {
+  title: string;
+  logoImage: string;
+  description: string;
+}
+
+interface BackendService {
+  title: string;
+  description: string;
+}
+
+interface BusinessBoost {
+  title: string;
+  description: string;
+}
+
+// Animation variants for smoother fade-in effect
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] } 
+  },
+};
+
+const WebDesign: FC = () => {
+  const dispatch = useDispatch<any>();
+
   const handleOpenGetQuote = () => {
-    disp({ type: "open" });
+    dispatch({ type: "open" });
   };
+
   // Array of objects for Web Design & Development Services
-  const designServices = [
+  const designServices: DesignService[] = [
     {
       title: "Static Websites",
       logoImage: LogoImage1,
@@ -40,7 +73,7 @@ const WebDesign = () => {
   ];
 
   // Array of objects for Backend Development Services
-  const backendServices = [
+  const backendServices: BackendService[] = [
     {
       title: "Custom APIs",
       description:
@@ -63,10 +96,8 @@ const WebDesign = () => {
     },
   ];
 
- 
-
   // Array of objects for How Web Design Boosts Business
-  const businessBoosts = [
+  const businessBoosts: BusinessBoost[] = [
     {
       title: "More Leads",
       description:
@@ -86,15 +117,19 @@ const WebDesign = () => {
 
   return (
     <Mainlayout>
-      <div className="min-h-screen w-full bg-[#0F172A] ">
-        <div
+      <div className="min-h-screen w-full bg-[#0F172A]">
+        {/* Hero Section with Animation */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
           className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
           style={{
             background: `
-          radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-          radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-          #0F172A
-        `,
+              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+              #0F172A
+            `,
           }}
         >
           {/* Left Side - Heading */}
@@ -112,19 +147,19 @@ const WebDesign = () => {
               className="w-3/5 max-w-[200px] md:max-w-sm lg:max-w-md object-contain drop-shadow-lg"
             />
           </div>
-        </div>
+        </motion.div>
         <div
-          className="w-full "
+          className="w-full"
           style={{
             background: `
-                radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
-                radial-gradient(ellipse 50% 80% at bottom right, #f56015 1%, transparent 50%),
-                #0F172A
-              `,
+              radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
+              radial-gradient(ellipse 50% 80% at bottom right, #f56015 1%, transparent 50%),
+              #0F172A
+            `,
           }}
         >
           {/* Hero Section */}
-          <section className=" text-white  text-center px-6 md:px-16 py-10">
+          <SectionWithAnimation className="text-white text-center px-6 md:px-16 py-10">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
                 Professional Web Design & Development Services
@@ -134,10 +169,10 @@ const WebDesign = () => {
                 that drive business growth.
               </p>
             </div>
-          </section>
+          </SectionWithAnimation>
 
           {/* What is Web Design */}
-          <section className="  text-white px-6 md:px-16 py-10">
+          <SectionWithAnimation className="text-white px-6 md:px-16 py-10">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-bold mb-6 text-center">
                 What is Web Design?
@@ -152,36 +187,21 @@ const WebDesign = () => {
                 effectively communicates your brand message.
               </p>
             </div>
-          </section>
+          </SectionWithAnimation>
 
           {/* Why Web Design is Important */}
-          <section className="  text-white px-6 md:px-16 py-10">
+          <SectionWithAnimation className="text-white px-6 md:px-16 py-10">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-2xl md:text-4xl font-bold mb-6">
                   Why is Web Design Important?
                 </h2>
                 <ul className="list-disc list-inside text-[#9f9f9f] text-lg leading-relaxed space-y-3">
-                  <li>
-                    First impressions matter — your website is often the first
-                    interaction people have with your brand.
-                  </li>
-                  <li>
-                    A professional design builds trust and encourages visitors
-                    to become customers.
-                  </li>
-                  <li>
-                    Good UI/UX (user interface/user experience) keeps users
-                    engaged longer.
-                  </li>
-                  <li>
-                    Mobile-responsive design ensures your site looks great on
-                    all devices.
-                  </li>
-                  <li>
-                    SEO-optimized design improves your visibility on Google and
-                    drives more traffic.
-                  </li>
+                  <li>First impressions matter — your website is often the first interaction people have with your brand.</li>
+                  <li>A professional design builds trust and encourages visitors to become customers.</li>
+                  <li>Good UI/UX (user interface/user experience) keeps users engaged longer.</li>
+                  <li>Mobile-responsive design ensures your site looks great on all devices.</li>
+                  <li>SEO-optimized design improves your visibility on Google and drives more traffic.</li>
                 </ul>
               </div>
               <img
@@ -190,116 +210,157 @@ const WebDesign = () => {
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
-          </section>
+          </SectionWithAnimation>
         </div>
 
         {/* Services We Offer */}
-        <section className=" bg-[#D9D9D9] text-black px-6 md:px-16 py-10">
+        <SectionWithAnimation className="bg-[#D9D9D9] text-black px-6 md:px-16 py-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6">
-              Our Web Design & Development Services
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">Our Web Design & Development Services</h2>
+            <motion.div 
+              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: { 
+                  opacity: 1, 
+                  transition: { staggerChildren: 0.2 } 
+                }
+              }}
+              initial="hidden"
+              animate="visible"
+            >
               {designServices.map((service, index) => (
-                <>
-                  <div
-                    key={index}
-                    className="p-6 bg-gray-100 rounded-2xl shadow-md "
-                  >
-                    <div className=" flex justify-center items-center my-1">
-                      <img
-                        src={service.logoImage}
-                        className="w-10 h-10 hover:text-[#f56015] "
-                      />
-                    </div>
-                    <h3 className="font-semibold text-xl mb-4 text-[#f56015]">
-                      {service.title}
-                    </h3>
-                    <p className="text-[#9f9f9f]">{service.description}</p>
+                <motion.div
+                  key={index}
+                  className="p-6 bg-gray-100 rounded-2xl shadow-md"
+                  variants={fadeIn}
+                >
+                  <div className="flex justify-center items-center my-1">
+                    <img src={service.logoImage} className="w-10 h-10 hover:text-[#f56015]" alt={`${service.title} icon`} />
                   </div>
-                </>
+                  <h3 className="font-semibold text-xl mb-4 text-[#f56015]">{service.title}</h3>
+                  <p className="text-[#9f9f9f]">{service.description}</p>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </SectionWithAnimation>
 
         {/* Backend Development Services */}
-        <section className="  px-6 md:px-16 py-10 bg-white">
+        <SectionWithAnimation className="px-6 md:px-16 py-10 bg-white">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-black">
-              Backend Development for Web Apps
-            </h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-black">Backend Development for Web Apps</h2>
             <p className="text-[#9f9f9f] text-lg leading-relaxed mb-8">
-              We don't just create the front-end of your website or web app, we
-              also develop the backend to ensure smooth functionality, secure
-              data handling, and high performance. Our backend solutions support
-              all the dynamic features your web app needs, from databases to
-              user authentication and real-time updates.
+              We don't just create the front-end of your website or web app, we also develop the backend to ensure smooth
+              functionality, secure data handling, and high performance. Our backend solutions support all the dynamic
+              features your web app needs, from databases to user authentication and real-time updates.
             </p>
-            <div className="grid md:grid-cols-2 gap-10 ">
+            <motion.div 
+              className="grid md:grid-cols-2 gap-10"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: { 
+                  opacity: 1, 
+                  transition: { staggerChildren: 0.2 } 
+                }
+              }}
+              initial="hidden"
+              animate="visible"
+            >
               {backendServices.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="p-6 bg-white rounded-2xl shadow-md  "
+                  className="p-6 bg-white rounded-2xl shadow-md"
+                  variants={fadeIn}
                 >
-                  <h3 className="font-semibold text-xl mb-4 text-[#f56015]">
-                    {service.title}
-                  </h3>
+                  <h3 className="font-semibold text-xl mb-4 text-[#f56015]">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
-
-        {/* Happy Clients Section */}
-       
+        </SectionWithAnimation>
 
         {/* How It Boosts Business */}
-        <section className="  px-6 md:px-16 py-10 bg-white">
+        <SectionWithAnimation className="px-6 md:px-16 py-10 bg-white">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-black">
-              How Web Design Boosts Your Business
-            </h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-black">How Web Design Boosts Your Business</h2>
             <p className="text-[#9f9f9f] text-lg leading-relaxed mb-8">
-              A powerful website acts as your 24/7 salesperson, always ready to
-              showcase your products, tell your brand story, and generate leads.
-              A strategic, mobile-optimized, and SEO-friendly design maximizes
-              user engagement, increases trust, and converts visitors into loyal
-              customers — all leading to real growth and success.
+              A powerful website acts as your 24/7 salesperson, always ready to showcase your products, tell your brand
+              story, and generate leads. A strategic, mobile-optimized, and SEO-friendly design maximizes user engagement,
+              increases trust, and converts visitors into loyal customers — all leading to real growth and success.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-10 ">
+            <motion.div 
+              className="grid md:grid-cols-3 gap-8 mt-10"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: { 
+                  opacity: 1, 
+                  transition: { staggerChildren: 0.2 } 
+                }
+              }}
+              initial="hidden"
+              animate="visible"
+            >
               {businessBoosts.map((boost, index) => (
-                <div key={index} className="p-6 bg-white rounded-2xl shadow-md">
-                  <h3 className="font-semibold text-xl mb-4 text-[#f56015]">
-                    {boost.title}
-                  </h3>
+                <motion.div
+                  key={index}
+                  className="p-6 bg-white rounded-2xl shadow-md"
+                  variants={fadeIn}
+                >
+                  <h3 className="font-semibold text-xl mb-4 text-[#f56015]">{boost.title}</h3>
                   <p className="text-gray-600">{boost.description}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </SectionWithAnimation>
 
-        <section className=" px-6 md:px-16 py-10 bg-[#0F172A] text-white text-center">
+        {/* Call to Action Section */}
+        <SectionWithAnimation className="px-6 md:px-16 py-10 bg-[#0F172A] text-white text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6">
-              Ready to Elevate Your Online Presence with Expert Web Design?
-            </h2>
-            <p className="text-lg mb-8">
-              Let’s collaborate to design a stunning, user-friendly website that
-              captures your brand’s essence and drives results.
-            </p>
-            <button
-              className=" cursor-pointer  font-bold py-3 px-8 rounded-full bg-[#f56015] hover:bg-[#d14e10] text-white   transition-colors"
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">Ready to Elevate Your Online Presence with Expert Web Design?</h2>
+            <p className="text-lg mb-8">Let’s collaborate to design a stunning, user-friendly website that captures your brand’s essence and drives results.</p>
+            <motion.button
+              className="cursor-pointer font-bold py-3 px-8 rounded-full bg-[#f56015] hover:bg-[#d14e10] text-white transition-colors"
               onClick={handleOpenGetQuote}
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Schedule a Free Consultation
-            </button>
+            </motion.button>
           </div>
-        </section>
+        </SectionWithAnimation>
       </div>
     </Mainlayout>
+  );
+};
+
+// Reusable Section Component with Intersection Observer
+interface SectionWithAnimationProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const SectionWithAnimation: FC<SectionWithAnimationProps> = ({ children, className }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={className}
+    >
+      {children}
+    </motion.section>
   );
 };
 

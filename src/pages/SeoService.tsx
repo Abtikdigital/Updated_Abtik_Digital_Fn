@@ -2,13 +2,35 @@ import Mainlayout from "../layout/Mainlayout";
 import WhySeoImportantImage from "../assets/SeoService/WhySeoImportant.jpg";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import { useDispatch } from "react-redux";
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FC, ReactNode } from "react";
 
-const SeoService = () => {
-  const disp = useDispatch();
+
+// Define interfaces for data objects
+interface SeoAccelerate {
+  title: string;
+  description: string;
+}
+
+// Animation variants for smooth fade-in effect
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+  },
+};
+
+const SeoService: FC = () => {
+  const dispatch = useDispatch<any>();
+
   const handleOpenGetQuote = () => {
-    disp({ type: "open" });
+    dispatch({ type: "open" });
   };
-  const seoMatters = [
+
+  const seoMatters: string[] = [
     "Over 90% of online experiences begin with a search engine.",
     "Top-ranking websites get the majority of clicks and traffic.",
     "SEO builds trust, credibility, and brand authority over time.",
@@ -16,18 +38,7 @@ const SeoService = () => {
     "SEO brings long-term, sustainable growth to your business.",
   ];
 
-  // const happyClients = [
-  //   {
-  //     title: `"Our organic traffic grew by 300% within six months thanks to their SEO work!"`,
-  //     description: "- GreenTech Innovations",
-  //   },
-  //   {
-  //     title: `"From page 5 to page 1 on Google — incredible transformation!"`,
-  //     description: "- Urban Realty Group",
-  //   },
-  // ];
-
-  const seoAccelerates = [
+  const seoAccelerates: SeoAccelerate[] = [
     {
       title: "Higher Rankings",
       description:
@@ -49,14 +60,17 @@ const SeoService = () => {
     <Mainlayout>
       <div className="min-h-screen w-full bg-[#0F172A] text-white">
         {/* Header Section */}
-         <div
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
           className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
           style={{
             background: `
-          radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-          radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-          #0F172A
-        `,
+              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+              #0F172A
+            `,
           }}
         >
           {/* Left Side - Heading */}
@@ -74,19 +88,19 @@ const SeoService = () => {
               className="w-3/5 max-w-[200px] md:max-w-sm lg:max-w-md object-contain drop-shadow-lg"
             />
           </div>
-        </div>
+        </motion.div>
         <div
-        className="w-full"
-        style={{
-          background: `
+          className="w-full"
+          style={{
+            background: `
               radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
               radial-gradient(ellipse 50% 80% at bottom right, #f56015 1%, transparent 50%),
               #0F172A
             `,
-        }}
+          }}
         >
           {/* Hero */}
-          <section className="text-center px-6 md:px-16 py-16">
+          <SectionWithAnimation className="text-center px-6 md:px-16 py-16">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
                 SEO Services That Drive Real Results
@@ -96,10 +110,10 @@ const SeoService = () => {
                 SEO strategies.
               </p>
             </div>
-          </section>
+          </SectionWithAnimation>
 
           {/* What is SEO */}
-          <section className="text-white px-6 md:px-16 py-16">
+          <SectionWithAnimation className="text-white px-6 md:px-16 py-16">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-bold mb-6 text-center">
                 What is SEO?
@@ -112,10 +126,10 @@ const SeoService = () => {
                 paying for ads.
               </p>
             </div>
-          </section>
+          </SectionWithAnimation>
 
           {/* Why SEO is Important */}
-          <section className=" text-white px-6 md:px-16 py-16">
+          <SectionWithAnimation className="text-white px-6 md:px-16 py-16">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
               <img
                 src={WhySeoImportantImage}
@@ -133,14 +147,11 @@ const SeoService = () => {
                 </ul>
               </div>
             </div>
-          </section>
+          </SectionWithAnimation>
         </div>
 
-        {/* Happy Clients */}
-        
-
         {/* SEO Accelerates Growth */}
-        <section className="bg-white text-black px-6 md:px-16 py-16">
+        <SectionWithAnimation className="bg-white text-black px-6 md:px-16 py-16">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl md:text-4xl font-bold mb-6">
               How SEO Accelerates Business Growth
@@ -151,21 +162,36 @@ const SeoService = () => {
               high-intent traffic that converts into paying customers — building
               a strong foundation for lasting business success.
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              className="grid md:grid-cols-3 gap-8"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.2 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+            >
               {seoAccelerates.map((item, index) => (
-                <div key={index} className="p-6 rounded-xl shadow-md bg-white">
+                <motion.div
+                  key={index}
+                  className="p-6 rounded-xl shadow-md bg-white"
+                  variants={fadeIn}
+                >
                   <h3 className="font-semibold text-xl mb-3 text-[#f56015]">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </SectionWithAnimation>
 
         {/* Call to Action */}
-        <section className="bg-[#0F172A] text-white text-center px-6 md:px-16 py-16">
+        <SectionWithAnimation className="bg-[#0F172A] text-white text-center px-6 md:px-16 py-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold mb-6">
               Ready to Boost Your Search Rankings?
@@ -174,16 +200,46 @@ const SeoService = () => {
               Let’s create a powerful SEO strategy that drives more traffic and
               sales to your business.
             </p>
-            <button
-              className="bg-[#f56015] hover:bg-[#d14e10] text-white cursor-pointer  font-bold py-3 px-8 rounded-full  transition-colors"
+            <motion.button
+              className="bg-[#f56015] hover:bg-[#d14e10] text-white cursor-pointer font-bold py-3 px-8 rounded-full transition-colors"
               onClick={handleOpenGetQuote}
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Schedule a Free SEO Consultation
-            </button>
+            </motion.button>
           </div>
-        </section>
+        </SectionWithAnimation>
       </div>
     </Mainlayout>
+  );
+};
+
+// Reusable Section Component with Intersection Observer
+interface SectionWithAnimationProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const SectionWithAnimation: FC<SectionWithAnimationProps> = ({ children, className }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={className}
+    >
+      {children}
+    </motion.section>
   );
 };
 

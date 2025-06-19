@@ -8,19 +8,35 @@ import Services from "./Services";
 import Testimonial from "./Testimonial";
 import ContactUs from "../section/Contact";
 import Events from "./Events";
+import FadeInSection from "../utils/Fadein";
 
 const Home = () => {
   return (
     <Mainlayout>
+    
+
       <Hero />
+   
       {/* <Partner /> */}
-      <Services/>
-      <Events/>
-      <ClientStats/>
-      <Testimonial/>
+      <FadeInSection>
+        <Services />
+      </FadeInSection>
+      <FadeInSection>
+        <Events />
+      </FadeInSection>
+      <FadeInSection>
+        <ClientStats />
+      </FadeInSection>
+      <FadeInSection>
+        <Testimonial />
+      </FadeInSection>
       {/* <HeroSection /> */}
-      <Faq />
-      <ContactUs/>
+      <FadeInSection>
+        <Faq />
+      </FadeInSection>
+      <FadeInSection>
+        <ContactUs />
+      </FadeInSection>
     </Mainlayout>
   );
 };

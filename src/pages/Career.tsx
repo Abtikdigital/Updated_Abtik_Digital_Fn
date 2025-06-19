@@ -15,6 +15,9 @@ import { addApplication } from "../apis/careerApis";
 import Swal from "sweetalert2";
 import { X } from "lucide-react";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FC, ReactNode } from "react";
 
 // Define Job interface
 interface Job {
@@ -25,7 +28,17 @@ interface Job {
   description: string;
 }
 
-const Career = () => {
+// Animation variants for smooth fade-in effect
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+  },
+};
+
+const Career: FC = () => {
   const [open, setOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -149,15 +162,18 @@ const Career = () => {
   return (
     <>
       <Mainlayout>
-        <section className="min-h-screen w-full bg-[#0F172A] flex flex-col items-center">
-          <div
+        <SectionWithAnimation className="min-h-screen w-full bg-[#0F172A] flex flex-col items-center">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
             className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
             style={{
               background: `
-            radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-            radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-            #0F172A
-          `,
+                radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+                radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+                #0F172A
+              `,
             }}
           >
             {/* Left Side - Heading */}
@@ -175,7 +191,7 @@ const Career = () => {
                 className="w-3/5 max-w-[200px] md:max-w-sm lg:max-w-md object-contain drop-shadow-lg"
               />
             </div>
-          </div>
+          </motion.div>
           <div
             className="w-full"
             style={{
@@ -186,7 +202,7 @@ const Career = () => {
               `,
             }}
           >
-            <div className="w-full text-center px-6 md:px-16 py-10">
+            <SectionWithAnimation className="w-full text-center px-6 md:px-16 py-10">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 underline underline-offset-8 decoration-2">
                 Join Our Team
               </h2>
@@ -196,68 +212,50 @@ const Career = () => {
                 projects, grow your skills, and make a real impact. Explore our
                 open positions below and apply today!
               </p>
-            </div>
+            </SectionWithAnimation>
 
-            <div className="max-w-full mx-auto w-full px-6 md:px-16 py-10">
+            <SectionWithAnimation className="max-w-full mx-auto w-full px-6 md:px-16 py-10">
               <h3 className="text-2xl font-semibold text-white mb-8 text-center">
                 Current Job Openings
               </h3>
               <div className="flex flex-wrap justify-center gap-6">
-               {/* No Post Available */}
-                <p className="text-white text-2xl md:text-4xl font-semibold text-center">
-                No Open Positions at the Moment
-                </p>
+                {/* No Post Available */}
+                <motion.p
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeIn}
+                  className="text-white text-2xl md:text-4xl font-semibold text-center"
+                >
+                  No Open Positions at the Moment
+                </motion.p>
+                {/* Uncomment to enable job openings with fade-in animation */}
                 {/* {jobOpenings.map((job, index) => (
-                  <div
+                  <JobCard
                     key={job.title}
-                    className="bg-white cursor-pointer border border-gray-300 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#f56015] transition-all duration-300 animate-fadeInUp w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex flex-col justify-between min-h-[16rem]"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                    onClick={() => {
-                      toggleDialog(job);
-                    }}
-                  >
-                    <div>
-                      <h4 className="text-xl font-semibold text-gray-800 mb-2 min-h-[2.5rem]">
-                        {job.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm mb-4 min-h-[4rem]">
-                        {job.description}
-                      </p>
-                      <div className="flex flex-col gap-2 mb-4 w-full">
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-700 text-sm">
-                            <strong>Vacancies:</strong> {job.vacancy}
-                          </span>
-                          <span className="text-gray-700 text-sm">
-                            <strong>Location:</strong> {job.location}
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-700 text-sm">
-                            <strong>Experience:</strong> {job.experience}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <Button
-                      onClick={() => toggleDialog(job)}
-                      className="inline-block cursor-pointer bg-[#f56015] text-white font-medium px-4 py-2 rounded-full hover:bg-[#d14e10] transition-colors duration-300 self-start"
-                    >
-                      Apply Now
-                    </Button>
-                  </div>
+                    job={job}
+                    index={index}
+                    onClick={() => toggleDialog(job)}
+                  />
                 ))} */}
               </div>
-            </div>
+            </SectionWithAnimation>
           </div>
-        </section>
+        </SectionWithAnimation>
       </Mainlayout>
       {open && (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-black/50"
           style={{ zIndex: 999999999999 }}
         >
-          <div className="relative bg-white p-0 rounded-md shadow-lg transition-all mx-0 h-fit w-full md:max-w-2xl md:mx-4">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            className="relative bg-white p-0 rounded-md shadow-lg transition-all mx-0 h-fit w-full md:max-w-2xl md:mx-4"
+          >
             <div className="absolute right-2 top-7 md:top-3">
               <X
                 className="p-1 w-7 h-7 bg-white rounded-md cursor-pointer hover:outline-2 outline-white"
@@ -582,11 +580,94 @@ const Career = () => {
                 </div>
               </form>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </>
   );
 };
+
+// Reusable Section Component with Intersection Observer
+interface SectionWithAnimationProps {
+  children: ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const SectionWithAnimation: FC<SectionWithAnimationProps> = ({ children, className, style }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={className}
+      style={style}
+    >
+      {children}
+    </motion.section>
+  );
+};
+
+// Reusable Job Card Component with Intersection Observer
+// interface JobCardProps {
+//   job: Job;
+//   index: number;
+//   onClick: () => void;
+// }
+
+// const JobCard: FC<JobCardProps> = ({ job, index, onClick }) => {
+//   const { ref, inView } = useInView({
+//     triggerOnce: true,
+//     threshold: 0.3,
+//   });
+
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial="hidden"
+//       animate={inView ? "visible" : "hidden"}
+//       variants={fadeIn}
+//       className="bg-white cursor-pointer border border-gray-300 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#f56015] transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex flex-col justify-between min-h-[16rem]"
+//       style={{ animationDelay: `${index * 0.1}s` }}
+//       onClick={onClick}
+//     >
+//       <div>
+//         <h4 className="text-xl font-semibold text-gray-800 mb-2 min-h-[2.5rem]">
+//           {job.title}
+//         </h4>
+//         <p className="text-gray-600 text-sm mb-4 min-h-[4rem]">
+//           {job.description}
+//         </p>
+//         <div className="flex flex-col gap-2 mb-4 w-full">
+//           <div className="flex justify-between items-center">
+//             <span className="text-gray-700 text-sm">
+//               <strong>Vacancies:</strong> {job.vacancy}
+//             </span>
+//             <span className="text-gray-700 text-sm">
+//               <strong>Location:</strong> {job.location}
+//             </span>
+//           </div>
+//           <div className="flex justify-between items-center">
+//             <span className="text-gray-700 text-sm">
+//               <strong>Experience:</strong> {job.experience}
+//             </span>
+//           </div>
+//         </div>
+//       </div>
+//       <Button
+//         onClick={onClick}
+//         className="inline-block cursor-pointer bg-[#f56015] text-white font-medium px-4 py-2 rounded-full hover:bg-[#d14e10] transition-colors duration-300 self-start"
+//       >
+//         Apply Now
+//       </Button>
+//     </motion.div>
+//   );
+// };
 
 export default Career;

@@ -72,7 +72,7 @@ const Faq: React.FC = () => {
 
   return (
     <section
-      ref={sectionRef}
+   
       id="faq"
       className={`flex flex-col overflow-hidden md:flex-row justify-center items-center gap-12 px-6 py-10 md:px-16 mx-auto  max-w-full bg-white ${hasAnimated ? "fade-in" : ""}`}
     >
