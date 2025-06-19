@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/Footer.css";
 import Logo from "../assets/logo/AbtikDigitalwhite.png";
-import { addEmail } from "../apis/emailMarketingApis";
+// import { addEmail } from "../apis/emailMarketingApis";
 import {
   Facebook,
   Linkedin,
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -37,7 +38,7 @@ const Footer = () => {
     }
 
     try {
-      let res = await addEmail({ email });
+      let res = await axios.post("/api/emailApis",{ email });
       if (res?.status === 201) {
         Swal.fire({
           icon: "success",
