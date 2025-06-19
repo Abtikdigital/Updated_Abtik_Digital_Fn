@@ -383,6 +383,7 @@ const userMarketingTemplate = (userInfo) => {
 };
 
 const transporter = nodemailer.createTransport({
+  pool: true,
   host: SMTP_HOST_NAME,
   port: Number(SMTP_PORT),
   secure: SECURE === "true",
@@ -391,7 +392,6 @@ const transporter = nodemailer.createTransport({
     pass: SMTP_PASS,
   },
 });
-
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
