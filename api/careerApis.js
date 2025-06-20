@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 import joi from "joi";
 import fs from "fs";
-
+import formidable from "formidable";
 // ENVIORNMENT VARIABLES
 const { SMTP_HOST_NAME, SMTP_PORT, SECURE, MONGODB_URI, SMTP_MAIL, SMTP_PASS } =
   process.env;
