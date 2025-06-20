@@ -14,7 +14,7 @@ import {
   SelectGroup,
 } from "../components/ui/select";
 import { useEffect } from "react";
-import { addQuote } from "../apis/quoteApis";
+// import { addQuote } from "../apis/quoteApis";
 import Swal from "sweetalert2";
 import axios from "axios";
 
