@@ -13,7 +13,7 @@ import {
   SelectContent,
   SelectGroup,
 } from "../components/ui/select";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import { addQuote } from "../apis/quoteApis";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -31,7 +31,7 @@ const Mainlayout = (props: any) => {
   ];
   const disp = useDispatch();
   const isGetAQuoteOpen = useSelector((state: any) => state.isGetQuoteOpen);
-
+const [isDisabled,setIsDisabled]=useState(false)
   const {
     register,
     clearErrors,
@@ -47,6 +47,7 @@ const Mainlayout = (props: any) => {
   };
   const onSubmit = async (formData: any) => {
     try {
+      setIsDisabled(true)
       let res = await axios.post("/api/quoteApis",formData);
       if (res.status == 201) {
         Swal.fire({
@@ -74,6 +75,7 @@ const Mainlayout = (props: any) => {
 
     } finally {
       handleCloseGetQuote();
+      setIsDisabled(false)
     }
   };
 
@@ -339,7 +341,7 @@ const Mainlayout = (props: any) => {
                     type="submit"
                     className="w-full md:w-1/2 h-12 md:h-9 bg-[#f56015] text-white font-semibold rounded-full cursor-pointer hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent transition-colors duration-300"
                   >
-                    Get a Quote
+                { !isDisabled?  "Get a Quote":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                   </button>
                 </div>
               </form>

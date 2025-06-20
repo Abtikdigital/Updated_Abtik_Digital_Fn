@@ -19,6 +19,7 @@ import axios from "axios";
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const [email, setEmail] = useState("");
+  const [isDisabled, setDisabled] = useState(false);
 
   const handleChange = (event: any) => {
     setEmail(event.target.value);
@@ -33,12 +34,13 @@ const Footer = () => {
         text: "Please enter a valid email address.",
         confirmButtonColor: "#f56015",
       });
-      setEmail("")
+      setEmail("");
       return;
     }
 
     try {
-      let res = await axios.post("/api/emailApis",{ email });
+      setDisabled(true);
+      let res = await axios.post("/api/emailApis", { email });
       if (res?.status === 201) {
         Swal.fire({
           icon: "success",
@@ -48,14 +50,18 @@ const Footer = () => {
         });
         setEmail("");
       }
-    } catch (error:any) {
+    } catch (error: any) {
       console.error(error);
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text:error?.response?.data?.message|| "Something went wrong. Please try again later.",
+        text:
+          error?.response?.data?.message ||
+          "Something went wrong. Please try again later.",
         confirmButtonColor: "#f56015",
       });
+    } finally {
+      setDisabled(false);
     }
   };
 
@@ -88,9 +94,21 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: <Facebook className="w-5 h-5" />,path:"https://www.facebook.com/people/Abtik-Digital/61557004832458/#" },
-    { name: "LinkedIn", icon: <Linkedin className="w-5 h-5" />,path:"https://www.linkedin.com/company/abtik-digitals/" },
-    { name: "Instagram", icon: <Instagram className="w-5 h-5" />,path:"https://www.instagram.com/abtik_digital/?igsh=MWh5NHZqamxodmZiNg%3D%3D#" },
+    {
+      name: "Facebook",
+      icon: <Facebook className="w-5 h-5" />,
+      path: "https://www.facebook.com/people/Abtik-Digital/61557004832458/#",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin className="w-5 h-5" />,
+      path: "https://www.linkedin.com/company/abtik-digitals/",
+    },
+    {
+      name: "Instagram",
+      icon: <Instagram className="w-5 h-5" />,
+      path: "https://www.instagram.com/abtik_digital/?igsh=MWh5NHZqamxodmZiNg%3D%3D#",
+    },
   ];
 
   useEffect(() => {
@@ -198,9 +216,14 @@ const Footer = () => {
             />
             <button
               onClick={handleSubmit}
+              disabled={isDisabled}
               className="absolute right-1.5 p-2 cursor-pointer flex justify-center items-center bg-[#f56015] text-white rounded-full hover:bg-[#d14e10] transition"
             >
-              <SendHorizonal className="w-5 h-5" />
+              {!isDisabled ? (
+                <SendHorizonal className="w-5 h-5" />
+              ) : (
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              )}
             </button>
           </div>
 
