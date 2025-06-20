@@ -13,8 +13,8 @@ const dbConnect = async () => {
   if (cached) return cached;
   cached = await mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+     useUnifiedTopology: true,
+  })
   return cached;
 };
 

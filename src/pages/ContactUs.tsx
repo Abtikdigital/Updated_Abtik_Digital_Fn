@@ -7,6 +7,7 @@ import "../styles/Contact.css";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import axios from "axios";
 
 // Define form data interface
 interface ContactFormData {
@@ -55,15 +56,26 @@ const ContactUs = () => {
   };
 
   // Intersection Observer hooks for sections
-  const [headerLeftRef, headerLeftInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [headerRightRef, headerRightInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [formRef, formInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [headerLeftRef, headerLeftInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [headerRightRef, headerRightInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [formRef, formInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   const [mapRef, mapInView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  const handleContactSubmit: SubmitHandler<ContactFormData> = async (formData) => {
+  const handleContactSubmit: SubmitHandler<ContactFormData> = async (
+    formData
+  ) => {
     try {
       setIsLoading(true);
-      const res = await handleAddContact(formData);
+      const res = await axios.post("/api/contactApis", formData);
       if (res?.status === 201) {
         Swal.fire({
           title: "Thank You for Contacting",

@@ -16,6 +16,7 @@ import {
 import { useEffect } from "react";
 import { addQuote } from "../apis/quoteApis";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Mainlayout = (props: any) => {
   // List of service options
@@ -46,7 +47,7 @@ const Mainlayout = (props: any) => {
   };
   const onSubmit = async (formData: any) => {
     try {
-      let res = await addQuote(formData);
+      let res = await axios.post("/api/quoteApis",formData);
       if (res.status == 201) {
         Swal.fire({
           icon: "success",

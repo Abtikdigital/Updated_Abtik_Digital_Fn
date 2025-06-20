@@ -5,6 +5,7 @@ import { handleAddContact } from "../apis/apis";
 import Swal from "sweetalert2";
 import gsap from "gsap";
 import { MapPin, Phone, Clock } from "lucide-react";
+import axios from "axios";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ const ContactUs = () => {
     if (!validate()) return;
 
     try {
-      let res = await handleAddContact(formData);
+      let res = await axios.post("/api/contactApis",formData);
       if (res?.status === 201) {
         Swal.fire({
           icon: "success",
