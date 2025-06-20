@@ -11,13 +11,14 @@ import { useForm } from "react-hook-form";
 import { Button } from "../components/ui/button";
 import { Label } from "../components/ui/label";
 import { useState, useRef } from "react";
-import { addApplication } from "../apis/careerApis";
+// import { addApplication } from "../apis/careerApis";
 import Swal from "sweetalert2";
 import { X } from "lucide-react";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FC, ReactNode } from "react";
+import axios from "axios";
 
 // Define Job interface
 interface Job {
@@ -40,6 +41,7 @@ const fadeIn: Variants = {
 
 const Career: FC = () => {
   const [open, setOpen] = useState(false);
+  const [isDisabled,setIsDisabled]=useState(false)
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [fileName, setFileName] = useState("");
@@ -127,8 +129,9 @@ const Career: FC = () => {
       if (fileInputRef.current?.files?.[0]) {
         formData.append("resume", fileInputRef.current.files[0]);
       }
+      setIsDisabled(true)
 
-      let res = await addApplication(formData);
+      let res = await axios.post("/api/careerApis.js",formData);
 
       if (res?.status === 200) {
         Swal.fire({
@@ -156,6 +159,7 @@ const Career: FC = () => {
       console.error(error);
     } finally {
       toggleDialog(); // Close the form regardless of success or failure
+      setIsDisabled(false)
     }
   };
 
@@ -573,9 +577,9 @@ const Career: FC = () => {
                         });
                       }
                     }}
-                    className="w-full md:w-1/2 h-12 md:h-9 bg-[#f56015] text-white font-semibold rounded-full cursor-pointer hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent transition-colors duration-300"
+                    className="w-full md:w-1/2 h-12 md:h-9 flex justify-center items-center bg-[#f56015] text-white font-semibold rounded-full cursor-pointer hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent transition-colors duration-300"
                   >
-                    Submit Application
+                  {!isDisabled?"Submit Application":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                   </Button>
                 </div>
               </form>
