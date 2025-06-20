@@ -73,7 +73,7 @@ const [isDisabled,setIsDisabled]=useState(false)
     if (!validate()) return;
 
     try {
-      
+      setIsDisabled(true)
       let res = await axios.post("/api/contactApis", formData);
       if (res?.status === 201) {
         Swal.fire({
@@ -101,7 +101,7 @@ const [isDisabled,setIsDisabled]=useState(false)
       }
       console.error(error);
     }finally{
-
+setIsDisabled(false)
     }
   };
 
