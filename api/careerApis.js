@@ -624,46 +624,49 @@ const handler = async (req, res) => {
         res
           .status(201)
           .json({ isSuccess: true, message: "Application Added Successfully" });
-        await Promise.all([
-          await sendMail(
-            SMTP_MAIL,
-            SMTP_MAIL,
-            "New Application Receieved",
-            firmTemplate({
-              name,
-              position,
-              email,
-              contact_number,
-              experience,
-              expectedCtc,
-              currentCtc,
-              message,
-              joiningPeriod,
-            }),
-            [
-              {
-                filename: files.resume.originalFilename,
-                content: buffer,
-              },
-            ]
-          ),
-          await sendMail(
-            SMTP_MAIL,
-            email,
-            "Thank You for Applying to Abtik-Digital",
-            userTemplate({
-              name,
-              position,
-              email,
-              contact_number,
-              experience,
-              expectedCtc,
-              currentCtc,
-              message,
-              joiningPeriod,
-            })
-          ),
-        ]);
+       setTimeout(async()=>{
+
+           await Promise.all([
+           await sendMail(
+             SMTP_MAIL,
+             SMTP_MAIL,
+             "New Application Receieved",
+             firmTemplate({
+               name,
+               position,
+               email,
+               contact_number,
+               experience,
+               expectedCtc,
+               currentCtc,
+               message,
+               joiningPeriod,
+             }),
+             [
+               {
+                 filename: files.resume.originalFilename,
+                 content: buffer,
+               },
+             ]
+           ),
+           await sendMail(
+             SMTP_MAIL,
+             email,
+             "Thank You for Applying to Abtik-Digital",
+             userTemplate({
+               name,
+               position,
+               email,
+               contact_number,
+               experience,
+               expectedCtc,
+               currentCtc,
+               message,
+               joiningPeriod,
+             })
+           ),
+         ]);
+       },100)
       } else {
         return res.status(400).json({
           isSuccess: false,
