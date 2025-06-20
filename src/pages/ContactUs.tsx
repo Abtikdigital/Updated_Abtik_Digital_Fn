@@ -84,11 +84,11 @@ const ContactUs = () => {
         });
       }
     } catch (error: any) {
-      if (error?.status === 403 || error?.status === 409) {
+      if (error?.status === 403 || error?.status === 409||error?.status==400) {
         Swal.fire({
           title: "Oops...",
           icon: "error",
-          text: error?.response?.data?.message,
+          text: error?.response?.data?.message||"Error While Inserting Data",
           confirmButtonColor: "#f56015",
         });
       }

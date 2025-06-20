@@ -505,30 +505,24 @@ const handler = async (req, res) => {
     let newContact = new ContactModel(req.body);
     let isSaved = await newContact.save();
     if (isSaved) {
+      await Promise.all([
+        await sendMail(
+          SMTP_MAIL,
+          email,
+          "Thanks for Contacting Abtik-Digital",
+          userTemplate(req.body)
+        ),
+        await sendMail(
+          SMTP_MAIL,
+          SMTP_MAIL,
+          `New Contact Request from ${name}`,
+          firmTemplate(req.body)
+        ),
+      ]);
       res.status(201).json({
         isSuccess: true,
         message: "New Contact Details Added Succesfully",
       });
-      setTimeout(async () => {
-        try {
-          await Promise.all([
-            await sendMail(
-              SMTP_MAIL,
-              email,
-              "Thanks for Contacting Abtik-Digital",
-              userTemplate(req.body)
-            ),
-            await sendMail(
-              SMTP_MAIL,
-              SMTP_MAIL,
-              `New Contact Request from ${name}`,
-              firmTemplate(req.body)
-            ),
-          ]);
-        } catch (error) {
-          console.log("Error While Sending Mail", error);
-        }
-      }, 100);
     } else {
       return res.status(400).json({
         isSuccess: false,

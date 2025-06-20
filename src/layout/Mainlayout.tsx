@@ -57,7 +57,7 @@ const Mainlayout = (props: any) => {
       }
     } catch (error: any) {
 
-      if (error?.response?.status === 400) {
+      if (error?.response?.status === 400||error?.response?.status === 409) {
         Swal.fire({
           icon: "error",
           confirmButtonColor: "#f56015",

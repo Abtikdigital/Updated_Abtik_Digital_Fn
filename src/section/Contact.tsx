@@ -72,7 +72,7 @@ const ContactUs = () => {
     if (!validate()) return;
 
     try {
-      let res = await axios.post("/api/contactApis",formData);
+      let res = await axios.post("/api/contactApis", formData);
       if (res?.status === 201) {
         Swal.fire({
           icon: "success",
@@ -93,7 +93,7 @@ const ContactUs = () => {
       } else {
         Swal.fire({
           icon: "error",
-          text: "An error occurred while submitting your application",
+          text: error?.response?.data?.message || "An error occurred while submitting your application",
           draggable: true,
         });
       }

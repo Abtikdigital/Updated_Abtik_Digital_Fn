@@ -48,12 +48,12 @@ const Footer = () => {
         });
         setEmail("");
       }
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text: "Something went wrong. Please try again later.",
+        text:error?.response?.data?.message|| "Something went wrong. Please try again later.",
         confirmButtonColor: "#f56015",
       });
     }

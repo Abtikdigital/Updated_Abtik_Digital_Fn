@@ -417,18 +417,14 @@ export default async function handler(req, res) {
 
     const saved = await EmailModel.create({ email });
 
-    // Send response EARLY (non-blocking)
-    res.status(201).json({
-      message: "Subscription successful. Emails will be sent.",
-      data: saved,
-    });
+ 
 
     // Fire-and-forget background email sending
     const [userHtml, adminHtml] = [
       userMarketingTemplate({ email }),
       firmMarketingTemplate({ email }),
     ];
-    setTimeout(async () => {
+   
       await Promise.all([
         transporter.sendMail({
           from: SMTP_MAIL,
@@ -443,7 +439,11 @@ export default async function handler(req, res) {
           html: adminHtml,
         }),
       ]);
-    }, 100);
+     // Send response EARLY (non-blocking)
+    res.status(201).json({
+      message: "Subscription successful. Emails will be sent.",
+      data: saved,
+    });
 
     // Optional: You could log or write a success status to a DB/log here
   } catch (err) {
