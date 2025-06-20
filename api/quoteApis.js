@@ -551,23 +551,25 @@ const handler = async (req, res) => {
     let newQuote = new QuoteModel(req.body);
     let isSaved = await newQuote.save();
     if (isSaved) {
-       res
+      res
         .status(201)
         .json({ isSuccess: true, message: "New Quote Added Succesfully" });
-      await Promise.all([
-        await sendMail(
-          SMTP_MAIL,
-          email,
-          "Thank You for Requesting a Quote from Abtik-Digital",
-          userTemplate(req.body)
-        ),
-        await sendMail(
-          SMTP_MAIL,
-          SMTP_MAIL,
-          "New Quote Request Received",
-          firmTemplate(req.body)
-        ),
-      ]);
+      setTimeout(async () => {
+        await Promise.all([
+          await sendMail(
+            SMTP_MAIL,
+            email,
+            "Thank You for Requesting a Quote from Abtik-Digital",
+            userTemplate(req.body)
+          ),
+          await sendMail(
+            SMTP_MAIL,
+            SMTP_MAIL,
+            "New Quote Request Received",
+            firmTemplate(req.body)
+          ),
+        ]);
+      }, 100);
     } else {
       return res
         .status(400)

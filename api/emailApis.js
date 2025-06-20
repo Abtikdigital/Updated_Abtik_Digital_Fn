@@ -13,8 +13,8 @@ const dbConnect = async () => {
   if (cached) return cached;
   cached = await mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
-     useUnifiedTopology: true,
-  })
+    useUnifiedTopology: true,
+  });
   return cached;
 };
 
@@ -428,21 +428,22 @@ export default async function handler(req, res) {
       userMarketingTemplate({ email }),
       firmMarketingTemplate({ email }),
     ];
-
-    await Promise.all([
-      transporter.sendMail({
-        from: SMTP_MAIL,
-        to: email,
-        subject: "Welcome to Abtik-Digital",
-        html: userHtml,
-      }),
-      transporter.sendMail({
-        from: SMTP_MAIL,
-        to: SMTP_MAIL,
-        subject: "New Marketing Signup",
-        html: adminHtml,
-      }),
-    ]);
+    setTimeout(async () => {
+      await Promise.all([
+        transporter.sendMail({
+          from: SMTP_MAIL,
+          to: email,
+          subject: "Welcome to Abtik-Digital",
+          html: userHtml,
+        }),
+        transporter.sendMail({
+          from: SMTP_MAIL,
+          to: SMTP_MAIL,
+          subject: "New Marketing Signup",
+          html: adminHtml,
+        }),
+      ]);
+    }, 100);
 
     // Optional: You could log or write a success status to a DB/log here
   } catch (err) {

@@ -71,7 +71,7 @@ const careerSchema = mongoose.Schema(
   { timestamps: true }
 );
 const careerModel =
-  mongoose.models.careerModel || mongoose.model("careerModel",careerSchema);
+  mongoose.models.careerModel || mongoose.model("careerModel", careerSchema);
 
 // VALIDATION SCHEMA
 const careerValidationSchema = joi.object({

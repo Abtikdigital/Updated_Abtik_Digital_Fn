@@ -51,7 +51,7 @@ const contactSchema = mongoose.Schema(
 
 // MOGODB MODELS
 const ContactModel =
-  mongoose.models.contactModel || mongoose.model("contactModel",contactSchema);
+  mongoose.models.contactModel || mongoose.model("contactModel", contactSchema);
 
 // VALIDATION SCHEMA
 const contactValidationSchema = joi.object({
@@ -509,20 +509,26 @@ const handler = async (req, res) => {
         isSuccess: true,
         message: "New Contact Details Added Succesfully",
       });
-      await Promise.all([
-        await sendMail(
-          SMTP_MAIL,
-          email,
-          "Thanks for Contacting Abtik-Digital",
-          userTemplate(req.body)
-        ),
-        await sendMail(
-          SMTP_MAIL,
-          SMTP_MAIL,
-          `New Contact Request from ${name}`,
-          firmTemplate(req.body)
-        ),
-      ]);
+      setTimeout(async () => {
+        try {
+          await Promise.all([
+            await sendMail(
+              SMTP_MAIL,
+              email,
+              "Thanks for Contacting Abtik-Digital",
+              userTemplate(req.body)
+            ),
+            await sendMail(
+              SMTP_MAIL,
+              SMTP_MAIL,
+              `New Contact Request from ${name}`,
+              firmTemplate(req.body)
+            ),
+          ]);
+        } catch (error) {
+          console.log("Error While Sending Mail", error);
+        }
+      }, 100);
     } else {
       return res.status(400).json({
         isSuccess: false,
@@ -536,4 +542,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default handler
+export default handler;
