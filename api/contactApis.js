@@ -51,7 +51,7 @@ const contactSchema = mongoose.Schema(
 
 // MOGODB MODELS
 const ContactModel =
-  mongoose.models.contactModel || mongoose.model("contactModel");
+  mongoose.models.contactModel || mongoose.model("contactModel",contactSchema);
 
 // VALIDATION SCHEMA
 const contactValidationSchema = joi.object({
