@@ -3,7 +3,8 @@ import nodemailer from "nodemailer";
 import joi from "joi";
 import fs from "fs";
 import formidable from "formidable";
-// ENVIORNMENT VARIABLES
+
+// ENVIRONMENT VARIABLES
 const { SMTP_HOST_NAME, SMTP_PORT, SECURE, MONGODB_URI, SMTP_MAIL, SMTP_PASS } =
   process.env;
 
@@ -21,6 +22,7 @@ const dbConnection = async () => {
     return cached;
   } catch (error) {
     console.log("Error While Connecting Error", error);
+    throw error; // Re-throw to handle in main function
   }
 };
 
@@ -42,15 +44,15 @@ const careerSchema = mongoose.Schema(
       lowercase: true,
       trim: true,
       unique: true,
-      index: true, // Explicitly create an index
+      index: true,
     },
     contact_number: {
-      type: Number,
+      type: String, // Changed from Number to String to handle validation properly
       required: [true, "* Contact Number Is Required"],
     },
     experience: {
-      type: String,
-      required: [true, "* Experiance Is Required"],
+      type: String, // Changed from String to match validation
+      required: [true, "* Experience Is Required"],
     },
     expectedCtc: {
       type: String,
@@ -70,10 +72,11 @@ const careerSchema = mongoose.Schema(
   },
   { timestamps: true }
 );
+
 const careerModel =
   mongoose.models.careerModel || mongoose.model("careerModel", careerSchema);
 
-// VALIDATION SCHEMA
+// VALIDATION SCHEMA - Fixed to match frontend data types
 const careerValidationSchema = joi.object({
   name: joi.string().required().messages({
     "string.base": "* Name must be a string",
@@ -97,29 +100,26 @@ const careerValidationSchema = joi.object({
 
   contact_number: joi
     .string()
-    .pattern(/^[0-9]{10}$/)
+    .pattern(/^[0-9]{10,15}$/) // Allow 10-15 digits to match frontend validation
     .required()
     .messages({
       "string.base": "* Contact Number must be a string of digits",
-      "string.pattern.base": "* Contact Number must be exactly 10 digits",
+      "string.pattern.base": "* Contact Number must be 10-15 digits",
       "any.required": "* Contact Number is required",
     }),
 
-  experience: joi.number().positive().required().messages({
-    "number.base": "* Experience must be a number",
-    "number.positive": "* Experience must be a positive number",
+  experience: joi.string().required().messages({ // Changed to string to match frontend
+    "string.base": "* Experience must be a string",
     "any.required": "* Experience is required",
   }),
 
-  expectedCtc: joi.number().positive().required().messages({
-    "number.base": "* Expected CTC must be a number",
-    "number.positive": "* Expected CTC must be a positive number",
+  expectedCtc: joi.string().required().messages({ // Changed to string to match frontend
+    "string.base": "* Expected CTC must be a string",
     "any.required": "* Expected CTC is required",
   }),
 
-  currentCtc: joi.number().positive().required().messages({
-    "number.base": "* Current CTC must be a number",
-    "number.positive": "* Current CTC must be a positive number",
+  currentCtc: joi.string().required().messages({ // Changed to string to match frontend
+    "string.base": "* Current CTC must be a string", 
     "any.required": "* Current CTC is required",
   }),
 
@@ -127,16 +127,19 @@ const careerValidationSchema = joi.object({
     "string.base": "* Joining Period must be a string",
     "any.required": "* Joining Period is required",
   }),
+
+  message: joi.string().allow('', null).optional(), // Allow empty message
 });
-// Trasporter Cretaed
-const transporter = nodemailer.createTransport({
+
+// Transporter Created
+const transporter = nodemailer.createTransporter({
   host: SMTP_HOST_NAME,
   auth: {
     user: SMTP_MAIL,
     pass: SMTP_PASS,
   },
   port: SMTP_PORT,
-  secure: SECURE,
+  secure: SECURE === 'true', // Convert string to boolean
 });
 
 // SEND MAIL
@@ -150,16 +153,17 @@ const sendMail = async (from, to, subject, template, attachments = []) => {
       attachments,
     });
     if (info) {
-      console.log("Mail Sended Successfully");
+      console.log("Mail Sent Successfully");
     } else {
       console.log("Error While Sending Mail");
     }
   } catch (error) {
     console.log("Error While Sending Mail", error);
+    throw error; // Re-throw to handle in main function
   }
 };
 
-// firm Temaplte
+// Firm Template
 const firmTemplate = (userInfo) => {
   try {
     let {
@@ -343,7 +347,7 @@ const firmTemplate = (userInfo) => {
               </tr>
               <tr>
                 <th>Experience</th>
-                <td>${experience} years</td>
+                <td>${experience}</td>
               </tr>
               <tr>
                 <th>Expected CTC</th>
@@ -380,14 +384,16 @@ const firmTemplate = (userInfo) => {
       </body>
     </html>`;
   } catch (error) {
-    console.error(error);
+    console.error("Error in firmTemplate:", error);
+    throw error;
   }
 };
 
-// user Template
+// User Template
 const userTemplate = (userInfo) => {
   try {
-    let { name, subject } = userInfo;
+    let { name } = userInfo;
+    const subject = "Thank You for Applying to Abtik-Digital";
     return `
     <!DOCTYPE html>
     <html>
@@ -545,7 +551,6 @@ const userTemplate = (userInfo) => {
           <div class="footer">
             <div class="social-links">
               <a href="https://www.facebook.com/people/Abtik-Digital/61557004832458/#">Facebook</a> • 
-      
               <a href="https://www.instagram.com/abtik_digital/?igsh=MWh5NHZqamxodmZiNg%3D%3D#">Instagram</a> • 
               <a href="https://www.linkedin.com/company/abtik-digitals/">LinkedIn</a>
             </div>
@@ -556,9 +561,11 @@ const userTemplate = (userInfo) => {
       </body>
     </html>`;
   } catch (error) {
-    console.error(error);
+    console.error("Error in userTemplate:", error);
+    throw error;
   }
 };
+
 export const config = {
   api: {
     bodyParser: false, // IMPORTANT for formidable
@@ -567,114 +574,145 @@ export const config = {
 
 const handler = async (req, res) => {
   if (req.method !== "POST") {
-    return res.status(405).json({ isSuccess: "Only Post Method Is Allowed" });
+    return res.status(405).json({ isSuccess: false, message: "Only POST method is allowed" });
   }
-  try {
-    await dbConnection();
-    const form = new formidable.IncomingForm({ keepExtensions: true });
-    form.parse(req, async (error, fields, files) => {
-      let {
-        name,
-        position,
-        email,
-        contact_number,
-        experience,
-        expectedCtc,
-        currentCtc,
-        message,
-        joiningPeriod,
-      } = fields;
-      const buffer = fs.readFileSync(files.resume.filepath);
-      let { error } = careerValidationSchema.validate({
-        name,
-        position,
-        email,
-        contact_number,
-        experience,
-        expectedCtc,
-        currentCtc,
-        message,
-        joiningPeriod,
-      });
 
-      if (error) {
-        return res
-          .status(400)
-          .json({ isSuccess: false, message: "Validation Error", error });
+  try {
+    // Connect to database
+    await dbConnection();
+    
+    const form = new formidable.IncomingForm({ 
+      keepExtensions: true,
+      maxFileSize: 3 * 1024 * 1024, // 3MB limit
+    });
+
+    form.parse(req, async (parseError, fields, files) => {
+      if (parseError) {
+        console.error("Form parse error:", parseError);
+        return res.status(400).json({ 
+          isSuccess: false, 
+          message: "Error parsing form data",
+          error: parseError.message 
+        });
       }
-      let isDataExist = await careerModel.findOne({ email });
-      if (isDataExist) {
-        return res
-          .status(409)
-          .json({ isSuccess: false, message: "Email Is Already Exist" });
-      }
-      let newApplication = new careerModel({
-        name,
-        position,
-        email,
-        contact_number,
-        experience,
-        expectedCtc,
-        currentCtc,
-        message,
-        joiningPeriod,
-      });
-      let isSaved = await newApplication.save();
-      if (isSaved) {
-        await Promise.all([
-          await sendMail(
-            SMTP_MAIL,
-            SMTP_MAIL,
-            "New Application Receieved",
-            firmTemplate({
-              name,
-              position,
-              email,
-              contact_number,
-              experience,
-              expectedCtc,
-              currentCtc,
-              message,
-              joiningPeriod,
-            }),
-            [
-              {
-                filename: files.resume.originalFilename,
-                content: buffer,
-              },
-            ]
-          ),
-          await sendMail(
-            SMTP_MAIL,
-            email,
-            "Thank You for Applying to Abtik-Digital",
-            userTemplate({
-              name,
-              position,
-              email,
-              contact_number,
-              experience,
-              expectedCtc,
-              currentCtc,
-              message,
-              joiningPeriod,
-            })
-          ),
-        ]);
-        res
-          .status(201)
-          .json({ isSuccess: true, message: "Application Added Successfully" });
-      } else {
-        return res.status(400).json({
+
+      try {
+        // Extract fields (formidable returns arrays, so get first element)
+        const formData = {
+          name: Array.isArray(fields.name) ? fields.name[0] : fields.name,
+          position: Array.isArray(fields.position) ? fields.position[0] : fields.position,
+          email: Array.isArray(fields.email) ? fields.email[0] : fields.email,
+          contact_number: Array.isArray(fields.contact_number) ? fields.contact_number[0] : fields.contact_number,
+          experience: Array.isArray(fields.experience) ? fields.experience[0] : fields.experience,
+          expectedCtc: Array.isArray(fields.expectedCtc) ? fields.expectedCtc[0] : fields.expectedCtc,
+          currentCtc: Array.isArray(fields.currentCtc) ? fields.currentCtc[0] : fields.currentCtc,
+          joiningPeriod: Array.isArray(fields.joiningPeriod) ? fields.joiningPeriod[0] : fields.joiningPeriod,
+          message: Array.isArray(fields.message) ? fields.message[0] : fields.message || '',
+        };
+
+        console.log("Parsed form data:", formData);
+
+        // Validate required fields
+        const { error: validationError } = careerValidationSchema.validate(formData);
+        if (validationError) {
+          console.error("Validation error:", validationError);
+          return res.status(400).json({ 
+            isSuccess: false, 
+            message: "Validation Error", 
+            error: validationError.details[0].message 
+          });
+        }
+
+        // Check if email already exists
+        const isDataExist = await careerModel.findOne({ email: formData.email });
+        if (isDataExist) {
+          return res.status(409).json({ 
+            isSuccess: false, 
+            message: "Email already exists" 
+          });
+        }
+
+        // Handle file upload
+        if (!files.resume) {
+          return res.status(400).json({ 
+            isSuccess: false, 
+            message: "Resume file is required" 
+          });
+        }
+
+        const resumeFile = Array.isArray(files.resume) ? files.resume[0] : files.resume;
+        
+        // Check if file exists and is readable
+        if (!fs.existsSync(resumeFile.filepath)) {
+          console.error("Resume file not found:", resumeFile.filepath);
+          return res.status(400).json({ 
+            isSuccess: false, 
+            message: "Resume file upload failed" 
+          });
+        }
+
+        const buffer = fs.readFileSync(resumeFile.filepath);
+
+        // Save to database
+        const newApplication = new careerModel(formData);
+        const isSaved = await newApplication.save();
+
+        if (isSaved) {
+          // Send emails in parallel
+          await Promise.all([
+            sendMail(
+              SMTP_MAIL,
+              SMTP_MAIL,
+              "New Application Received",
+              firmTemplate(formData),
+              [
+                {
+                  filename: resumeFile.originalFilename || 'resume.pdf',
+                  content: buffer,
+                },
+              ]
+            ),
+            sendMail(
+              SMTP_MAIL,
+              formData.email,
+              "Thank You for Applying to Abtik-Digital",
+              userTemplate(formData)
+            ),
+          ]);
+
+          // Clean up temporary file
+          try {
+            fs.unlinkSync(resumeFile.filepath);
+          } catch (cleanupError) {
+            console.warn("Failed to cleanup temp file:", cleanupError);
+          }
+
+          return res.status(201).json({ 
+            isSuccess: true, 
+            message: "Application submitted successfully" 
+          });
+        } else {
+          return res.status(400).json({
+            isSuccess: false,
+            message: "Error while saving application",
+          });
+        }
+      } catch (processingError) {
+        console.error("Processing error:", processingError);
+        return res.status(500).json({
           isSuccess: false,
-          message: "Error While Inserting New Application",
+          message: "Error processing application",
+          error: processingError.message,
         });
       }
     });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ isSuccess: false, message: "Internale Server Error", error });
+    console.error("Handler error:", error);
+    return res.status(500).json({ 
+      isSuccess: false, 
+      message: "Internal server error", 
+      error: error.message 
+    });
   }
 };
 
