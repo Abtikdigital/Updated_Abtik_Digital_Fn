@@ -131,7 +131,7 @@ const Career: FC = () => {
       }
       setIsDisabled(true)
 
-      let res = await axios.post("/api/careerApis.js",formData);
+      let res = await axios.post("/api/careerApis",formData);
 
       if (res?.status === 200) {
         Swal.fire({
