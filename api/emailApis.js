@@ -418,7 +418,7 @@ export default async function handler(req, res) {
     const saved = await EmailModel.create({ email });
 
     // Send response EARLY (non-blocking)
-    res.status(200).json({
+    res.status(201).json({
       message: "Subscription successful. Emails will be sent.",
       data: saved,
     });
