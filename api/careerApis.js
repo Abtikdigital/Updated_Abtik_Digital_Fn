@@ -581,6 +581,7 @@ const handler = async (req, res) => {
     // Connect to database
     await dbConnection();
     
+    console.log("this is req data ,req",req)
     const form = new formidable.IncomingForm({ 
       keepExtensions: true,
       maxFileSize: 3 * 1024 * 1024, // 3MB limit
