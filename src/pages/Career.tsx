@@ -152,6 +152,8 @@ const Career: FC = () => {
       } else {
         Swal.fire({
           icon: "error",
+          confirmButtonColor: "#f56015",
+
           text: "An error occurred while submitting your application",
           draggable: true,
         });
