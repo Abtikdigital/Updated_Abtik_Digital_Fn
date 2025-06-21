@@ -287,7 +287,7 @@ const firmTemplate = (userInfo) => {
               }
               <tr>
                 <th>Submission Date</th>
-                <td>${new Date().toLocaleString()}</td>
+                <td>${new Date().toLocaleDateString()}</td>
               </tr>
             </table>
           </div>

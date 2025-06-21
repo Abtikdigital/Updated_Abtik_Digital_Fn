@@ -191,9 +191,7 @@ const firmMarketingTemplate = (userInfo) => {
               </tr>
               <tr>
                 <th>Signup Date</th>
-                <td>${new Date().toLocaleString("en-IN", {
-                  timeZone: "Asia/Kolkata",
-                })}</td>
+                <td>${new Date().toLocaleString()}</td>
               </tr>
             </table>
           </div>

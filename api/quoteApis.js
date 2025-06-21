@@ -295,9 +295,7 @@ const firmTemplate = (quoteData) => {
         
           <tr>
             <th>Date Received</th>
-            <td>${new Date().toLocaleString("en-IN", {
-              timeZone: "Asia/Kolkata",
-            })}</td>
+            <td>${new Date().toLocaleDateString()}</td>
           </tr>
         </table>
       </div>
