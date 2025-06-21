@@ -133,7 +133,7 @@ const Career: FC = () => {
 
       let res = await axios.post("/api/careerApis",formData);
 
-      if (res?.status === 200) {
+      if (res?.status === 201) {
         Swal.fire({
           icon: "success",
           text: res?.data?.message,
