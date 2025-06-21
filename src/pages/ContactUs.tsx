@@ -298,7 +298,7 @@ const ContactUs = () => {
         </h3>
         <div className="w-full h-[400px] rounded-xl shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.4045673256455!2d72.5125040743684!3d23.04562491547031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f8ee324da2af39%3A0xf04a9f002154bc83!2sAbtik%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1746261865836!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.4045673256255!2d72.51250407384686!3d23.045624915470377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f8ee324da2af39%3A0xf04a9f002154b683!2sAbtik%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1750505291870!5m2!1sen!2sin"
             className="w-full h-full"
             style={{ border: 0 }}
             allowFullScreen={true}
