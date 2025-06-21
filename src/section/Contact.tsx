@@ -409,7 +409,7 @@ const InputFields = ({
     <div className="text-center">
       <button
         type="submit"
-        className="py-2 px-6 bg-[black] hover:bg-[#000000d8]  border-2 border-white text-white font-semibold cursor-pointer transition rounded-full text-xs "
+        className="py-2 px-6 bg-[black] disabled:bg-[#fbd1b7] disabled:cursor-not-allowed  hover:bg-[#000000d8]  border-2 border-white text-white font-semibold cursor-pointer transition rounded-full text-xs "
       >
        {!isDisabled? "Send":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
       </button>
