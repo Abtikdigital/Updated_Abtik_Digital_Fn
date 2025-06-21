@@ -41,7 +41,7 @@ const fadeIn: Variants = {
 
 const Career: FC = () => {
   const [open, setOpen] = useState(false);
-  const [isDisabled,setIsDisabled]=useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [fileName, setFileName] = useState("");
@@ -91,29 +91,43 @@ const Career: FC = () => {
 
   const jobOpenings: Job[] = [
     {
-      title: "Senior MERN Stack Developer",
-      vacancy: 3,
-      location: "Ahmedabad",
-      experience: "5+ years",
-      description:
-        "Join our team to build cutting-edge web applications using MongoDB, Express.js, React, and Node.js. Lead projects and mentor junior developers.",
+      "title": "Business Development Executive (BDE)",
+      "vacancy": 5,
+      "location": "Ahmedabad",
+      "experience": "1+ years",
+      "description": "Boost Abtik Digital’s sales by securing new clients and driving revenue growth."
     },
     {
-      title: "Senior Word Press Developer",
-      vacancy: 3,
-      location: "Ahmedabad",
-      experience: "4+ years",
-      description:
-        "Create and maintain high-performance WordPress sites. Customize themes, develop plugins, and ensure seamless client experiences.",
-    },
-    {
-      title: "Senior UIUX Designer",
-      vacancy: 7,
-      location: "Ahmedabad",
-      experience: "2+ years",
-      description:
-        "Design and create intuitive, user-centered interfaces that enhance user experience. Focus on visual aesthetics, usability, and seamless interactions to deliver engaging digital solutions.",
-    },
+      "title": "BDE Intern",
+      "vacancy": 5,
+      "location": "Ahmedabad",
+      "experience": "0-1 year",
+      "description": "Join Abtik Digital to learn sales strategies and support client acquisition."
+    }
+    // {
+    //   title: "Senior MERN Stack Developer",
+    //   vacancy: 3,
+    //   location: "Ahmedabad",
+    //   experience: "5+ years",
+    //   description:
+    //     "Join our team to build cutting-edge web applications using MongoDB, Express.js, React, and Node.js. Lead projects and mentor junior developers.",
+    // },
+    // {
+    //   title: "Senior Word Press Developer",
+    //   vacancy: 3,
+    //   location: "Ahmedabad",
+    //   experience: "4+ years",
+    //   description:
+    //     "Create and maintain high-performance WordPress sites. Customize themes, develop plugins, and ensure seamless client experiences.",
+    // },
+    // {
+    //   title: "Senior UIUX Designer",
+    //   vacancy: 7,
+    //   location: "Ahmedabad",
+    //   experience: "2+ years",
+    //   description:
+    //     "Design and create intuitive, user-centered interfaces that enhance user experience. Focus on visual aesthetics, usability, and seamless interactions to deliver engaging digital solutions.",
+    // },
   ];
 
   const onSubmit = async (data: any) => {
@@ -131,7 +145,7 @@ const Career: FC = () => {
       }
       setIsDisabled(true)
 
-      let res = await axios.post("/api/careerApis",formData);
+      let res = await axios.post("/api/careerApis", formData);
 
       if (res?.status === 201) {
         Swal.fire({
@@ -226,23 +240,23 @@ const Career: FC = () => {
               </h3>
               <div className="flex flex-wrap justify-center gap-6">
                 {/* No Post Available */}
-                <motion.p
+                {/* <motion.p
                   initial="hidden"
                   animate="visible"
                   variants={fadeIn}
                   className="text-white text-2xl md:text-4xl font-semibold text-center"
                 >
                   No Open Positions at the Moment
-                </motion.p>
+                </motion.p> */}
                 {/* Uncomment to enable job openings with fade-in animation */}
-                {/* {jobOpenings.map((job, index) => (
+                {jobOpenings.map((job, index) => (
                   <JobCard
                     key={job.title}
                     job={job}
                     index={index}
                     onClick={() => toggleDialog(job)}
                   />
-                ))} */}
+                ))}
               </div>
             </SectionWithAnimation>
           </div>
@@ -581,7 +595,7 @@ const Career: FC = () => {
                     }}
                     className="w-full md:w-1/2 h-12 md:h-9 flex justify-center items-center bg-[#f56015] text-white font-semibold rounded-full cursor-pointer hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent transition-colors duration-300"
                   >
-                  {!isDisabled?"Submit Application":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
+                    {!isDisabled ? "Submit Application" : <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                   </Button>
                 </div>
               </form>
@@ -621,59 +635,59 @@ const SectionWithAnimation: FC<SectionWithAnimationProps> = ({ children, classNa
 };
 
 // Reusable Job Card Component with Intersection Observer
-// interface JobCardProps {
-//   job: Job;
-//   index: number;
-//   onClick: () => void;
-// }
+interface JobCardProps {
+  job: Job;
+  index: number;
+  onClick: () => void;
+}
 
-// const JobCard: FC<JobCardProps> = ({ job, index, onClick }) => {
-//   const { ref, inView } = useInView({
-//     triggerOnce: true,
-//     threshold: 0.3,
-//   });
+const JobCard: FC<JobCardProps> = ({ job, index, onClick }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
-//   return (
-//     <motion.div
-//       ref={ref}
-//       initial="hidden"
-//       animate={inView ? "visible" : "hidden"}
-//       variants={fadeIn}
-//       className="bg-white cursor-pointer border border-gray-300 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#f56015] transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex flex-col justify-between min-h-[16rem]"
-//       style={{ animationDelay: `${index * 0.1}s` }}
-//       onClick={onClick}
-//     >
-//       <div>
-//         <h4 className="text-xl font-semibold text-gray-800 mb-2 min-h-[2.5rem]">
-//           {job.title}
-//         </h4>
-//         <p className="text-gray-600 text-sm mb-4 min-h-[4rem]">
-//           {job.description}
-//         </p>
-//         <div className="flex flex-col gap-2 mb-4 w-full">
-//           <div className="flex justify-between items-center">
-//             <span className="text-gray-700 text-sm">
-//               <strong>Vacancies:</strong> {job.vacancy}
-//             </span>
-//             <span className="text-gray-700 text-sm">
-//               <strong>Location:</strong> {job.location}
-//             </span>
-//           </div>
-//           <div className="flex justify-between items-center">
-//             <span className="text-gray-700 text-sm">
-//               <strong>Experience:</strong> {job.experience}
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-//       <Button
-//         onClick={onClick}
-//         className="inline-block cursor-pointer bg-[#f56015] text-white font-medium px-4 py-2 rounded-full hover:bg-[#d14e10] transition-colors duration-300 self-start"
-//       >
-//         Apply Now
-//       </Button>
-//     </motion.div>
-//   );
-// };
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className="bg-white cursor-pointer border border-gray-300 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-[#f56015] transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex flex-col justify-between min-h-[16rem]"
+      style={{ animationDelay: `${index * 0.1}s` }}
+      onClick={onClick}
+    >
+      <div>
+        <h4 className="text-xl font-semibold text-gray-800 mb-2 min-h-[2.5rem]">
+          {job.title}
+        </h4>
+        <p className="text-gray-600 text-sm mb-4 min-h-[4rem]">
+          {job.description}
+        </p>
+        <div className="flex flex-col gap-2 mb-4 w-full">
+          <div className="flex justify-between items-center">
+            <span className="text-gray-700 text-sm">
+              <strong>Vacancies:</strong> {job.vacancy}
+            </span>
+            <span className="text-gray-700 text-sm">
+              <strong>Location:</strong> {job.location}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-700 text-sm">
+              <strong>Experience:</strong> {job.experience}
+            </span>
+          </div>
+        </div>
+      </div>
+      <Button
+        onClick={onClick}
+        className="inline-block cursor-pointer bg-[#f56015] text-white font-medium px-4 py-2 rounded-full hover:bg-[#d14e10] transition-colors duration-300 self-start"
+      >
+        Apply Now
+      </Button>
+    </motion.div>
+  );
+};
 
 export default Career;

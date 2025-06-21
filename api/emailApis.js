@@ -191,7 +191,9 @@ const firmMarketingTemplate = (userInfo) => {
               </tr>
               <tr>
                 <th>Signup Date</th>
-                <td>${new Date().toLocaleString()}</td>
+                <td>${new Date().toLocaleString("en-IN", {
+                  timeZone: "Asia/Kolkata",
+                })}</td>
               </tr>
             </table>
           </div>
@@ -417,29 +419,27 @@ export default async function handler(req, res) {
 
     const saved = await EmailModel.create({ email });
 
- 
-
     // Fire-and-forget background email sending
     const [userHtml, adminHtml] = [
       userMarketingTemplate({ email }),
       firmMarketingTemplate({ email }),
     ];
-   
-      await Promise.all([
-        transporter.sendMail({
-          from: SMTP_MAIL,
-          to: email,
-          subject: "Welcome to Abtik-Digital",
-          html: userHtml,
-        }),
-        transporter.sendMail({
-          from: SMTP_MAIL,
-          to: SMTP_MAIL,
-          subject: "New Marketing Signup",
-          html: adminHtml,
-        }),
-      ]);
-     // Send response EARLY (non-blocking)
+
+    await Promise.all([
+      transporter.sendMail({
+        from: SMTP_MAIL,
+        to: email,
+        subject: "Welcome to Abtik-Digital",
+        html: userHtml,
+      }),
+      transporter.sendMail({
+        from: SMTP_MAIL,
+        to: SMTP_MAIL,
+        subject: "New Marketing Signup",
+        html: adminHtml,
+      }),
+    ]);
+    // Send response EARLY (non-blocking)
     res.status(201).json({
       message: "Subscription successful. Emails will be sent.",
       data: saved,
