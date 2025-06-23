@@ -1,4 +1,4 @@
-import {  CheckCircle, Code, ChartColumnIncreasing ,  Brush } from "lucide-react";
+import { CheckCircle, Code, ChartColumnIncreasing, Brush } from "lucide-react";
 import { useEffect, useRef, useCallback } from "react";
 import Mainlayout from "../layout/Mainlayout";
 import Image1 from "../assets/AboutUs/Image1.jpeg";
@@ -36,7 +36,7 @@ const sectionData = [
       "SEO, social media, and paid ads",
       "Continuous optimization and reporting",
     ],
-    imgSrc:Image3,
+    imgSrc: Image3,
   },
 ];
 
@@ -97,29 +97,134 @@ const AboutUs = () => {
         {/* About Section */}
         <section
           ref={setSectionRef(0)}
-          className="flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0 text-white opacity-0  transition-all duration-500"
+          className="relative flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0 text-white opacity-0 transition-all duration-500 overflow-hidden"
           style={{
-            background: `
-              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-              #0F172A`,
+            background: `               
+      radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),               
+      radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),               
+      #0F172A`,
           }}
         >
+          {/* SVG Line Animation for Desktop (Large screens) */}
+          <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1920 1080"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              {/* Main curved line: right to center, curve down, then to left */}
+              <path
+                id="about-curved-line"
+                d="M1920,280 L960,280 Q940,280 940,300 L940,580 Q940,600 920,600 L0,600"
+                fill="none"
+                stroke="#a33cc4"
+                strokeWidth="32"
+                strokeDasharray="2800"
+                strokeDashoffset="2800"
+                className="animate-[drawCurvedLine_3s_ease-in-out_0.5s_forwards]"
+              />
+
+              {/* Secondary curved line with slight offset */}
+              <path
+                id="about-curved-line-2"
+                d="M1920,340 L900,340 Q880,340 880,360 L880,640 Q880,660 860,660 L0,660"
+                fill="none"
+                stroke="#f9a825"
+                strokeWidth="32"
+                strokeDasharray="2800"
+                strokeDashoffset="2800"
+                className="animate-[drawCurvedLine_3s_ease-in-out_1s_forwards]"
+              />
+
+              {/* Third curved line with more offset */}
+              <path
+                id="about-curved-line-3"
+                d="M1920,400 L840,400 Q820,400 820,420 L820,700 Q820,720 800,720 L0,720"
+                fill="none"
+                stroke="#9c274f"
+                strokeWidth="32"
+                strokeDasharray="2800"
+                strokeDashoffset="2800"
+                className="animate-[drawCurvedLine_3s_ease-in-out_1.5s_forwards]"
+              />
+            </svg>
+          </div>
+
+          {/* Mobile Curved Lines Animation (Small screens only) */}
+          <div
+            className="block sm:hidden absolute top-[20%] md:inset-0 w-full h-full overflow-hidden pointer-events-none z-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 414 896"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              {/* Mobile curved line: right to center, curve down, then to left */}
+              <path
+                id="mobile-curved-line1"
+                d="M414,180 L207,180 Q197,180 197,190 L197,350 Q197,360 187,360 L0,360"
+                fill="none"
+                stroke="#a33cc4"
+                strokeWidth="32"
+                strokeDasharray="800"
+                strokeDashoffset="800"
+                className="animate-[drawCurvedLine_2.5s_ease-in-out_0.5s_forwards]"
+              />
+              <path
+                id="mobile-curved-line2"
+                d="M414,240 L187,240 Q177,240 177,250 L177,410 Q177,420 167,420 L0,420"
+                fill="none"
+                stroke="#f9a825"
+                strokeWidth="32"
+                strokeDasharray="800"
+                strokeDashoffset="800"
+                className="animate-[drawCurvedLine_2.5s_ease-in-out_1s_forwards]"
+              />
+              <path
+                id="mobile-curved-line3"
+                d="M414,300 L167,300 Q157,300 157,310 L157,470 Q157,480 147,480 L0,480"
+                fill="none"
+                stroke="#9c274f"
+                strokeWidth="32"
+                strokeDasharray="800"
+                strokeDashoffset="800"
+                className="animate-[drawCurvedLine_2.5s_ease-in-out_1.5s_forwards]"
+              />
+            </svg>
+          </div>
+
           {/* Left Side - Heading + Paragraph */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center md:items-start items-center text-center md:text-left">
+          <div className="w-full md:w-1/2 flex flex-col justify-center md:items-start items-center text-center md:text-left z-10">
             <h2 className="max-w-full text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left leading-tight">
               About Abtik
             </h2>
           </div>
 
           {/* Right Side - Image */}
-          <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="w-full md:w-1/2 flex justify-center items-center z-10">
             <img
               src={IphonImage}
               alt="iPhone Preview"
               className="hover:scale-105 cursor-pointer transition-transform duration-500 floating-icon w-3/5 max-w-[200px] md:max-w-sm lg:max-w-md object-contain drop-shadow-lg"
             />
           </div>
+
+          {/* Animation Styles */}
+          <style>{`
+    @keyframes drawCurvedLine {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    
+    
+    .floating-icon {
+      animation: floating-icon 3s ease-in-out infinite;
+    }
+  `}</style>
         </section>
 
         {/* Alternating Value Propositions */}
@@ -127,9 +232,8 @@ const AboutUs = () => {
           <section
             key={i}
             ref={setSectionRef(i + 1)}
-            className={`value-prop-section flex flex-col md:flex-row px-6 md:px-16 py-10 ${
-              i % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } items-center gap-4 space-x-4 group delay-${i + 1} opacity-0 translate-y-10 transition-all duration-500`}
+            className={`value-prop-section flex flex-col md:flex-row px-6 md:px-16 py-10 ${i % 2 !== 0 ? "md:flex-row-reverse" : ""
+              } items-center gap-4 space-x-4 group delay-${i + 1} opacity-0 translate-y-10 transition-all duration-500`}
           >
             <img
               src={item.imgSrc}
@@ -155,7 +259,7 @@ const AboutUs = () => {
         ))}
 
         {/* Team Section */}
-       
+
 
         {/* Services Section */}
         <section

@@ -46,11 +46,26 @@ const HeroSection = () => {
   };
 
   // Intersection Observer hooks for sections
-  const [sectionOneLeftRef, sectionOneLeftInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [sectionOneRightRef, sectionOneRightInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [sectionTwoRef, sectionTwoInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [sectionThreeLeftRef, sectionThreeLeftInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [sectionThreeRightRef, sectionThreeRightInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [sectionOneLeftRef, sectionOneLeftInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [sectionOneRightRef, sectionOneRightInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [sectionTwoRef, sectionTwoInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [sectionThreeLeftRef, sectionThreeLeftInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [sectionThreeRightRef, sectionThreeRightInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   // Initialize ScrollTrigger animations after component mounts
   useEffect(() => {
@@ -213,7 +228,10 @@ const HeroSection = () => {
   // Handle clicking outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         isOpen && setIsOpen(false);
       }
     };
@@ -257,13 +275,13 @@ const HeroSection = () => {
           className="md:min-h-screen flex flex-col md:flex-row items-center text-white px-6 py-10 md:px-16 bg-[radial-gradient(ellipse_at_top_right,_#f56015_1%,_#0F172A_40%)] z-10 relative"
           style={{
             background: `
-              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-              #0F172A
-            `,
+      radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+      radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+      #0F172A
+    `,
           }}
         >
-          {/* SVG Line Animation for Section One */}
+          {/* SVG Line Animation for Desktop (Large screens) */}
           <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none top-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -296,6 +314,49 @@ const HeroSection = () => {
                 strokeWidth="18"
                 strokeDasharray="1400"
                 strokeDashoffset="1400"
+              />
+            </svg>
+          </div>
+
+          {/* Mobile Horizontal Lines Animation (Small screens only - in mobile section area) */}
+          <div
+            className="block sm:hidden absolute w-full overflow-hidden pointer-events-none z-0"
+            style={{ top: "50%", height: "40%" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 200"
+              className="w-full h-full"
+            >
+              <path
+                id="mobile-line1"
+                d="M0,60 L400,60"
+                fill="none"
+                stroke="#a33cc4"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
+              />
+              <path
+                id="mobile-line2"
+                d="M0,100 L400,100"
+                fill="none"
+                stroke="#f9a825"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+              />
+              <path
+                id="mobile-line3"
+                d="M0,140 L400,140"
+                fill="none"
+                stroke="#9c274f"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
               />
             </svg>
           </div>
@@ -346,9 +407,8 @@ const HeroSection = () => {
             className="w-full md:w-1/2 flex justify-center items-center md:h-screen z-10"
           >
             <div
-              className={`relative bg-gray-900 rounded-[20px] shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing ${
-                isPlaying ? "w-[500px] h-[250.25px]" : "w-[250px] h-[500px]"
-              } transition-all duration-300`}
+              className={`relative bg-gray-900 rounded-[20px] shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing ${isPlaying ? "w-[500px] h-[250.25px]" : "w-[250px] h-[500px]"
+                } transition-all duration-300`}
               style={{
                 transform: isMobile
                   ? "none"
@@ -381,9 +441,8 @@ const HeroSection = () => {
                 <video
                   ref={videoRef}
                   src={IntroVideo}
-                  className={`w-full h-full object-cover absolute top-0 left-0 bg-black ${
-                    isPlaying ? "block" : "hidden"
-                  }`}
+                  className={`w-full h-full object-cover absolute top-0 left-0 bg-black ${isPlaying ? "block" : "hidden"
+                    }`}
                   loop
                   muted
                 />
@@ -412,19 +471,27 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
+        <style>{`
+          @keyframes drawLine {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        `}</style>
+
         {/* Section Two */}
         <div
           id="section-two"
           className="flex justify-center items-center md:min-h-screen bg-[radial-gradient(ellipse_at_top_left,_#f56015_1%,_#0F172A_30%)] px-4 py-10 relative overflow-hidden"
           style={{
             background: `
-              radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at bottom right, #f56015 1%, transparent 50%),
-              #0F172A
-            `,
+      radial-gradient(ellipse 50% 80% at top left, #f56015 1%, transparent 50%),
+      radial-gradient(ellipse 50% 80% at bottom right, #f56015 1%, transparent 50%),
+      #0F172A
+    `,
           }}
         >
-          {/* SVG Background Lines */}
+          {/* SVG Background Lines for Large Screens */}
           <div className="hidden lg:block absolute inset-0 z-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1050">
               <path
@@ -433,7 +500,9 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="18"
-                strokeDasharray="0,1000"
+                strokeDasharray="1000,1000"
+                strokeDashoffset="1000"
+                className="animate-draw"
               />
               <path
                 id="line2"
@@ -441,7 +510,9 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="18"
-                strokeDasharray="0,1000"
+                strokeDasharray="1000,1000"
+                strokeDashoffset="1000"
+                className="animate-draw delay-200"
               />
               <path
                 id="line3"
@@ -449,7 +520,51 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="18"
-                strokeDasharray="0,1000"
+                strokeDasharray="1000,1000"
+                strokeDashoffset="1000"
+                className="animate-draw delay-400"
+              />
+            </svg>
+          </div>
+          {/* SVG Background Lines for Small Screens */}
+          <div
+            className="block sm:hidden absolute w-full overflow-hidden pointer-events-none z-0"
+            style={{ top: "30%", height: "40%" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 200"
+              className="w-full h-full"
+            >
+              <path
+                id="mobile-line1"
+                d="M400,60 L0,60"
+                fill="none"
+                stroke="#a33cc4"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
+              />
+              <path
+                id="mobile-line2"
+                d="M400,100 L0,100"
+                fill="none"
+                stroke="#f9a825"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+              />
+              <path
+                id="mobile-line3"
+                d="M400,140 L0,140"
+                fill="none"
+                stroke="#9c274f"
+                strokeWidth="14"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
               />
             </svg>
           </div>
@@ -473,19 +588,90 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
+        <style>{`
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes drawLine {
+    from {
+      stroke-dashoffset: 400;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw {
+    animation: draw 2s ease-in-out forwards;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+`}</style>
+
         {/* Section Three */}
         <div
           id="section-three"
           className="relative min-h-screen px-6 py-10 md:px-16 flex flex-col md:flex-row items-center justify-between text-white bg-[radial-gradient(ellipse_at_bottom_right,_#f56015_1%,_#0F172A_30%)]"
           style={{
             background: `
-              radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
-              radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
-              #0F172A
-            `,
+      radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
+      radial-gradient(ellipse 50% 80% at bottom left, #f56015 1%, transparent 50%),
+      #0F172A
+    `,
           }}
         >
-          {/* SVG Lines in Background */}
+          {/* SVG Background Lines for Small Screens */}
+          <div
+            className="block  sm:hidden absolute top-[30%] flex items-center justify-center w-full overflow-hidden pointer-events-none z-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 200"
+              className="w-full h-auto max-h-[200px]"
+            >
+              <path
+                id="section-three-line1"
+                d="M0,60 L400,60"
+                fill="none"
+                stroke="#a33cc4"
+                strokeWidth="18"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
+              />
+              <path
+                id="section-three-line2"
+                d="M0,100 L400,100"
+                fill="none"
+                stroke="#f9a825"
+                strokeWidth="18"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+              />
+              <path
+                id="section-three-line3"
+                d="M0,140 L400,140"
+                fill="none"
+                stroke="#9c274f"
+                strokeWidth="18"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
+              />
+            </svg>
+          </div>
+
+          {/* SVG Background Lines for Large Screens */}
           <div
             className="hidden lg:block absolute inset-0 z-0 pointer-events-none"
             style={{ height: "70vh" }}
@@ -563,6 +749,17 @@ const HeroSection = () => {
             </div>
           </motion.div>
         </div>
+
+        <style >{`
+  @keyframes drawLine {
+    from {
+      stroke-dashoffset: 400;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+`}</style>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Plus, X } from "lucide-react";
-import "../styles/Faq.css"; 
+import "../styles/Faq.css";
 import PhonePhoto from "../assets/Faq/faq.jpg";
 
 interface Question {
@@ -22,22 +22,18 @@ const questions: Question[] = [
     ],
   },
   {
-    question: "Do you offer affordable packages for students or early-stage entrepreneurs?",
-    answer: [
-      "Yes, we have special pricing for startups and students.",
-    ],
+    question:
+      "Do you offer affordable packages for students or early-stage entrepreneurs?",
+    answer: ["Yes, we have special pricing for startups and students."],
   },
   {
     question: "How long does it take to develop a website or brand identity?",
-    answer: [
-      "Depends on the scope—typically 2–4 weeks.",
-    ],
+    answer: ["Depends on the scope—typically 2–4 weeks."],
   },
   {
-    question: "Can Abtik Digital also handle legal registrations (like company incorporation)?",
-    answer: [
-      "Yes, we assist in company setup and branding.",
-    ],
+    question:
+      "Can Abtik Digital also handle legal registrations (like company incorporation)?",
+    answer: ["Yes, we assist in company setup and branding."],
   },
 ];
 
@@ -72,12 +68,15 @@ const Faq: React.FC = () => {
 
   return (
     <section
-   
       id="faq"
-      className={`flex flex-col overflow-hidden md:flex-row justify-center items-center gap-12 px-6 py-10 md:px-16 mx-auto  max-w-full bg-white ${hasAnimated ? "fade-in" : ""}`}
+      className={`flex flex-col overflow-hidden md:flex-row justify-center items-center gap-12 px-6 py-10 md:px-16 mx-auto  max-w-full bg-white ${
+        hasAnimated ? "fade-in" : ""
+      }`}
     >
       <div className="w-full md:w-1/2 h-full p-6 rounded-3xl text-white bg-[#F56015]">
-        <h2 className="text-3xl font-bold mb-8 text-center md:text-left text-white ">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center md:text-left text-white ">
+          Frequently Asked Questions
+        </h2>
 
         {questions.map((item, index) => {
           const isOpen = openIndex === index;
@@ -90,8 +89,14 @@ const Faq: React.FC = () => {
                 className={`w-full flex justify-between items-center p-3.5 cursor-pointer text-left `}
                 onClick={() => toggleIndex(index)}
               >
-                <span className={`font-semibold text-lg text-[#000000]`}>{item.question}</span>
-                <span className={`text-[#0F172A] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
+                <span className={`font-semibold text-lg text-[#000000]`}>
+                  {item.question}
+                </span>
+                <span
+                  className={`text-[#0F172A] transition-transform duration-300 ${
+                    isOpen ? "rotate-45" : ""
+                  }`}
+                >
                   {isOpen ? <X size={24} /> : <Plus size={24} />}
                 </span>
               </button>
@@ -110,7 +115,10 @@ const Faq: React.FC = () => {
         })}
       </div>
       <div className="w-full md:w-1/2 h-full flex justify-center items-center">
-        <img src={PhonePhoto} className="max-w-full max-h-full rounded-lg mix-blend-multiply" />
+        <img
+          src={PhonePhoto}
+          className="max-w-full max-h-full rounded-lg mix-blend-multiply"
+        />
       </div>
     </section>
   );
