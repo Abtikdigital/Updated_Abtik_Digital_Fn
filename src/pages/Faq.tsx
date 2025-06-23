@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Plus, X } from "lucide-react";
 import "../styles/Faq.css";
-import PhonePhoto from "../assets/Faq/faq.jpg";
+import PhonePhoto from "../assets/Faq/bgImage1.png";
 
 interface Question {
   question: string;
