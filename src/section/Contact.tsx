@@ -1,10 +1,10 @@
 import { useEffect, useState, ChangeEvent, useRef } from "react";
 import MacImage from "../assets/ContactUs/Macbook.png";
-import LogoImage from "../assets/logo/AbtikDigitalwhite.png";
+
 // import { handleAddContact } from "../apis/apis";
 import Swal from "sweetalert2";
 import gsap from "gsap";
-import { MapPin, Phone, Clock } from "lucide-react";
+
 import axios from "axios";
 
 const ContactUs = () => {
