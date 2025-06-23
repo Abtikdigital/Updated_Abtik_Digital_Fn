@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import MacbookMockup from "../assets/Events/Macbook.png";
 import Slider1 from "../assets/Events/Image1.jpeg";
 import Slider2 from "../assets/Events/Image2.jpeg";
+import Slider3 from "../assets/Events/Frame 1000007515.jpg"
+import Slider4 from "../assets/Events/Frame 1000007516.jpg"
+import Slider5 from "../assets/Events/Frame 1000007518.jpg"
 // import FrontImage from "../assets/Events/FrontImage.jpeg"
-const sliderImages = [Slider1, Slider2];
+const sliderImages = [Slider1, Slider2,Slider3,Slider4,Slider5];
 
 const Events = () => {
   const [current, setCurrent] = useState(0);

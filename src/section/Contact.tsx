@@ -1,5 +1,5 @@
 import { useEffect, useState, ChangeEvent, useRef } from "react";
-import MacImage from "../assets/ContactUs/MacOrangeImage.png";
+import MacImage from "../assets/ContactUs/Macbook.png";
 import LogoImage from "../assets/logo/AbtikDigitalwhite.png";
 // import { handleAddContact } from "../apis/apis";
 import Swal from "sweetalert2";
@@ -225,9 +225,10 @@ setIsDisabled(false)
 
       <section
         id="section-one"
-        className="min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 md:px-12 lg:px-16"
+        className="md:min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 md:px-12 lg:px-16"
       >
         <div className=" w-full mx-auto z-10">
+          <h2></h2>
           {/* Desktop View */}
           <div className="hidden md:block relative w-full">
             <img
@@ -237,7 +238,7 @@ setIsDisabled(false)
             />
 
             {/* Top-left Card with Location, Phone, and Hours */}
-            <div className="absolute top-[30%] sm:top-[32%] lg:top-[35%] left-2 sm:-left-3 lg:left-6 bg-white shadow-lg rounded-xl px-4 sm:px-5 lg:px-6 py-3 sm:py-4 z-20 w-44 sm:w-48 ">
+            {/* <div className="absolute top-[30%] sm:top-[32%] lg:top-[35%] left-2 sm:-left-3 lg:left-6 bg-white shadow-lg rounded-xl px-4 sm:px-5 lg:px-6 py-3 sm:py-4 z-20 w-44 sm:w-48 ">
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <MapPin size={14} className="text-gray-600 min-w-4" />
@@ -257,20 +258,14 @@ setIsDisabled(false)
                   <p className="text-xs text-gray-600">Mon-Fri, 9 AM - 5 PM</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Top-right Logo (Half Displayed) */}
-            <div className="absolute  z-20 right-[2%]  top-[35%] lg:right-[8%]">
-              <img
-                src={LogoImage}
-                alt="Logo"
-                className="w-30 h-30  object-contain"
-              />
-            </div>
+      
 
             {/* Form Centered in MacBook */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-full h-[75%] sm:h-[80%] lg:h-[80%] ">
+              <div className="relative w-full h-[75%]  sm:h-[80%] lg:h-[80%] ">
                 <form
                   onSubmit={handleSubmit}
                   className="absolute overflow-auto min-h-fit  sm:h-[70%] lg:h-auto  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-3 sm:p-4 h-full w-[50%] sm:w-[45%] lg:w-[40%]    rounded-3xl flex flex-col justify-center space-y-3 sm:space-y-4"
@@ -288,17 +283,18 @@ setIsDisabled(false)
 
           {/* Mobile View */}
           <div className="block md:hidden space-y-6">
+            <h2 className="text-4xl text-center font-bold text-white">Contact Us</h2>
 
             {/* Logo */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <img
                 src={LogoImage}
                 alt="Logo"
                 className="w-20 h-auto object-contain"
               />
-            </div>
+            </div> */}
             {/* Contact Info Card */}
-            <div className="bg-white shadow-lg rounded-xl px-4 py-4 w-full max-w-md mx-auto">
+            {/* <div className="bg-white shadow-lg rounded-xl px-4 py-4 w-full max-w-md mx-auto">
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <MapPin size={14} className="text-gray-600" />
@@ -317,7 +313,7 @@ setIsDisabled(false)
                   <p className="text-xs text-gray-600">Mon-Fri, 9 AM - 5 PM</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
 
             {/* Form */}
@@ -400,7 +396,7 @@ const InputFields = ({
         value={formData.message}
         onChange={handleChange}
         rows={4}
-        className="w-full p-2 px-3 resize-none rounded-lg border-2 border-white text-white font-medium bg-black bg-opacity-30 focus:outline-none text-xs"
+        className="w-full p-2 px-3 resize-none rounded-lg border-2 border-white text-gray-900 font-medium bg-white bg-opacity-30 focus:outline-none text-xs"
       />
       {errors.message && (
         <p className="text-white text-xs mt-1">{errors.message}</p>
@@ -409,7 +405,7 @@ const InputFields = ({
     <div className="text-center">
       <button
         type="submit"
-        className="py-2 px-6 bg-[black] disabled:bg-[#fbd1b7] disabled:cursor-not-allowed  hover:bg-[#000000d8]  border-2 border-white text-white font-semibold cursor-pointer transition rounded-full text-xs "
+        className="py-2 px-6 bg-[#f56015] disabled:bg-[#fbd1b7] disabled:cursor-not-allowed  hover:bg-[#d14e10]  border-2 border-white text-white font-semibold cursor-pointer transition rounded-full text-xs "
       >
        {!isDisabled? "Send":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
       </button>
@@ -439,7 +435,7 @@ const Input = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="w-full p-2 px-3 rounded-lg text-white border-2 border-white font-medium bg-black bg-opacity-30 focus:outline-none text-xs"
+      className="w-full p-2 px-3 rounded-lg text-gray-900 border-2 border-white font-medium bg-white bg-opacity-30 focus:outline-none text-xs"
     />
     {error && <p className="text-white text-xs mt-1">{error}</p>}
   </div>
