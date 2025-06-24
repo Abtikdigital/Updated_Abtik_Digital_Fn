@@ -97,6 +97,7 @@ const [isDisabled,setIsDisabled]=useState(false)
     <>
       <Navbar />
 
+
       <div className="scroll-smooth">
         {props.children}
         <Footer />
