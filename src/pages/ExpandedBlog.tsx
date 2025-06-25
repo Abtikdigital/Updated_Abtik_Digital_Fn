@@ -64,6 +64,7 @@ const BlogData: BlogData = {
         {
           heading: "Frontend Development",
           text: "Modern frontend stacks like React, Vue, and Svelte are enabling responsive, component-driven UIs with lightning-fast performance. React is widely preferred for its ecosystem, reusability, and community support.",
+        lists:["Frontend "]
         },
         {
           heading: "Backend Technologies",
