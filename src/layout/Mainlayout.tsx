@@ -2,7 +2,7 @@ import Navbar from "../section/Navbar";
 import Footer from "../section/Footer";
 import CopyRightSection from "../section/Copyright";
 import { useDispatch, useSelector } from "react-redux";
-import { X } from "lucide-react";
+import { MessageCircle, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { Label } from "../components/ui/label";
 import {
@@ -31,7 +31,7 @@ const Mainlayout = (props: any) => {
   ];
   const disp = useDispatch();
   const isGetAQuoteOpen = useSelector((state: any) => state.isGetQuoteOpen);
-const [isDisabled,setIsDisabled]=useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
   const {
     register,
     clearErrors,
@@ -48,7 +48,7 @@ const [isDisabled,setIsDisabled]=useState(false)
   const onSubmit = async (formData: any) => {
     try {
       setIsDisabled(true)
-      let res = await axios.post("/api/quoteApis",formData);
+      let res = await axios.post("/api/quoteApis", formData);
       if (res.status == 201) {
         Swal.fire({
           icon: "success",
@@ -58,7 +58,7 @@ const [isDisabled,setIsDisabled]=useState(false)
       }
     } catch (error: any) {
 
-      if (error?.response?.status === 400||error?.response?.status === 409) {
+      if (error?.response?.status === 400 || error?.response?.status === 409) {
         Swal.fire({
           icon: "error",
           confirmButtonColor: "#f56015",
@@ -88,10 +88,9 @@ const [isDisabled,setIsDisabled]=useState(false)
       document.documentElement.style.scrollBehavior = "auto";
     };
   }, []);
-  useEffect(() => {
-
-
-  }, [])
+  const handleOpenGetQuote = () => {
+    disp({ type: "open" });
+  }
 
   return (
     <>
@@ -342,7 +341,7 @@ const [isDisabled,setIsDisabled]=useState(false)
                     type="submit"
                     className="w-full disabled:bg-[#fbd1b7] disabled:cursor-not-allowed  flex justify-center items-center md:w-1/2 h-12 md:h-9 bg-[#f56015] text-white font-semibold rounded-full cursor-pointer hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent transition-colors duration-300"
                   >
-                { !isDisabled?  "Get a Quote":<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
+                    {!isDisabled ? "Get a Quote" : <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                   </button>
                 </div>
               </form>
@@ -350,6 +349,11 @@ const [isDisabled,setIsDisabled]=useState(false)
           </div>
         </div>
       )}
+      <div className="fixed bg-[#f56015] bottom-0 right-0"
+        onClick={handleOpenGetQuote}
+      >
+        click
+      </div>
     </>
   );
 };
