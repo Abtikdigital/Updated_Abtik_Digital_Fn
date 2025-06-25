@@ -16,7 +16,7 @@ import {
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 const Mainlayout = (props: any) => {
   // List of service options
@@ -103,13 +103,13 @@ const Mainlayout = (props: any) => {
     disp({ type: "open" });
   };
 
-  // Framer Motion animation variants for the form
-  const formVariants = {
+  // Framer Motion animation variants for the form, explicitly typed
+  const formVariants: Variants = {
     hidden: {
       x: "100vw", // Start from far right
       y: "100vh", // Start from far bottom
       opacity: 0,
-      scale: 0.8, // Slightly smaller for a subtle effect
+      scale: 0.8, // Slightly smaller for subtle effect
     },
     visible: {
       x: 0,
@@ -117,11 +117,11 @@ const Mainlayout = (props: any) => {
       opacity: 1,
       scale: 1,
       transition: {
-        type: "spring",
-        stiffness: 120, // Slightly higher stiffness for snappier motion
-        damping: 15, // Lower damping for smoother bounce
-        mass: 0.5, // Lighter mass for faster response
-        duration: 0.4, // Faster animation (was 0.5s)
+        type: "spring" as const, // Explicitly type as "spring"
+        stiffness: 120, // Snappier motion
+        damping: 15, // Smoother bounce
+        mass: 0.5, // Lighter for faster response
+        duration: 0.4, // Faster animation
       },
     },
     exit: {
@@ -130,8 +130,8 @@ const Mainlayout = (props: any) => {
       opacity: 0,
       scale: 0.8,
       transition: {
-        duration: 0.25, // Slightly faster exit (was 0.3s)
-        ease: "easeInOut", // Smoother easing for exit
+        duration: 0.25, // Faster exit
+        ease: "easeInOut", // Smoother easing
       },
     },
   };
@@ -241,7 +241,9 @@ const Mainlayout = (props: any) => {
                       Contact Number <span className="text-red-500">*</span>
                     </label>
                     <input
-                      {...register("phoneNumber", {
+                      {...
+
+register("phoneNumber", {
                         required: "* Phone number is required",
                         pattern: {
                           value: /^[0-9]{10,15}$/,
