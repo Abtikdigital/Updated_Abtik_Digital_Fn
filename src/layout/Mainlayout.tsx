@@ -2,7 +2,7 @@ import Navbar from "../section/Navbar";
 import Footer from "../section/Footer";
 import CopyRightSection from "../section/Copyright";
 import { useDispatch, useSelector } from "react-redux";
-import { MessageCircle, X } from "lucide-react";
+import {  X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { Label } from "../components/ui/label";
 import {

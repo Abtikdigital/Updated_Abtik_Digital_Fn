@@ -6,16 +6,13 @@ import Swal from "sweetalert2";
 import Mainlayout from "../layout/Mainlayout";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import WebDevelopmentBlogImage1 from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentBlogImage1.jpg";
-import WebDevelopmentBlogImage2 from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentImage1.jpeg";
+
 import GraphiThumbnail from "../../public/blog-images/GRAPHIC_DESIGN/image1.jpg";
-import GraphicImage1 from "../../public/blog-images/GRAPHIC_DESIGN/graphicDesignBlogImage1.jpg";
-import GraphicImage2 from "../../public/blog-images/GRAPHIC_DESIGN/graphicDesignImage1.jpeg";
+
 import SeoThumbnail from "../../public/blog-images/SEO/seoThumbnail.jpg";
-import SeoImage1 from "../../public/blog-images/SEO/seoBlogImage1.jpg";
-import SeoImage3 from "../../public/blog-images/SEO/SeoImage3.jpeg";
-import SeoImage2 from "../../public/blog-images/SEO/SeoImage2.jpeg";
+
 import DigitalMarketingThumbnail from "../../public/blog-images/DIGITAL_MARKETING/digitalMarketingThumbnail.jpg";
-import DigitalMarketingImage1 from "../../public/blog-images/DIGITAL_MARKETING/digitalMarketingImage1.jpeg";
+
 
 // Define interfaces for BlogData structure
 interface BlogSection {
