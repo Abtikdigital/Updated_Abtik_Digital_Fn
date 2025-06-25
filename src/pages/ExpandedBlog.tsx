@@ -279,7 +279,7 @@ const ExpandedBlog: React.FC = () => {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       setIsDisabled(true);
-      const res: AxiosResponse<ApiResponse> = await axios.post("/api/contactApis", data);
+      const res: AxiosResponse<ApiResponse> = await axios.post("/api/blogApis.js", data);
       if (res?.status === 201) {
         Swal.fire({
           icon: "success",
