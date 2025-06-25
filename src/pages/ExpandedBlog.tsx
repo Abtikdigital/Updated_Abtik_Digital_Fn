@@ -19,6 +19,7 @@ interface BlogSection {
   heading?: string;
   text?: string;
   lists?: string[];
+  description?:any;
 }
 
 interface BlogPost {
@@ -54,33 +55,53 @@ const BlogData: BlogData = {
       id: 1,
       slug: "modern-web-trends",
       title: "Modern Web Trends",
-      category: "Web Development",
+      category: "",
       imageUrl: WebDevelopmentBlogImage1,
       heading: "Introduction",
       sections: [
         {
-          text: "That’s where Abtik Digital comes in — with strategies that don’t just chase trends but drive measurable business growth.",
+          heading: "Summary",
+          text: "The way people browse, shop, and engage online has changed dramatically. In 2025, websites are more than digital brochures—they’re dynamic, intelligent platforms that convert visitors into customers. Modern web trends like AI chatbots, voice search, fast-loading design, and mobile-first experiences aren’t optional anymore—they’re essential for business growth. For digital marketers and business owners alike, keeping up means staying ahead.",
         },
         {
-          heading: "Frontend Development",
-          text: "Modern frontend stacks like React, Vue, and Svelte are enabling responsive, component-driven UIs with lightning-fast performance. React is widely preferred for its ecosystem, reusability, and community support.",
-        lists:["Frontend "]
+          heading: "What Are Modern Web Trends?",
+          text: "Modern web trends refer to the evolving technologies and design strategies that make websites faster, smarter, and more engaging. They focus on user experience (UX), performance, personalization, and conversion—all pillars of effective digital marketing.",
+      
         },
         {
-          heading: "Backend Technologies",
-          text: "Node.js, Django, and Laravel power scalable backends with APIs, authentication, and real-time features. Node.js is preferred for full-stack JavaScript, speed, and non-blocking architecture.",
+          heading: "Key Web Trends in 2025 You Should Know",
+          text: "",
+          lists:["➢ AI chatbots help answer customer questions automatically.","➢ Simple and dark designs make websites look clean and easy to read.", "➢ Mobile-friendly layouts work smoothly on phones and tablets.", "➢ Voice search support helps people find you by speaking, not typing.", "➢ Websites that work like apps are faster and can be used offline.", "➢ Accessible websites are built so everyone, including people with disabilities, can use them.", ]
         },
         {
-          heading: "Database Management",
-          text: "MongoDB, PostgreSQL, and Firebase are popular choices for structured and unstructured data. Cloud databases improve availability and scaling effortlessly.",
+          heading: "Why These Trends Matter for Your Digital Marketing Strategy",
+          text: "",
+           lists:["➢ Easy-to-use websites keep visitors on your site longer.","➢ Modern features help your website rank higher on Google.","➢ Faster websites lead to more leads, sales, and signups.","➢ A clean design makes your brand look more professional and trustworthy."]
         },
         {
-          heading: "Web Performance & Core Vitals",
-          text: "Performance directly impacts SEO and conversions. Techniques like lazy loading, code splitting, and optimized media are key. Tools like Lighthouse and WebPageTest help monitor vitals.",
+          heading: "The Business Opportunity Behind Web Trends",
+          text: "For agencies, marketers, and businesses, riding the wave of modern web trends means:",
+          lists:["➢ Upselling website revamps with measurable ROI","➢ Offering AI integrations as part of automation solutions","➢ Providing performance-optimized SEO/SEM campaigns" ]
         },
         {
-          heading: "Why It Matters",
-          text: "Your website is your digital storefront. A fast, secure, and accessible site boosts engagement and drives results.",
+          heading: "How You Can Get Started",
+          text: "",
+          lists:["➢ Redesign your site with a mobile-first, user-focused approach.","➢ Use analytics tools like GA4 or Hotjar to guide design decisions.","➢ Integrate AI for chat, personalization, and marketing automation.","➢ Optimize performance for fast load times and Core Web Vitals." ]
+        },
+         {
+          heading: "Challenges You May Face",
+          text: "",
+          lists:["➢ Budget Constraints: Trendy websites require investment, but offer higher long-term returns.","➢ Tech Overload: With too many tools, it’s easy to get overwhelmed—focus on impact-first improvements.","➢ Legacy Systems: Older websites may need total redesigns to catch up","➢ Security & Compliance: New trends must still meet privacy (GDPR) and security standards." ]
+        },
+         {
+          heading: "What We’re Doing at Abtik Digital",
+          text: "At Abtik Digital, we help businesses grow online with smart, modern, and result-driven solutions.",
+          lists:["➢ Website Development – Fast, responsive websites built on WordPress, Shopify, or custom code.","➢ E-Commerce Solutions – User-friendly online stores designed to increase sales.","➢ Digital Marketing – Targeted ad campaigns on Google, Facebook, and Instagram.","➢ SEO Services – Boost rankings with keyword strategy, on-page SEO, and technical fixes.","➢ Social Media Management – Grow your brand with planned content and consistent engagement.", "➢ Graphic Design & Branding – Professional logos, brochures, and brand visuals.", "➢ Content Creation – High-quality blogs, web copy, and social media content.", "➢ Video & Reel Creation – Short videos and reels that capture attention and drive results.", "➢ Performance Ads – Data-driven ad campaigns that deliver maximum ROI." ]
+        },
+         {
+          heading: "Conclusion",
+          text: "Modern web trends are key to creating faster, smarter, and more engaging digital experiences. Businesses that adapt stay ahead in the competitive online space. At Abtik Digital, we combine design, technology, and strategy to help you grow online. Let’s upgrade your digital presence—partner with us today.",
+          lists:[]
         },
         {
           heading: "Contact Us",
@@ -92,73 +113,110 @@ const BlogData: BlogData = {
       id: 2,
       slug: "effective-ui-ux-practices",
       title: "Effective UI/UX Practices",
-      category: "UIUX",
+      category: "",
       imageUrl: GraphiThumbnail,
       heading: "Design Principles",
       sections: [
         {
-          text: "Learn key design principles and patterns that boost user satisfaction and conversions.",
+          text: "",
         },
         {
-          heading: "Consistency & Accessibility",
-          text: "Consistency, clarity, and accessibility are essential elements in great UI/UX design.",
+          heading: "Summary",
+          text: "User expectations are higher than ever. In 2025, great design isn’t just about how a website looks—it’s about how it works. Effective UI (User Interface) and UX (User Experience) practices are critical for converting visitors into loyal customers. From intuitive navigation to fast-loading pages and mobile-friendly layouts, a well-designed experience can make or break your online presence. For businesses and marketers, getting UI/UX right is key to standing out and succeeding online.",
         },
         {
-          heading: "User Psychology",
-          text: "Designing based on how users think and behave ensures higher engagement and ease of use.",
+          heading: "What Is UI/UX Design?",
+          text: "UI refers to the visual elements—buttons, menus, colors, layout—while UX focuses on the overall experience of a user navigating a website or app. Together, UI/UX ensures your site is not only attractive but also easy to use, engaging, and built to convert.",
         },
         {
-          heading: "Wireframes & Prototypes",
-          text: "Tools like Figma, Adobe XD, and Sketch help visualize ideas before development, saving time and cost.",
+          heading: "Effective UI/UX Practices to Follow in 2025",
+          text: "",
+          lists:["➢ Simple, clean layouts help users focus and find information quickly.","➢ Clear navigation menus guide users easily through your site.","➢ Mobile-first design ensures a great experience on any device.","➢ Consistent colors and typography create a strong, trustworthy brand identity.", "➢ Clickable elements and CTAs should be visible, intuitive, and easy to interact with.", "➢ User-friendly forms with fewer fields improve lead generation." ]
         },
         {
-          heading: "Usability Testing",
-          text: "Test early, test often. Real user feedback helps refine design decisions and improve experience.",
+          heading: "Why These Practices Matter for Your Digital Marketing",
+          text: "",
+          lists: ["➢ Better design means better engagement and longer time on site.","➢ User-friendly experiences lead to more leads, sign-ups, and sales.","➢ Google rewards well-structured, mobile-optimized websites.","➢ Good UI/UX builds trust and leaves a lasting impression on visitors."]
         },
         {
-          heading: "Why It’s Important",
-          text: "Great design enhances trust, usability, and conversions. Poor UX drives users away.",
+          heading: "The Business Opportunity Behind Good UI/UX",
+          text: "For businesses, agencies, and marketers, applying modern UI/UX best practices means:",
+          lists: ["➢ Improving website performance with measurable results","➢ Offering UI/UX audits and redesigns as high-value services","➢ Boosting campaign effectiveness through better landing pages and user flows"]
+        },
+         {
+          heading: "  Challenges You May Face",
+          text: "",
+          lists: ["➢ Budget Limits: UI/UX upgrades may require design and dev resources.","➢ Outdated Design Systems: Old templates can slow down new improvements.","➢ Inconsistent Branding: Without UI/UX guidelines, your site may feel disjointed.","➢ Lack of Data: Not tracking user behavior can make improvement efforts guesswork."]
+        },
+         {
+          heading: "What We’re Doing at Abtik Digital",
+          text: "At Abtik Digital, we help businesses grow online with smart, modern, and result-driven solutions.",
+          lists:["➢ Website Development – Fast, responsive websites built on WordPress, Shopify, or custom code.","➢ E-Commerce Solutions – User-friendly online stores designed to increase sales.","➢ Digital Marketing – Targeted ad campaigns on Google, Facebook, and Instagram.","➢ SEO Services – Boost rankings with keyword strategy, on-page SEO, and technical fixes.","➢ Social Media Management – Grow your brand with planned content and consistent engagement.", "➢ Graphic Design & Branding – Professional logos, brochures, and brand visuals.", "➢ Content Creation – High-quality blogs, web copy, and social media content.", "➢ Video & Reel Creation – Short videos and reels that capture attention and drive results.", "➢ Performance Ads – Data-driven ad campaigns that deliver maximum ROI." ]
+        },
+         {
+          heading: "Conclusion",
+          text: "A great website isn’t just about how it looks—it’s about how it works for your users. Effective UI/UX helps your business stand out, engage better, and convert more visitors. In a digital world where attention is short and options are many, creating a seamless user experience is essential. At Abtik Digital, we’re here to turn great design into real results.",
+          lists:[]
         },
         {
           heading: "Contact Us",
           text: "📞 <a href='tel:+918928138434' style='color:#f56015;'>+91 89281 38434</a><br>🌐 Visit: <a href='https://www.abtikdigital.com' style='color:#f56015;'>www.abtikdigital.com</a>",
         },
+        
       ],
     },
     {
       id: 3,
       slug: "seo-in-2025",
       title: "SEO in 2025",
-      category: "SEO",
+      category: "",
       imageUrl: SeoThumbnail,
       heading: "SEO Evolution",
       sections: [
         {
-          text: "Discover how search engine optimization is evolving with AI and user behavior shifts.",
+          text: "",
         },
         {
-          heading: "Search Trends",
-          text: "Semantic search and voice queries are reshaping how content is structured. Focus on natural language and context.",
+          heading: "Summary",
+          text: "Search Engine Optimization (SEO) has changed dramatically over the years—and 2025 is no different. With the rise of AI-driven search engines, voice queries, zero-click results, and user-focused algorithms, SEO is now less about keywords and more about delivering real value. To grow online, businesses must embrace smarter strategies, better content, and optimized user experience. In 2025, SEO is not just a ranking game—it’s a brand-building tool.",
         },
         {
-          heading: "Performance Metrics",
-          text: "Core Web Vitals and real user metrics continue to influence rankings. Tools like Google Search Console and PageSpeed Insights are essential.",
+          heading: "What Is SEO in 2025?",
+          text: "SEO in 2025 goes beyond traditional tactics like keyword stuffing or backlink farming. It’s about providing fast, relevant, secure, and engaging content that answers real user intent. Search engines are smarter, and so your SEO strategy needs to focus on E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), structured data, and human-friendly design.",
         },
         {
-          heading: "AI-Powered Content",
-          text: "AI tools like ChatGPT and Jasper help create SEO-friendly articles faster, focusing on search intent and keywords.",
+          heading: "Key SEO Trends in 2025 You Should Know",
+          text: "",
+          lists: ["➢ AI-Powered Search Engines understand context, not just keywords.", "➢ Core Web Vitals (speed, stability, responsiveness) directly impact rankings.", "➢ Mobile-First Indexing means Google ranks your mobile version first.", "➢ Semantic Search & Intent Matching require well-structured, relevant content.", "➢ Local SEO + Maps Integration helps businesses get discovered nearby.", "➢ Video & Visual SEO are essential as Google ranks multimedia content higher."]
         },
         {
-          heading: "Technical SEO",
-          text: "Schema markup, mobile-first indexing, and crawl efficiency help search engines understand and rank content better.",
+          heading: "Why SEO Still Matters for Your Digital Growth",
+          text: "",
+          lists: ["➢ Drives high-intent organic traffic to your website.","➢ Builds long-term visibility and brand credibility.","➢ Reduces ad spend by attracting free search traffic.","➢ Improves user experience with better content and structure.","➢ Supports every stage of the buyer’s journey."]
         },
-        {
-          heading: "Local SEO & Maps",
-          text: "Google Business Profiles, citations, and customer reviews boost visibility in local search results.",
+         {
+          heading: "How You Can Get Started",
+          text: "",
+          lists: ["➢ Audit your website for speed, structure, and mobile performance.","➢ Update existing content to match current search intent and keyword trends.","➢ Add schema markup for better visibility in featured results.","➢ Create content hubs (pillar pages and clusters) for better internal linking.","➢ Focus on E-E-A-T in blogs, landing pages, and service content."]
+        },
+         {
+          heading: "Challenges You May Face",
+          text: "",
+          lists: ["➢ Algorithm updates can shift rankings overnight—stay flexible.","➢ High competition requires smart content, not just more content.","➢ Technical SEO like schema and speed needs expert handling","➢ Tracking ROI takes time and consistent measurement."]
+        },
+         {
+          heading: "What We’re Doing at Abtik Digital",
+          text: "At Abtik Digital, we help businesses grow online with smart, modern, and result-driven solutions.",
+          lists:["➢ Website Development – Fast, responsive websites built on WordPress, Shopify, or custom code.","➢ E-Commerce Solutions – User-friendly online stores designed to increase sales.","➢ Digital Marketing – Targeted ad campaigns on Google, Facebook, and Instagram.","➢ SEO Services – Boost rankings with keyword strategy, on-page SEO, and technical fixes.","➢ Social Media Management – Grow your brand with planned content and consistent engagement.", "➢ Graphic Design & Branding – Professional logos, brochures, and brand visuals.", "➢ Content Creation – High-quality blogs, web copy, and social media content.", "➢ Video & Reel Creation – Short videos and reels that capture attention and drive results.", "➢ Performance Ads – Data-driven ad campaigns that deliver maximum ROI." ]
         },
         {
           heading: "Recommended Tools",
           lists: ["✔ Google Search Console", "✔ Ahrefs", "✔ Semrush", "✔ Screaming Frog"],
+        },
+         {
+          heading: "Conclusion",
+          text: "SEO in 2025 is more advanced, more user-focused, and more important than ever. To rank, convert, and grow, businesses must embrace smarter, ethical, and intent-driven strategies. At Abtik Digital, we help brands stay visible, relevant, and competitive in this fast-changing search landscape.",
+          lists:[]
         },
         {
           heading: "Let’s Boost Your Search Visibility",
@@ -169,47 +227,40 @@ const BlogData: BlogData = {
     {
       id: 4,
       slug: "digital-marketing-in-2025",
-      title: "Digital Marketing in 2025: “Visibility Isn’t Optional. It’s Everything.”",
-      category: "Digital Marketing",
+      title: "Digital Marketing in 2025",
+      category: "",
       imageUrl: DigitalMarketingThumbnail,
-      heading: "Introduction",
+      heading: "",
       sections: [
         {
-          text: "Digital Marketing in 2025: “Visibility Isn’t Optional. It’s Everything.”\n\nIn today’s hyper-connected world, your brand must be seen, heard, and remembered.",
+          text: "",
         },
         {
-          heading: "Eligibility – Who Needs Digital Marketing?",
-          text: "If you’re any of the following, digital marketing is critical:",
+          heading: "Summary",
+          text: "Digital marketing in 2025 is more intelligent, personalized, and automated than ever before. With AI, voice search, privacy-first strategies, and short-form content leading the way, businesses must evolve fast or risk getting left behind. This blog explores what digital marketing looks like in 2025, key trends, why it matters, and how businesses can turn upcoming challenges into growth opportunities.",
+          lists: [],
+        },
+        {
+          heading: "What Is Digital Marketing in 2025?",
+          text: "In 2025, digital marketing is no longer just about running ads or managing social media—it’s about delivering real-time, data-driven, personalized experiences across every customer touchpoint. It integrates advanced technologies like AI, machine learning, automation, and predictive analytics to better understand and serve consumers.",
           lists: [
-            "A startup or local business trying to build brand awareness",
-            "An e-commerce store seeking higher conversions",
-            "A service-based business looking for quality leads",
-            "A brand aiming to outshine competitors online",
+            "✔ AI-powered content creation and chatbots",
+            "✔ Hyper-personalized email and social campaigns",
+            "✔ Voice and visual search optimization",
+            "✔ Real-time data analysis and behavior prediction",
+            "✔ Seamless omnichannel experiences",
           ],
         },
         {
-          heading: "Top Benefits of Digital Marketing",
+          heading: "Why It Matters for Your Business Growth",
+          text: "Digital marketing in 2025 isn’t just about staying trendy—it’s a growth engine.",
           lists: [
-            "✔ Maximum Visibility",
-            "✔ Lead Generation",
-            "✔ Brand Building",
-            "✔ Smart Analytics",
-            "✔ Cost Efficiency",
+            "✔ Higher ROI: AI automation reduces cost and increases efficiency.",
+            "✔ Customer Loyalty: Personalized experiences build lasting relationships.",
+            "✔ Faster Conversions: Predictive tools shorten the buyer journey.",
+            "✔ Wider Reach: Omnichannel strategies ensure you’re where your audience is.",
           ],
-        },
-        {
-          heading: "Our Core Services",
-          lists: [
-            "✔ Social Media Marketing — Scroll-stopping content & engagement",
-            "✔ SEO — Technical fixes to content optimization",
-            "✔ Performance Ads — Google & Meta campaigns",
-            "✔ Email & WhatsApp Marketing — Automation & retargeting",
-            "✔ Content Strategy — Funnels & copy that convert",
-            "✔ WhatsApp Banner Design — Branded message creatives",
-            "✔ LinkedIn Post Creation — Professional brand content",
-            "✔ Logo & Branding Design — Eye-catching visuals",
-            "✔ UI/UX Design — Flexible & conversion-focused layouts",
-          ],
+          description: "Businesses that embrace these changes will not only grow—but dominate their markets."
         },
         {
           heading: "Top Trends for 2025",
@@ -222,23 +273,32 @@ const BlogData: BlogData = {
           ],
         },
         {
-          heading: "How We Support You",
+          heading: "The Business Opportunity in 2025",
+          text: "If you adapt early, you get ahead. Here’s where the real opportunity lies:",
           lists: [
-            "✔ Customized Strategy",
-            "✔ Campaign Execution",
-            "✔ Performance Tracking",
-            "✔ Design & Content Support",
-            "✔ Growth Hacking Solutions",
+            "✔ Hyper-targeted campaigns with higher engagement",
+            "✔ Lower acquisition costs through smarter ad targeting",
+            "✔ Global access to customers via voice, mobile, and video",
+            "✔ Building brand trust in a privacy-conscious world",
+            "✔ New markets and niches through influencer-led micro-communities",
+          ],
+          description: "Digital marketing in 2025 is a level playing field—startups and small businesses can compete with giants using the right strategies and tools."
+        },
+        {
+          heading: "Challenges You May Face",
+          text: "Despite the opportunities, businesses must overcome key challenges:",
+          lists: [
+            "✓ Keeping up with tech: The pace of change is fast. Tools evolve monthly.",
+            "✓ Data privacy laws: You’ll need consent-based marketing strategies.",
+            "✓ Complex analytics: Interpreting AI data and performance metrics requires skill.",
+            "✓ Ad fatigue and content saturation: Standing out takes creativity and authenticity.",
+            "✓ Tool overload: Choosing the right tech stack can be overwhelming..",
           ],
         },
         {
-          heading: "How We Help You Win",
-          lists: [
-            "✓ You don’t need to learn algorithms — we handle it all",
-            "✓ We scale your brand across platforms",
-            "✓ We track and optimize every campaign",
-            "✓ You get a full marketing team — not just a service",
-          ],
+          heading: "Conclusion",
+          text: "Digital marketing in 2025 is about more than just being online—it’s about being intelligent, fast, and human-centric. Brands that embrace AI, focus on real value, and adapt to new behaviors will lead the next decade of growth. Whether you’re a small business, startup, or growing brand—this is the moment to invest in smarter marketing.",
+          lists: [],
         },
         {
           heading: "Ready to Dominate Digital?",
@@ -470,11 +530,11 @@ const ExpandedBlog: React.FC = () => {
                       />
                     )}
                     {section.lists && section.lists.length > 0 && (
-                      <ul className="list-disc list-inside space-y-2 mt-2">
+                      <ul className="list-none list-inside space-y-2 mt-2">
                         {section.lists.map((item, idx) => {
                           const isBold = item.startsWith("**") && item.endsWith("**");
                           return (
-                            <li key={idx} className="text-white text-lg">
+                            <li key={idx} className="text-white text-lg ">
                               {isBold ? (
                                 <span className="font-semibold text-[#f56015]">
                                   {item.replace(/\*\*/g, "")}
@@ -487,6 +547,13 @@ const ExpandedBlog: React.FC = () => {
                         })}
                       </ul>
                     )}
+                    {
+                      section?.description&&(
+                        <p>
+                          {section.description}
+                        </p>
+                      )
+                    }
                   </div>
                 ))}
               </div>
