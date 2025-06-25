@@ -7,11 +7,11 @@ import Mainlayout from "../layout/Mainlayout";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import WebDevelopmentBlogImage1 from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentBlogImage1.jpg";
 
-import GraphiThumbnail from "../../public/blog-images/GRAPHIC_DESIGN/image1.jpg";
+import GraphiThumbnail from "../../public/blog-images/UI/UXimage.jpg";
 
-import SeoThumbnail from "../../public/blog-images/SEO/seoThumbnail.jpg";
+import SeoThumbnail from "../../public/blog-images/SEO/seoimage.jpg";
 
-import DigitalMarketingThumbnail from "../../public/blog-images/DIGITAL_MARKETING/digitalMarketingThumbnail.jpg";
+import DigitalMarketingThumbnail from "../../public/blog-images/DIGITAL_MARKETING/digital marketingimage.jpg";
 
 
 // Define interfaces for BlogData structure
@@ -506,7 +506,7 @@ const ExpandedBlog: React.FC = () => {
                 <img
                   src={blog.imageUrl}
                   alt={blog.title}
-                  className="w-full h-64 object-cover rounded-xl shadow-md mb-6"
+                  className="w-full h- object-cover rounded-xl shadow-md mb-6"
                 />
               )}
 

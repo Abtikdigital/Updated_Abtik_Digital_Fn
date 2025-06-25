@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Mainlayout from "../layout/Mainlayout";
 import WebDevelopmentThumbnail from "../../public/blog-images/WEB_DEVELOPMENT/webDevelopmentThumbnail.jpg";
-import GraphiThumbnail from "../../public/blog-images/GRAPHIC_DESIGN/image2.jpg";
-import SeoThumbnail from "../../public/blog-images/SEO/seoThumbnail.jpg";
-import DigitalMarketingThumbnail from "../../public/blog-images/DIGITAL_MARKETING/digitalMarketingThumbnail.jpg";
+import GraphiThumbnail from "../../public/blog-images/UI/UXimage.jpg";
+import SeoThumbnail from "../../public/blog-images/SEO/seoimage.jpg";
+import DigitalMarketingThumbnail from "../../public/blog-images/DIGITAL_MARKETING/digital marketingimage.jpg";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import { Link } from "react-router-dom";
 
