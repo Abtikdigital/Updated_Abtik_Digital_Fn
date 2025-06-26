@@ -5,7 +5,8 @@ import fs from "fs";
 import formidable from "formidable";
 
 // ENVIRONMENT VARIABLES
-const { SMTP_HOST_NAME, SMTP_PORT, SECURE, MONGODB_URI, SMTP_MAIL, SMTP_PASS } = process.env;
+const { SMTP_HOST_NAME, SMTP_PORT, SECURE, MONGODB_URI, SMTP_MAIL, SMTP_PASS } =
+  process.env;
 
 // -----------------------------
 // MONGOOSE CONNECTION
@@ -17,6 +18,9 @@ const dbConnection = async () => {
     cached = await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      bufferCommands: false,
+      serverSelectionTimeoutMS: 5000,
+      tls: true,
     });
     return cached;
   } catch (err) {
@@ -28,19 +32,29 @@ const dbConnection = async () => {
 // -----------------------------
 // SCHEMA & MODEL
 // -----------------------------
-const careerSchema = mongoose.Schema({
-  name: { type: String, required: true },
-  position: { type: String, required: true },
-  email: { type: String, required: true, unique: true, lowercase: true, trim: true },
-  contact_number: { type: String, required: true },
-  experience: { type: String, required: true },
-  expectedCtc: { type: String, required: true },
-  currentCtc: { type: String, required: true },
-  joiningPeriod: { type: String, required: true },
-  message: { type: String },
-}, { timestamps: true });
+const careerSchema = mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    position: { type: String, required: true },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
+    contact_number: { type: String, required: true },
+    experience: { type: String, required: true },
+    expectedCtc: { type: String, required: true },
+    currentCtc: { type: String, required: true },
+    joiningPeriod: { type: String, required: true },
+    message: { type: String },
+  },
+  { timestamps: true }
+);
 
-const careerModel = mongoose.models.careerModel || mongoose.model("careerModel", careerSchema);
+const careerModel =
+  mongoose.models.careerModel || mongoose.model("careerModel", careerSchema);
 
 // -----------------------------
 // VALIDATION SCHEMA
@@ -49,12 +63,15 @@ const careerValidationSchema = joi.object({
   name: joi.string().required(),
   position: joi.string().required(),
   email: joi.string().email().required(),
-  contact_number: joi.string().pattern(/^[0-9]{10,15}$/).required(),
+  contact_number: joi
+    .string()
+    .pattern(/^[0-9]{10,15}$/)
+    .required(),
   experience: joi.string().required(),
   expectedCtc: joi.string().required(),
   currentCtc: joi.string().required(),
   joiningPeriod: joi.string().required(),
-  message: joi.string().allow('', null).optional(),
+  message: joi.string().allow("", null).optional(),
 });
 
 // -----------------------------
@@ -63,7 +80,7 @@ const careerValidationSchema = joi.object({
 const transporter = nodemailer.createTransport({
   host: SMTP_HOST_NAME,
   port: Number(SMTP_PORT),
-  secure: SECURE === 'true',
+  secure: SECURE === "true",
   auth: {
     user: SMTP_MAIL,
     pass: SMTP_PASS,
@@ -74,7 +91,13 @@ const transporter = nodemailer.createTransport({
 // EMAIL SENDING
 // -----------------------------
 const sendMail = async (from, to, subject, html, attachments = []) => {
-  const info = await transporter.sendMail({ from, to, subject, html, attachments });
+  const info = await transporter.sendMail({
+    from,
+    to,
+    subject,
+    html,
+    attachments,
+  });
   console.log("Mail sent:", info.messageId);
 };
 
@@ -486,18 +509,29 @@ export const config = {
 };
 
 const handler = async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ isSuccess: false, message: "Only POST allowed" });
+  if (req.method !== "POST") {
+    return res
+      .status(405)
+      .json({ isSuccess: false, message: "Only POST allowed" });
   }
 
   try {
     await dbConnection();
 
-    const form = formidable({ keepExtensions: true, maxFileSize: 3 * 1024 * 1024 });
+    const form = formidable({
+      keepExtensions: true,
+      maxFileSize: 3 * 1024 * 1024,
+    });
 
     form.parse(req, async (err, fields, files) => {
       if (err) {
-        return res.status(400).json({ isSuccess: false, message: "Form parse error", error: err.message });
+        return res
+          .status(400)
+          .json({
+            isSuccess: false,
+            message: "Form parse error",
+            error: err.message,
+          });
       }
 
       const formData = {
@@ -509,25 +543,37 @@ const handler = async (req, res) => {
         expectedCtc: fields.expectedCtc?.[0] || fields.expectedCtc,
         currentCtc: fields.currentCtc?.[0] || fields.currentCtc,
         joiningPeriod: fields.joiningPeriod?.[0] || fields.joiningPeriod,
-        message: fields.message?.[0] || fields.message || '',
+        message: fields.message?.[0] || fields.message || "",
       };
 
       // Validate
       const { error } = careerValidationSchema.validate(formData);
       if (error) {
-        return res.status(400).json({ isSuccess: false, message: "Validation error", error: error.message });
+        return res
+          .status(400)
+          .json({
+            isSuccess: false,
+            message: "Validation error",
+            error: error.message,
+          });
       }
 
       // Check duplicate
       const exists = await careerModel.findOne({ email: formData.email });
       if (exists) {
-        return res.status(409).json({ isSuccess: false, message: "Email already exists" });
+        return res
+          .status(409)
+          .json({ isSuccess: false, message: "Email already exists" });
       }
 
       // Resume validation
-      const resume = Array.isArray(files.resume) ? files.resume[0] : files.resume;
+      const resume = Array.isArray(files.resume)
+        ? files.resume[0]
+        : files.resume;
       if (!resume || !fs.existsSync(resume.filepath)) {
-        return res.status(400).json({ isSuccess: false, message: "Resume file missing" });
+        return res
+          .status(400)
+          .json({ isSuccess: false, message: "Resume file missing" });
       }
 
       // Save applicant data
@@ -542,8 +588,19 @@ const handler = async (req, res) => {
 
       // Send emails in parallel
       await Promise.all([
-        sendMail(SMTP_MAIL, SMTP_MAIL, "New Career Application", firmTemplate(formData), [resumeAttachment]),
-        sendMail(SMTP_MAIL, formData.email, "Thank You for Applying to Abtik-Digital", userTemplate(formData)),
+        sendMail(
+          SMTP_MAIL,
+          SMTP_MAIL,
+          "New Career Application",
+          firmTemplate(formData),
+          [resumeAttachment]
+        ),
+        sendMail(
+          SMTP_MAIL,
+          formData.email,
+          "Thank You for Applying to Abtik-Digital",
+          userTemplate(formData)
+        ),
       ]);
 
       // Clean temp file
@@ -553,11 +610,18 @@ const handler = async (req, res) => {
         console.warn("Temp file cleanup failed:", cleanupErr.message);
       }
 
-      return res.status(201).json({ isSuccess: true, message: "Application submitted successfully" });
+      return res
+        .status(201)
+        .json({
+          isSuccess: true,
+          message: "Application submitted successfully",
+        });
     });
   } catch (err) {
     console.error("Server Error:", err);
-    return res.status(500).json({ isSuccess: false, message: "Server error", error: err.message });
+    return res
+      .status(500)
+      .json({ isSuccess: false, message: "Server error", error: err.message });
   }
 };
 

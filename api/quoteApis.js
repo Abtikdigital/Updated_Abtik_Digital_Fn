@@ -15,6 +15,9 @@ const dbConnection = async () => {
     cached = await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      bufferCommands: false,
+      serverSelectionTimeoutMS: 5000,
+      tls: true,
     });
     return cached;
   } catch (error) {
