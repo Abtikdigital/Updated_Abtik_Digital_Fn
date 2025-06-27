@@ -444,7 +444,7 @@ const userTemplate = (data) => {
         
         <p>In the meantime, feel free to explore our website for more information about our services and offerings.</p>
         
-        <center><a href="https://www.abtik-digital.com" class="button">Visit Our Website</a></center>
+        <center><a href="https://www.abtikdigital.com" class="button">Visit Our Website</a></center>
         
         <div class="divider"></div>
         
@@ -452,10 +452,10 @@ const userTemplate = (data) => {
       </div>
       <div class="footer">
         <div class="social-links">
-          <a href="#">Facebook</a> • 
-          <a href="#">Twitter</a> • 
-          <a href="#">Instagram</a> • 
-          <a href="#">LinkedIn</a>
+          <a href="https://www.facebook.com/people/Abtik-Digital/61557004832458/?rdid=BNLPpD0K1E703Jao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16itJgeEAc%2F">Facebook</a> • 
+        
+          <a href="https://www.instagram.com/abtik.digital">Instagram</a> • 
+          <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHJQugFIMzy6QAAAZeq55CAMLUnn79hNkV7chXgOBjzkhFbezWCJw2nuPyYxOLIgJhDK9E8Zs-8hgiSZL8isIpwxOUosmlZKfTtF_86TL7eE8hAf626pHjnyeyVNJeL78qa0ss=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fabtik-digitals%2F">LinkedIn</a>
         </div>
         Thank you for choosing Abtik-Digital.
         <span class="footer-note">© 2025 Abtik-Digital. All rights reserved.</span>

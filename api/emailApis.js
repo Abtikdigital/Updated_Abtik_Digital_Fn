@@ -363,16 +363,16 @@ const userMarketingTemplate = (userInfo) => {
               <p>Expect to hear from us soon with exciting content and opportunities tailored just for you. We'll keep you in the loop with the latest from Abtik-Digital.</p>
             </div>
             <p>Explore our website to learn more about what we offer.</p>
-            <center><a href="https://www.abtik-digital.com" class="button">Visit Our Website</a></center>
+            <center><a href="https://www.abtikdigital.com" class="button">Visit Our Website</a></center>
             <div class="divider"></div>
-            <p>If you have any questions, contact us at <strong>+91 1234567890</strong>.</p>
+            <p>If you have any questions, contact us at <strong><a href="tel:+918928138434">+91 89281 38434</a></strong>.</p>
           </div>
           <div class="footer">
             <div class="social-links">
-              <a href="#">Facebook</a> • 
-              <a href="#">Twitter</a> • 
-              <a href="#">Instagram</a> • 
-              <a href="#">LinkedIn</a>
+              <a href="https://www.facebook.com/people/Abtik-Digital/61557004832458/?rdid=BNLPpD0K1E703Jao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16itJgeEAc%2F">Facebook</a> • 
+         
+              <a href="https://www.instagram.com/abtik.digital">Instagram</a> • 
+              <a href="https://www.linkedin.com/company/abtik-digitals/">LinkedIn</a>
             </div>
             Thank you for choosing Abtik-Digital.
             <span class="footer-note">© 2025 Abtik-Digital. All rights reserved.</span>

@@ -396,7 +396,7 @@ const ExpandedBlog: React.FC = () => {
           }}
         >
           {/* Animated SVG Lines - Desktop */}
-          <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="hidden lg:block absolute top-[20%] inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1920 1080"

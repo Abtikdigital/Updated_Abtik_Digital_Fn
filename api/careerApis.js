@@ -482,15 +482,15 @@ const userTemplate = (userInfo) => {
               <p>We will contact you within 24-48 business hours if your profile matches our requirements. Thank you for your interest in joining our team!</p>
             </div>
             <p>In the meantime, feel free to explore our website for more information about our company and opportunities.</p>
-            <center><a href="https://www.abtik-digital.com" class="button">Visit Our Website</a></center>
+            <center><a href="https://www.abtikdigital.com" class="button">Visit Our Website</a></center>
             <div class="divider"></div>
             <p>If you have any urgent questions, please don't hesitate to call us at <strong>+91 1234567890</strong>.</p>
           </div>
           <div class="footer">
             <div class="social-links">
-              <a href="https://www.facebook.com/people/Abtik-Digital/61557004832458/#">Facebook</a> • 
-              <a href="https://www.instagram.com/abtik_digital/?igsh=MWh5NHZqamxodmZiNg%3D%3D#">Instagram</a> • 
-              <a href="https://www.linkedin.com/company/abtik-digitals/">LinkedIn</a>
+              <a href="hhttps://www.linkedin.com/authwall?trk=bf&trkInfo=AQHJQugFIMzy6QAAAZeq55CAMLUnn79hNkV7chXgOBjzkhFbezWCJw2nuPyYxOLIgJhDK9E8Zs-8hgiSZL8isIpwxOUosmlZKfTtF_86TL7eE8hAf626pHjnyeyVNJeL78qa0ss=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fabtik-digitals%2F">Facebook</a> • 
+              <a href="https://www.instagram.com/abtik.digital">Instagram</a> • 
+              <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHJQugFIMzy6QAAAZeq55CAMLUnn79hNkV7chXgOBjzkhFbezWCJw2nuPyYxOLIgJhDK9E8Zs-8hgiSZL8isIpwxOUosmlZKfTtF_86TL7eE8hAf626pHjnyeyVNJeL78qa0ss=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fabtik-digitals%2F">LinkedIn</a>
             </div>
             Thank you for choosing Abtik-Digital.
             <span class="footer-note">© 2025 Abtik-Digital. All rights reserved.</span>

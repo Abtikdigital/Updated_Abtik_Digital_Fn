@@ -112,7 +112,7 @@ const ContactUs = () => {
   }}
 >
   {/* SVG Line Animation for Desktop */}
-  <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+  <div className="hidden lg:block absolute inset-0 top-[20%] w-full h-full overflow-hidden pointer-events-none z-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1920 1080"

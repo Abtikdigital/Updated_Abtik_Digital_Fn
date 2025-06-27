@@ -470,7 +470,7 @@ const userTemplate = (quoteData) => {
         <p>While you wait, feel free to explore our portfolio or check out our recent case studies to see how we've helped businesses like yours achieve their digital goals.</p>
         
         <p style="text-align: center;">
-          <a href="https://abtikdigital.com/portfolio" class="button">View Our Work</a>
+          <a href="https://www.abtikdigital.com/portfolio" class="button">View Our Work</a>
         </p>
         
         <p>If you have any questions or would like to provide additional details about your project, please don't hesitate to reach out to our support team.</p>
@@ -478,13 +478,15 @@ const userTemplate = (quoteData) => {
         <p>We look forward to the opportunity to work with you!</p>
         
         <p>Best regards,<br>The Abtik-Digital Team</p>
+         <div class="divider"></div>
+         <p>If you have any questions, contact us at <strong><a href="tel:+918928138434">+91 89281 38434</a></strong>.</p>
       </div>
       <div class="footer">
         <div class="social-links">
-          <a href="https://facebook.com/abtikdigital">f</a>
-          <a href="https://twitter.com/abtikdigital">t</a>
-          <a href="https://instagram.com/abtikdigital">i</a>
-          <a href="https://linkedin.com/company/abtikdigital">in</a>
+          <a href="https://facebook.com/abtikdigital">Facebook</a>
+
+          <a href="https://instagram.com/abtikdigital">Instagram</a>
+          <a href="https://linkedin.com/company/abtikdigital">LinkedIn</a>
         </div>
         This is an automated message confirming your quote request.
         <span class="footer-note">Please do not reply to this email directly.</span>

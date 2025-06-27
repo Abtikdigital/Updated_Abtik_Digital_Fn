@@ -106,7 +106,7 @@ const AboutUs = () => {
           }}
         >
           {/* SVG Line Animation for Desktop (Large screens) */}
-          <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="hidden lg:block absolute inset-0 top-[20%] w-full h-full overflow-hidden pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1920 1080"

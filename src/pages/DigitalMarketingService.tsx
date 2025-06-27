@@ -85,7 +85,7 @@ const DigitalMarketing: FC = () => {
       <div className="min-h-screen w-full bg-[#0F172A] text-white">
         {/* Header Section */}
    <SectionWithAnimation
-  className="relative flex flex-col md:flex-row items-center justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
+  className="relative flex flex-col md:flex-row items-center  justify-between w-full px-6 md:px-16 py-10 gap-10 md:gap-0"
   style={{
     background: `
       radial-gradient(ellipse 50% 80% at top right, #f56015 1%, transparent 50%),
@@ -95,7 +95,7 @@ const DigitalMarketing: FC = () => {
   }}
 >
   {/* SVG Line Animation - Desktop */}
-  <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+  <div className="hidden lg:block absolute top-[20%] inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1920 1080"
@@ -173,7 +173,7 @@ const DigitalMarketing: FC = () => {
   {/* Left Side - Heading */}
   <div className="w-full md:w-1/2 flex justify-center md:justify-start items-center z-10">
     <h2 className="max-w-full text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left leading-tight">
-      Digital Marketing
+      Digital <br/>Marketing
     </h2>
   </div>
 
