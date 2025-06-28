@@ -4,17 +4,17 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect, FC, memo } from "react";
 import Mainlayout from "../layout/Mainlayout";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
-import SlokImage from "../assets/Portfolio/1.jpg";
+import SlokImage from "../assets/Portfolio/New Images/3.jpg";
 import ClikcFluenceImage from "../assets/Portfolio/2.jpg";
-import NextStepImage from "../assets/Portfolio/3.jpg";
-import MetaMorphImage from "../assets/Portfolio/4.jpg";
-import WoodCompany from "../assets/Portfolio/5.jpg";
+import NextStepImage from "../assets/Portfolio/New Images/11.jpg";
+import MetaMorphImage from "../assets/Portfolio/New Images/10.jpg";
+import WoodCompany from "../assets/Portfolio/New Images/9.jpg";
 import FusinevitImage from "../assets/Portfolio/6.jpg";
-import HariOmKathiyavadiImage from "../assets/Portfolio/7.jpg";
-import MihrabImage from "../assets/Portfolio/Mihrab.jpg";
-import HoneImage from "../assets/Portfolio/10.jpg";
-import RudryaLayImage from "../assets/Portfolio/11.jpg";
-import LifeSignImage from "../assets/Portfolio/12.jpg";
+import HariOmKathiyavadiImage from "../assets/Portfolio/New Images/8.jpg";
+import MihrabImage from "../assets/Portfolio/New Images/6.jpg";
+import HoneImage from "../assets/Portfolio/New Images/5.jpg";
+import RudryaLayImage from "../assets/Portfolio/New Images/4.jpg";
+import LifeSignImage from "../assets/Portfolio/New Images/2.jpg";
 import BlueWingsImage from "../assets/Portfolio/Graphic/3.jpg";
 import HariOmDigitalMarketingImage from "../assets/Portfolio/Graphic/2.jpg";
 import Patrika from "../assets/Portfolio/Graphic/1.jpg";
@@ -23,6 +23,7 @@ import AlankritaGraphicImage from "../assets/Portfolio/AlankritaGraphicDesign.jp
 import HrGraphiDesignImage from "../assets/Portfolio/HrGraphicDesign.jpg";
 import NextStepGraphicDesign from "../assets/Portfolio/NextStepGraphicDesign.jpg";
 import NavrachnaDigitalMarketing from "../assets/Portfolio/NavrachnaDigital.jpg";
+import NobleCraft from "../assets/Portfolio/New Images/1.jpg"
 
 // Define TypeScript interfaces for portfolioData
 interface PortfolioItem {
@@ -189,6 +190,14 @@ const portfolioData: PortfolioData = {
         "We built a business website from the ground up with secure backend, user management, and service integrations.",
       link: "#",
       imageUrl: HoneImage,
+      category: "Development",
+    },
+    {
+      title: "NOBLE CRAFT PRIVATE LIMITED",
+      description:
+        "We built a business website from the ground up with secure backend, user management, and service integrations.",
+      link: "#",
+      imageUrl: NobleCraft,
       category: "Development",
     },
     {
