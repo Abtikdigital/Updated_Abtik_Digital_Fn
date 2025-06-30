@@ -274,10 +274,10 @@ const PortfolioCard: FC<PortfolioCardProps> = memo(({ project, index, isFlipped,
               draggable="false"
               alt={project.title}
               loading="lazy"
-              className="w-full h-[calc(100%-4rem)] object-cover"
+              className="w-full h-[calc(100%-4rem)] object-cover "
             />
-            <div className="absolute bottom-0 w-full h-18 bg-[#0F172A] bg-opacity-60 text-white text-center flex items-center justify-center">
-              <span className="w-full text-xl font-semibold wrap-break-word truncate">
+            <div className="absolute bottom-0 w-full h-18 bg-[#0F172A] bg-opacity-60  text-center flex items-center justify-center">
+              <span className="w-full text-xl font-semibold wrap-break-word truncate text-white">
                 {project.title}
               </span>
             </div>
