@@ -15,17 +15,20 @@ import MihrabImage from "../assets/Portfolio/New Images/6.jpg";
 import HoneImage from "../assets/Portfolio/New Images/5.jpg";
 import RudryaLayImage from "../assets/Portfolio/New Images/4.jpg";
 import LifeSignImage from "../assets/Portfolio/New Images/2.jpg";
-import BlueWingsImage from "../assets/Portfolio/Graphic/3.jpg";
-import HariOmDigitalMarketingImage from "../assets/Portfolio/Graphic/2.jpg";
-import Patrika from "../assets/Portfolio/Graphic/1.jpg";
 import OmNetsImage from "../assets/Portfolio/OmmNetz.jpeg";
 import AlankritaGraphicImage from "../assets/Portfolio/AlankritaGraphicDesign.jpg";
 import HrGraphiDesignImage from "../assets/Portfolio/HrGraphicDesign.jpg";
 import NextStepGraphicDesign from "../assets/Portfolio/NextStepGraphicDesign.jpg";
-import NavrachnaDigitalMarketing from "../assets/Portfolio/NavrachnaDigital.jpg";
 import NobleCraft from "../assets/Portfolio/New Images/1.jpg"
+import HariOmDigitalMarketing from "../assets/Portfolio/hariommockup.jpg"
 
+
+// commented Images
 // Define TypeScript interfaces for portfolioData
+// import BlueWingsImage from "../assets/Portfolio/Graphic/3.jpg";
+// import HariOmDigitalMarketingImage from "../assets/Portfolio/Graphic/2.jpg";
+// import Patrika from "../assets/Portfolio/Graphic/1.jpg";
+// import NavrachnaDigitalMarketing from "../assets/Portfolio/NavrachnaDigital.jpg";
 interface PortfolioItem {
   title: string;
   description: string;
@@ -48,38 +51,38 @@ const portfolioData: PortfolioData = {
       imageUrl: MihrabImage,
       category: "UIUX",
     },
-    {
-      title: "BLUE WINGS (SHIVA TOURS & TRAVELS)",
-      description:
-        "We created and posted engaging travel content and promotional offers on social media platforms, significantly increasing tour inquiries.",
-      link: "#",
-      imageUrl: BlueWingsImage,
-      category: "Digital Marketing",
-    },
-    {
-      title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
-      description:
-        "We developed informative social media posts and blog articles to educate audiences about organic living, enhancing product visibility and reach.",
-      link: "#",
-      imageUrl: Patrika,
-      category: "Digital Marketing",
-    },
+    // {
+    //   title: "BLUE WINGS (SHIVA TOURS & TRAVELS)",
+    //   description:
+    //     "We created and posted engaging travel content and promotional offers on social media platforms, significantly increasing tour inquiries.",
+    //   link: "#",
+    //   imageUrl: BlueWingsImage,
+    //   category: "Digital Marketing",
+    // },
+    // {
+    //   title: "RAJASTHAN AGRO ORGANICS PRIVATE LIMITED",
+    //   description:
+    //     "We developed informative social media posts and blog articles to educate audiences about organic living, enhancing product visibility and reach.",
+    //   link: "#",
+    //   imageUrl: Patrika,
+    //   category: "Digital Marketing",
+    // },
     {
       title: "Hari Om Kathiyawadi",
       description:
         "We curated appetizing food visuals and optimized local SEO content, leading to a consistent increase in dine-in and delivery sales.",
       link: "#",
-      imageUrl: HariOmDigitalMarketingImage,
+      imageUrl: HariOmDigitalMarketing,
       category: "Digital Marketing",
     },
-    {
-      title: "NAVRACHANA AROGYA PRIVATE LIMITED",
-      description:
-        "We promoted healthcare awareness through strategic SEO content and engaging campaign creatives across social media, improving patient inquiries.",
-      link: "#",
-      imageUrl: NavrachnaDigitalMarketing,
-      category: "Digital Marketing",
-    },
+    // {
+    //   title: "NAVRACHANA AROGYA PRIVATE LIMITED",
+    //   description:
+    //     "We promoted healthcare awareness through strategic SEO content and engaging campaign creatives across social media, improving patient inquiries.",
+    //   link: "#",
+    //   imageUrl: NavrachnaDigitalMarketing,
+    //   category: "Digital Marketing",
+    // },
     {
       title: "SLOKI SOFTWARE TECHNOLOGIES PRIVATE LIMITED",
       description:
