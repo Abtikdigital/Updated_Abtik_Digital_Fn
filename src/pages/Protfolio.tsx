@@ -15,10 +15,10 @@ import MihrabImage from "../assets/Portfolio/New Images/6.jpg";
 import HoneImage from "../assets/Portfolio/New Images/5.jpg";
 import RudryaLayImage from "../assets/Portfolio/New Images/4.jpg";
 import LifeSignImage from "../assets/Portfolio/New Images/2.jpg";
-import OmNetsImage from "../assets/Portfolio/OmmNetz.jpeg";
-import AlankritaGraphicImage from "../assets/Portfolio/AlankritaGraphicDesign.jpg";
-import HrGraphiDesignImage from "../assets/Portfolio/HrGraphicDesign.jpg";
-import NextStepGraphicDesign from "../assets/Portfolio/NextStepGraphicDesign.jpg";
+import KKLJImage from "../assets/Portfolio/KKLJ Energy.jpg";
+import AlankritaGraphicImage from "../assets/Portfolio/Alankrita.jpg";
+import HrGraphiDesignImage from "../assets/Portfolio/HR.jpg";
+import NextStepGraphicDesign from "../assets/Portfolio/Nextstep.jpg";
 import NobleCraft from "../assets/Portfolio/New Images/1.jpg"
 import HariOmDigitalMarketing from "../assets/Portfolio/hariommockup.jpg"
 import SJBWImage from "../assets/Portfolio/SJBWMOCKUP.jpg"
@@ -140,11 +140,11 @@ const portfolioData: PortfolioData = {
       category: "UIUX",
     },
     {
-      title: "OMMNETZ TECHNOLOGIES LLP",
+      title: "KKLJ ENERGY",
       description:
         "We developed branding visuals and sleek logo concepts tailored for a tech-based service provider to reflect innovation and trust.",
       link: "#",
-      imageUrl: OmNetsImage,
+      imageUrl: KKLJImage,
       category: "Graphic Design",
     },
     {
