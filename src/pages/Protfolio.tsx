@@ -5,11 +5,9 @@ import { useState, useEffect, FC, memo } from "react";
 import Mainlayout from "../layout/Mainlayout";
 import IphoneImage from "../assets/IphoneImage/iPhone.png";
 import SlokImage from "../assets/Portfolio/New Images/3.jpg";
-import ClikcFluenceImage from "../assets/Portfolio/2.jpg";
 import NextStepImage from "../assets/Portfolio/New Images/11.jpg";
 import MetaMorphImage from "../assets/Portfolio/New Images/10.jpg";
 import WoodCompany from "../assets/Portfolio/New Images/9.jpg";
-import FusinevitImage from "../assets/Portfolio/6.jpg";
 import HariOmKathiyavadiImage from "../assets/Portfolio/New Images/8.jpg";
 import MihrabImage from "../assets/Portfolio/New Images/6.jpg";
 import HoneImage from "../assets/Portfolio/New Images/5.jpg";
@@ -25,6 +23,8 @@ import SJBWImage from "../assets/Portfolio/SJBWMOCKUP.jpg"
 
 // commented Images
 // Define TypeScript interfaces for portfolioData
+// import FusinevitImage from "../assets/Portfolio/6.jpg";
+// import ClikcFluenceImage from "../assets/Portfolio/2.jpg";
 // import BlueWingsImage from "../assets/Portfolio/Graphic/3.jpg";
 // import HariOmDigitalMarketingImage from "../assets/Portfolio/Graphic/2.jpg";
 // import Patrika from "../assets/Portfolio/Graphic/1.jpg";
@@ -99,14 +99,14 @@ const portfolioData: PortfolioData = {
       imageUrl: SlokImage,
       category: "UIUX",
     },
-    {
-      title: "CLICKFLUENCE LLP",
-      description:
-        "We crafted a user-centric e-commerce layout with refined product navigation and a conversion-optimized checkout experience.",
-      link: "#",
-      imageUrl: ClikcFluenceImage,
-      category: "UIUX",
-    },
+    // {
+    //   title: "CLICKFLUENCE LLP",
+    //   description:
+    //     "We crafted a user-centric e-commerce layout with refined product navigation and a conversion-optimized checkout experience.",
+    //   link: "#",
+    //   imageUrl: ClikcFluenceImage,
+    //   category: "UIUX",
+    // },
     {
       title: "ALANKRITA",
       description:
@@ -163,14 +163,14 @@ const portfolioData: PortfolioData = {
       imageUrl: NextStepGraphicDesign,
       category: "Graphic Design",
     },
-    {
-      title: "FUSINEVIT SOLUTION PVT. LTD.",
-      description:
-        "We built a responsive SaaS platform with robust user authentication, dashboards, and API integrations for enterprise workflows.",
-      link: "#",
-      imageUrl: FusinevitImage,
-      category: "UIUX",
-    },
+    // {
+    //   title: "FUSINEVIT SOLUTION PVT. LTD.",
+    //   description:
+    //     "We built a responsive SaaS platform with robust user authentication, dashboards, and API integrations for enterprise workflows.",
+    //   link: "#",
+    //   imageUrl: FusinevitImage,
+    //   category: "UIUX",
+    // },
     {
       title: "Hari Om Kathiyawadi",
       description:
@@ -286,7 +286,7 @@ const PortfolioCard: FC<PortfolioCardProps> = memo(({ project, index, isFlipped,
               loading="lazy"
               className="w-full h-[calc(100%-4rem)] object-cover "
             />
-            <div className="absolute bottom-0 w-full h-18 bg-[#0F172A] bg-opacity-60  text-center flex items-center justify-center">
+            <div className="absolute bottom-0  w-full h-18 bg-[#0F172A] bg-opacity-60  text-center flex items-center justify-center">
               <span className="w-full text-xl font-semibold wrap-break-word truncate text-white">
                 {project.title}
               </span>
