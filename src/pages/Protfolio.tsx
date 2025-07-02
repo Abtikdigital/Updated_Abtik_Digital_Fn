@@ -44,7 +44,7 @@ interface PortfolioData {
 const portfolioData: PortfolioData = {
   portfolioItems: [
     {
-      title: "Mihrab",
+      title: "Mihrab Innovate",
       description:
         "We designed a modern website interface for Mihrab, focusing on a clean layout, improved accessibility, and enhanced user flow to boost engagement.",
       link: "#",
@@ -116,7 +116,7 @@ const portfolioData: PortfolioData = {
       category: "Graphic Design",
     },
     {
-      title: "HR",
+      title: "Heritage Repair PVT",
       description:
         "We created a memorable brand identity with a custom logo and educational social media graphics to boost audience engagement.",
       link: "#",
