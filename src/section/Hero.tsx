@@ -83,20 +83,21 @@ const HeroSection = () => {
     sectionOneLines
       .fromTo(
         "#section-one-line1",
-        { strokeDashoffset: 1000 },
-        { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" }
+        { strokeDashoffset: 1400 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#section-one-line2",
-        { strokeDashoffset: 1000 },
-        { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 1400 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#section-one-line3",
-        { strokeDashoffset: 1000 },
-        { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 1400 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       );
 
     const sectionTwoLines = gsap.timeline({
@@ -113,20 +114,21 @@ const HeroSection = () => {
     sectionTwoLines
       .fromTo(
         "#line1",
-        { strokeDasharray: "0,1000" },
-        { strokeDasharray: "1000,0", duration: 0.9, ease: "power2.out" }
+        { strokeDashoffset: 1000 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#line2",
-        { strokeDasharray: "0,1000" },
-        { strokeDasharray: "1000,0", duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 1000 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#line3",
-        { strokeDasharray: "0,1000" },
-        { strokeDasharray: "1000,0", duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 1000 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       );
 
     const sectionThreeLines = gsap.timeline({
@@ -143,20 +145,21 @@ const HeroSection = () => {
     sectionThreeLines
       .fromTo(
         "#section-three-line1",
-        { strokeDasharray: "0,900" },
-        { strokeDasharray: "900,0", duration: 0.9, ease: "power2.out" }
+        { strokeDashoffset: 900 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#section-three-line2",
-        { strokeDasharray: "0,900" },
-        { strokeDasharray: "900,0", duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 900 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       )
       .fromTo(
         "#section-three-line3",
-        { strokeDasharray: "0,900" },
-        { strokeDasharray: "900,0", duration: 0.9, ease: "power2.out" },
-        "-=0.5"
+        { strokeDashoffset: 900 },
+        { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" },
+        0
       );
 
     return () => {
@@ -282,7 +285,7 @@ const HeroSection = () => {
           }}
         >
           {/* SVG Line Animation for Desktop (Large screens) */}
-          <div className="hidden lg:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none top-5">
+          <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none top-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1050 1050"
@@ -318,45 +321,46 @@ const HeroSection = () => {
             </svg>
           </div>
 
-          {/* Mobile Horizontal Lines Animation (Small screens only - in mobile section area) */}
+          {/* Mobile Horizontal Lines Animation (Small screens only - full width) */}
           <div
-            className="block sm:hidden absolute w-full overflow-hidden pointer-events-none z-0"
+            className="block md:hidden absolute w-full overflow-hidden pointer-events-none z-0"
             style={{ top: "50%", height: "40%" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 400 200"
+              viewBox="0 0 1000 200"
+              preserveAspectRatio="none"
               className="w-full h-full"
             >
               <path
                 id="mobile-line1"
-                d="M0,60 L400,60"
+                d="M0,60 L1000,60"
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
                 className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="mobile-line2"
-                d="M0,100 L400,100"
+                d="M0,100 L1000,100"
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="mobile-line3"
-                d="M0,140 L400,140"
+                d="M0,140 L1000,140"
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
             </svg>
           </div>
@@ -407,8 +411,9 @@ const HeroSection = () => {
             className="w-full md:w-1/2 flex justify-center items-center md:h-screen z-10"
           >
             <div
-              className={`relative bg-gray-900 rounded-[20px] shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing ${isPlaying ? "w-[500px] h-[250.25px]" : "w-[250px] h-[500px]"
-                } transition-all duration-300`}
+              className={`relative bg-gray-900 rounded-[20px] shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing ${
+                isPlaying ? "w-[500px] h-[250.25px]" : "w-[250px] h-[500px]"
+              } transition-all duration-300`}
               style={{
                 transform: isMobile
                   ? "none"
@@ -441,8 +446,9 @@ const HeroSection = () => {
                 <video
                   ref={videoRef}
                   src={IntroVideo}
-                  className={`w-full h-full object-cover absolute top-0 left-0 bg-black ${isPlaying ? "block" : "hidden"
-                    }`}
+                  className={`w-full h-full object-cover absolute top-0 left-0 bg-black ${
+                    isPlaying ? "block" : "hidden"
+                  }`}
                   loop
                   muted
                 />
@@ -492,17 +498,19 @@ const HeroSection = () => {
           }}
         >
           {/* SVG Background Lines for Large Screens */}
-          <div className="hidden lg:block absolute inset-0 z-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1050">
+          <div className="hidden md:block absolute inset-0 z-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1050 1050"
+            >
               <path
                 id="line1"
                 d="M580,0 L580,1000"
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="18"
-                strokeDasharray="1000,1000"
+                strokeDasharray="1000"
                 strokeDashoffset="1000"
-                className="animate-draw"
               />
               <path
                 id="line2"
@@ -510,9 +518,8 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="18"
-                strokeDasharray="1000,1000"
+                strokeDasharray="1000"
                 strokeDashoffset="1000"
-                className="animate-draw delay-200"
               />
               <path
                 id="line3"
@@ -520,51 +527,51 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="18"
-                strokeDasharray="1000,1000"
+                strokeDasharray="1000"
                 strokeDashoffset="1000"
-                className="animate-draw delay-400"
               />
             </svg>
           </div>
           {/* SVG Background Lines for Small Screens */}
           <div
-            className="block sm:hidden absolute w-full overflow-hidden pointer-events-none z-0"
+            className="block md:hidden absolute w-full overflow-hidden pointer-events-none z-0"
             style={{ top: "30%", height: "40%" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 400 200"
+              viewBox="0 0 1000 200"
+              preserveAspectRatio="none"
               className="w-full h-full"
             >
               <path
                 id="mobile-line1"
-                d="M400,60 L0,60"
+                d="M0,60 L1000,60"
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
                 className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="mobile-line2"
-                d="M400,100 L0,100"
+                d="M0,100 L1000,100"
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="mobile-line3"
-                d="M400,140 L0,140"
+                d="M0,140 L1000,140"
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="14"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
             </svg>
           </div>
@@ -589,33 +596,12 @@ const HeroSection = () => {
         </div>
 
         <style>{`
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  @keyframes drawLine {
-    from {
-      stroke-dashoffset: 400;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw {
-    animation: draw 2s ease-in-out forwards;
-  }
-
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-
-  .delay-400 {
-    animation-delay: 0.4s;
-  }
-`}</style>
+          @keyframes drawLine {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        `}</style>
 
         {/* Section Three */}
         <div
@@ -631,59 +617,65 @@ const HeroSection = () => {
         >
           {/* SVG Background Lines for Small Screens */}
           <div
-            className="block  sm:hidden absolute top-[30%] flex items-center justify-center w-full overflow-hidden pointer-events-none z-0"
+            className="block md:hidden absolute w-full overflow-hidden pointer-events-none z-0"
+            style={{ top: "30%", height: "40%" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 400 200"
-              className="w-full h-auto max-h-[200px]"
+              viewBox="0 0 1000 200"
+              preserveAspectRatio="none"
+              className="w-full h-full"
             >
               <path
                 id="section-three-line1"
-                d="M0,60 L400,60"
+                d="M0,60 L1000,60"
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="18"
-                strokeDasharray="400"
-                strokeDashoffset="400"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
                 className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="section-three-line2"
-                d="M0,100 L400,100"
+                d="M0,100 L1000,100"
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="18"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
               <path
                 id="section-three-line3"
-                d="M0,140 L400,140"
+                d="M0,140 L1000,140"
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="18"
-                strokeDasharray="400"
-                strokeDashoffset="400"
-                className="animate-[drawLine_2s_ease-in-out_1.5s_forwards]"
+                strokeDasharray="1000"
+                strokeDashoffset="1000"
+                className="animate-[drawLine_2s_ease-in-out_0.5s_forwards]"
               />
             </svg>
           </div>
 
           {/* SVG Background Lines for Large Screens */}
           <div
-            className="hidden lg:block absolute inset-0 z-0 pointer-events-none"
+            className="hidden md:block absolute inset-0 z-0 pointer-events-none"
             style={{ height: "70vh" }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1050">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1050 1050"
+            >
               <path
                 id="section-three-line1"
                 d="M580,0 L580,240 Q580,270 530,270 L0,270"
                 fill="none"
                 stroke="#a33cc4"
                 strokeWidth="18"
-                strokeDasharray="0,900"
+                strokeDasharray="900"
+                strokeDashoffset="900"
               />
               <path
                 id="section-three-line2"
@@ -691,7 +683,8 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#f9a825"
                 strokeWidth="18"
-                strokeDasharray="0,900"
+                strokeDasharray="900"
+                strokeDashoffset="900"
               />
               <path
                 id="section-three-line3"
@@ -699,7 +692,8 @@ const HeroSection = () => {
                 fill="none"
                 stroke="#9c274f"
                 strokeWidth="18"
-                strokeDasharray="0,900"
+                strokeDasharray="900"
+                strokeDashoffset="900"
               />
             </svg>
           </div>
@@ -750,16 +744,13 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        <style >{`
-  @keyframes drawLine {
-    from {
-      stroke-dashoffset: 400;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-`}</style>
+        <style>{`
+          @keyframes drawLine {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        `}</style>
       </div>
     </>
   );
