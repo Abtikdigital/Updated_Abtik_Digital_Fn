@@ -200,11 +200,17 @@ const Mainlayout = (props: any) => {
             text: "Thank You! Your Response Has Been Submitted",
             confirmButtonColor: "#f56015",
           });
+        } else {
+          Swal.fire({
+            icon: "error",
+            text: "Error While Inserting Data",
+            confirmButtonColor: "#f56015"
+          })
         }
-      } catch (error) {
+      } catch (error: any) {
         Swal.fire({
           icon: "error",
-          text: "Error while inserting data",
+          text: error?.response?.data?.message || "Error while inserting data",
           confirmButtonColor: "#f56015",
         });
         setChatBotErrors({ ...newErrors, service: "Error while submitting service" });
@@ -266,9 +272,8 @@ const Mainlayout = (props: any) => {
                       id="name"
                       type="text"
                       placeholder="Enter your full name"
-                      className={`w-full px-4 py-2 border ${
-                        errors.name ? "border-red-500" : "border-gray-300"
-                      } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
+                      className={`w-full px-4 py-2 border ${errors.name ? "border-red-500" : "border-gray-300"
+                        } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
                     />
                     {errors.name && (
                       <p className="text-red-500 text-xs mt-1">{errors.name.message as string}</p>
@@ -289,9 +294,8 @@ const Mainlayout = (props: any) => {
                       id="email"
                       type="email"
                       placeholder="your.email@example.com"
-                      className={`w-full px-4 py-2 border ${
-                        errors.email ? "border-red-500" : "border-gray-300"
-                      } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
+                      className={`w-full px-4 py-2 border ${errors.email ? "border-red-500" : "border-gray-300"
+                        } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
                     />
                     {errors.email && (
                       <p className="text-red-500 text-xs mt-1">{errors.email.message as string}</p>
@@ -315,9 +319,8 @@ const Mainlayout = (props: any) => {
                       onKeyPress={(e) => {
                         if (!/[0-9]/.test(e.key)) e.preventDefault();
                       }}
-                      className={`w-full px-4 py-2 border ${
-                        errors.phoneNumber ? "border-red-500" : "border-gray-300"
-                      } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
+                      className={`w-full px-4 py-2 border ${errors.phoneNumber ? "border-red-500" : "border-gray-300"
+                        } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-transparent h-[38px]`}
                     />
                     {errors.phoneNumber && (
                       <p className="text-red-500 text-xs mt-1">{errors.phoneNumber.message as string}</p>
@@ -337,9 +340,8 @@ const Mainlayout = (props: any) => {
                       }}
                     >
                       <SelectTrigger
-                        className={`w-full h-10 px-4 py-2 border ${
-                          errors.service ? "border-red-500" : "border-gray-300"
-                        } rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-[#f56015] hover:border-[#f56015] transition-colors duration-200`}
+                        className={`w-full h-10 px-4 py-2 border ${errors.service ? "border-red-500" : "border-gray-300"
+                          } rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-[#f56015] hover:border-[#f56015] transition-colors duration-200`}
                       >
                         <SelectValue placeholder="Select a Service" />
                       </SelectTrigger>
@@ -377,9 +379,8 @@ const Mainlayout = (props: any) => {
                       }}
                     >
                       <SelectTrigger
-                        className={`w-full h-10 px-4 py-2 border ${
-                          errors.companyType ? "border-red-500" : "border-gray-300"
-                        } rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-[#f56015] hover:border-[#f56015] transition-colors duration-200`}
+                        className={`w-full h-10 px-4 py-2 border ${errors.companyType ? "border-red-500" : "border-gray-300"
+                          } rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#f56015] focus:border-[#f56015] hover:border-[#f56015] transition-colors duration-200`}
                       >
                         <SelectValue placeholder="Select a Company Type" />
                       </SelectTrigger>
@@ -459,9 +460,8 @@ const Mainlayout = (props: any) => {
             setChatBotStep(0);
           }
         }}
-        className={`fixed bottom-6 cursor-pointer right-6 p-4 rounded-full bg-[#f56015] text-white shadow-lg hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] transition-all duration-300 ${
-          showFab ? "opacity-100 scale-100" : "opacity-0 scale-0"
-        }`}
+        className={`fixed bottom-6 cursor-pointer right-6 p-4 rounded-full bg-[#f56015] text-white shadow-lg hover:bg-[#d14e10] focus:outline-none focus:ring-2 focus:ring-[#f56015] transition-all duration-300 ${showFab ? "opacity-100 scale-100" : "opacity-0 scale-0"
+          }`}
         style={{ zIndex: 9999 }}
       >
         <MessageCircle className="w-6 h-6" />
@@ -509,9 +509,8 @@ const Mainlayout = (props: any) => {
                       </div>
                       <div className="w-full mt-2">
                         <input
-                          className={`p-2 px-3 rounded-lg border w-full bg-white ${
-                            chatBotErrors.name ? "border-red-500" : "border-gray-300"
-                          }`}
+                          className={`p-2 px-3 rounded-lg border w-full bg-white ${chatBotErrors.name ? "border-red-500" : "border-gray-300"
+                            }`}
                           placeholder="Enter Your Full Name"
                           value={chatBotFormData.name}
                           onChange={(e) => setChatBotFormData({ ...chatBotFormData, name: e.target.value })}
@@ -556,9 +555,8 @@ const Mainlayout = (props: any) => {
                       <div className="w-full mt-2">
                         <input
                           type="text"
-                          className={`p-2 px-3 rounded-lg border w-full bg-white ${
-                            chatBotErrors.email ? "border-red-500" : "border-gray-300"
-                          }`}
+                          className={`p-2 px-3 rounded-lg border w-full bg-white ${chatBotErrors.email ? "border-red-500" : "border-gray-300"
+                            }`}
                           placeholder="your.email@example.com"
                           value={chatBotFormData.email}
                           onChange={(e) => setChatBotFormData({ ...chatBotFormData, email: e.target.value })}
@@ -603,9 +601,8 @@ const Mainlayout = (props: any) => {
                       <div className="w-full mt-2">
                         <input
                           type="tel"
-                          className={`p-2 px-3 rounded-lg border w-full bg-white ${
-                            chatBotErrors.phoneNumber ? "border-red-500" : "border-gray-300"
-                          }`}
+                          className={`p-2 px-3 rounded-lg border w-full bg-white ${chatBotErrors.phoneNumber ? "border-red-500" : "border-gray-300"
+                            }`}
                           placeholder="Enter your phone number"
                           value={chatBotFormData.phoneNumber}
                           onChange={(e) => setChatBotFormData({ ...chatBotFormData, phoneNumber: e.target.value })}
@@ -651,11 +648,10 @@ const Mainlayout = (props: any) => {
                         {services.map((service) => (
                           <button
                             key={service.value}
-                            className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                              chatBotFormData.service === service.value
+                            className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${chatBotFormData.service === service.value
                                 ? "bg-[#f56015] text-white hover:bg-[#d14e10]"
                                 : "bg-gray-50 text-gray-900 hover:bg-gray-200"
-                            } border ${chatBotErrors.service ? "border-red-500" : "border-gray-300"}`}
+                              } border ${chatBotErrors.service ? "border-red-500" : "border-gray-300"}`}
                             onClick={() => {
                               setChatBotFormData({ ...chatBotFormData, service: service.value });
                               setChatBotErrors({ ...chatBotErrors, service: "" });
